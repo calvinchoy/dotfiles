@@ -1,0 +1,8 @@
+[nodejs]
+disabled = true
+
+[python]
+disabled = true
+
+[aws]
+disabled = true
