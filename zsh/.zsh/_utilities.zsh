@@ -30,7 +30,7 @@ function fasd_cd() {
 }
 
 # fasd using fzf
-fzfd() {
+fzd() {
   fasdlist=$( fasd -d -l -r $1 | \
     fzf --query="$1 " --select-1 --exit-0 --height=25% --reverse --tac --no-sort --cycle) &&
     cd "$fasdlist"
@@ -149,47 +149,6 @@ function findProcessByPort() {
 
 function killProcessByPort() {
   lsof -ti tcp:$1 | xargs kill
-}
-
-function getFileNameFromPath() {
-  filePath=$1
-  fullName=$(basename -- "$filePath")
-
-  echo $fullName
-}
-alias getFileName="getFileNameFromPath"
-
-function getFileNameWithoutExtension() {
-  filePath=$1
-  fullName=$(basename -- "$filePath")
-  fileExtension="${fullName##*.}"
-  fileName="${fullName%.*}"
-
-  echo $fileName
-}
-
-function getFileExtension() {
-  filePath=$1
-  fullName=$(basename -- "$filePath")
-  fileExtension="${fullName##*.}"
-  fileName="${fullName%.*}"
-
-  echo $fileExtension
-}
-
-function getOsByFileName() {
-  typeset -A OS_BY_EXT
-  OS_BY_EXT[ipa]="ios"
-  OS_BY_EXT[apk]="android"
-
-  filePath=$1
-  fullName=$(basename -- "$filePath")
-  fileExtension="${fullName##*.}"
-  fileName="${fullName%.*}"
-
-  os=${OS_BY_EXT[$fileExtension]}
-
-  echo $os
 }
 
 # ---------------------------------------------------------------
