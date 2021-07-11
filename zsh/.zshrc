@@ -31,8 +31,6 @@ zinit light zdharma/fast-syntax-highlighting
 zinit light zsh-users/zsh-history-substring-search
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
-#oh-my-zsh
-zinit ice wait'0' lucid; zinit snippet OMZ::plugins/git/git.plugin.zsh
 #.zsh local extensions and aliases
 zinit snippet ~/.zsh/init.zsh
 
