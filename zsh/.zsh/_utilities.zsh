@@ -87,36 +87,6 @@ alias tarc="tar -czvf"
 # generate new rsa key
 alias generateKey="ssh-keygen -t rsa -C"
 
-function proxy() {
-  if [ "$1" = "on" ]; then
-    setproxy
-  else
-    unsetproxy
-  fi
-}
-
-function setproxy() {
-  myIp=$(getIp)
-  # if [[ $myIp == "10."* ]]; then
-  export http_proxy="$AAB_PROXY"
-  export https_proxy="$AAB_PROXY"
-  export ftp_proxy="$AAB_PROXY"
-  npm config --global set proxy $AAB_PROXY
-  npm config --global set https-proxy $AAB_PROXY
-  echo "Proxy set"
-  # fi
-}
-# Unset Proxy
-function unsetproxy() {
-  myIp=$(getIp)
-  # if [[ $myIp == "10."* ]]; then
-  unset {http,https,ftp}_proxy
-  npm config --global rm proxy
-  npm config --global rm https-proxy
-  echo "Proxy unset"
-  # fi
-}
-
 function getIp() {
   temp=$(ifconfig | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p' | head -n 1)
   echo "$temp"
