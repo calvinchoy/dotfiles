@@ -15,7 +15,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-telescope/telescope-fzf-native.nvim'
+Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'joshdick/onedark.vim'
 Plug 'posva/vim-vue'
 Plug 'junegunn/goyo.vim'
@@ -29,14 +29,12 @@ call plug#end()
 let mapleader = " "
 inoremap <C-c> <esc>
 imap jj <esc>                               " Easy escaping to normal model
-vnoremap J :m '>+1<CR>gv=gv
-vnoremap K :m '<-2<CR>gv=gv
-vnoremap <leader>p "_dP
-nnoremap <leader>y "+y
-vnoremap <leader>y "+y
-nnoremap <leader>Y gg"+yG
-nnoremap <leader>d "_d
-vnoremap <leader>d "_d
+vnoremap J :m '>+1<CR>gv=gv                 " Swap lines down
+vnoremap K :m '<-2<CR>gv=gv                 " Swap lines up
+vnoremap <leader>p                          "_dP
+nnoremap <leader>y                          "+y
+nnoremap <leader>Y gg                       "+yG
+nnoremap <leader>d                          "_d
 nmap <leader>w :w!<cr>                      " Fast saves
 nmap :bp :BufSurfBack<cr>                   " Buffer back
 nmap :bn :BufSurfForward<cr>                " Buffer forward
@@ -51,6 +49,7 @@ nmap <C-h> <C-w>h                           " window navigation
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
+:nno <C-k> :set hls!<CR>                    " clear search highlights
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and themes
