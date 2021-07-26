@@ -42,8 +42,8 @@ cmap w!! w !sudo tee % >/dev/null           " Force write as sudo
 cnoremap sudow w !sudo tee % >/dev/null
 nmap vs :vsplit<cr>                         " vert split
 nmap sp :split<cr>                          " hor split
-nnoremap <Leader>+ :vertical resize +5<CR>
-nnoremap <Leader>- :vertical resize -5<CR>
+nnoremap <Leader>+ :vertical resize +10<CR>
+nnoremap <Leader>- :vertical resize -10<CR>
 nnoremap <Leader>rp :resize 100<CR>
 nmap <C-h> <C-w>h                           " window navigation
 nmap <C-j> <C-w>j
