@@ -8,7 +8,7 @@ Dependencies can be installed using a package manager
 - [Zsh](https://zsh.sourceforge.io/) - Z shell, v5.X
 - [Zinit](https://github.com/ryanoasis/nerd-fonts) - a zsh plugin manager
 - [Starship prompt](https://starship.rs/) -  cross shell prompt
-- [ Nerd fonts](https://github.com/junegunn/vim-plug): patched fonts
+- [Nerd fonts](https://github.com/junegunn/vim-plug): patched fonts
 - [Neovim](https://neovim.io/) -  https://neovim.io/
 - [vim-plug](https://github.com/junegunn/vim-plug) - vim plugin manager
 - [Tmux]() - terminal multiplexer: https://github.com/tmux/tmux/wiki
