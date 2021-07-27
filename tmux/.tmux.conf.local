@@ -325,19 +325,20 @@ tmux_conf_theme_window_status_current_fg="$tmux_conf_theme_colour_1"
 tmux_conf_theme_window_status_current_bg="#00beff"
 
 # pane titles
-set -g pane-border-format " [ ###P #T ] "
+set -g pane-border-format " [ ###P #{pane_title} | #{pane_current_command} ] "
 
 # pane borders colours:
 tmux_conf_theme_pane_border="#4d4d4d"
 tmux_conf_theme_pane_active_border="$tmux_conf_theme_colour_12"
+tmux_conf_default_pane_title=""
 
 # Auto hide pane-border-status line when only one pane is displayed
-# set-hook -g 'session-created'    'run-shell -b "if [ \#{window_panes} -eq 1 ]; then tmux set pane-border-status off; fi"'
+set-hook -g 'session-created'    'run-shell -b "if [ \#{window_panes} -eq 1 ]; then tmux set pane-border-status off && tmux select-pane -T \"\"; fi"'
 set-hook -g 'client-attached'    'run-shell -b "if [ \#{window_panes} -eq 1 ]; then tmux set pane-border-status off; fi"'
 set-hook -g 'after-new-window'   'run-shell -b "if [ \#{window_panes} -eq 1 ]; then tmux set pane-border-status off; fi"'
 set-hook -g 'after-kill-pane'    'run-shell -b "if [ \#{window_panes} -eq 1 ]; then tmux set pane-border-status off; fi"'
 set-hook -g 'pane-exited'        'run-shell -b "if [ \#{window_panes} -eq 1 ]; then tmux set pane-border-status off; fi"'
-set-hook -g 'after-split-window' 'run-shell -b "if [ \#{window_panes} -gt 1 ]; then tmux set pane-border-status top; fi"'
+set-hook -g 'after-split-window' 'run-shell -b "if [ \#{window_panes} -gt 1 ]; then tmux set pane-border-status top && tmux select-pane -T \"\"; fi"'
 set-hook -g 'after-resize-pane'  "if-shell -F '#{||:#{==:#{window_panes},1},#{window_zoomed_flag}}' 'set -g pane-border-status off' 'set -g pane-border-status bottom'"
 
 # toggle status bar
