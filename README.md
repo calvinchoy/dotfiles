@@ -15,6 +15,7 @@ Dependencies can be installed using a package manager
 - [Tmux config template](https://github.com/junegunn/vim-plug): tmuxconfig template starter
 - [Fasd](https://github.com/clvv/fasd) - fast directory and file navigation
 - [Fzf](https://github.com/junegunn/fzf) - fuzzt finder
+- [fd](https://github.com/sharkdp/fd) - find alternative
 - [Exa](https://the.exa.website/) - fast ls replacement
 - [Bat](https://github.com/sharkdp/bat) - cat improved
 - [Stow](https://www.gnu.org/software/stow/manual/stow.html) - symlink manager
@@ -33,6 +34,11 @@ With the above dependencies installed
     ```
 3. Make sure to install vim plugins after installing vim-plug by running `:PlugInstall` in nvim
 4. Reload your terminal
+
+## Todo
+- [ ] neovim LSP config setup
+- [ ] neovim eslint + prettier
+- [ ] creating files and directories
 
 ## Resources
 - [ThePrimeagen dotfiles](https://github.com/ThePrimeagen/.dotfiles)
