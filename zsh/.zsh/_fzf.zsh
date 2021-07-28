@@ -33,6 +33,23 @@ fi'"
 export FZF_ALT_COMMAND="fd --type d"
 export FZF_ALT_C_COMMAND="$FZF_ALT_COMMAND"
 
+# fuzzy tmux session management
+tm() {
+  [[ -n "$TMUX" ]] && change="switch-client" || change="attach-session"
+  if [ $1 ]; then
+    tmux $change -t "$1" 2>/dev/null || (tmux new-session -d -s $1 && tmux $change -t "$1"); return
+  fi
+  session=$(tmux list-sessions -F "#{session_name}" 2>/dev/null | fzf --exit-0) &&  tmux $change -t "$session" || echo "No sessions found."
+}
+
+# fuzzy fasd
+eval "$(fasd --init auto)"
+alias d="fzf_fasd_d"
+fzf_fasd_d() {
+  local dir
+  dir="$(fasd -Rdl "$1" | fzf -1 -0 --no-sort +m)" && cd "${dir}" || return 1 
+}
+
 # ---------------------------------------------------------------
 # Opening using fzf + editor
 # ---------------------------------------------------------------
@@ -47,7 +64,7 @@ fcode() {
 fvim() {
   local files
   IFS=$'\n' files=($(fzf-tmux --query="$1" --multi --select-1 --exit-0))
-  [[ -n "$files" ]] && vim "${files[@]}"
+  [[ -n "$files" ]] && nvim "${files[@]}"
 }
 
 #fzf bat
@@ -56,9 +73,18 @@ fbat() {
   IFS=$'\n' files=($(fzf-tmux --query="$1" --multi --select-1 --exit-0))
   [[ -n "$files" ]] && bat "${files[@]}"
 }
-# fzf sublime https://www.sublimetext.com/docs/3/osx_command_line.html
-fsub() {
-  local files
-  IFS=$'\n' files=($(fzf-tmux --query="$1" --multi --select-1 --exit-0))
-  [[ -n "$files" ]] && subl "${files[@]}"
+
+# chrome bookmarks
+bm() {
+     bookmarks_path=~/Library/Application\ Support/Google/Chrome/Default/Bookmarks
+
+     jq_script='
+        def ancestors: while(. | length >= 2; del(.[-1,-2]));
+        . as $in | paths(.url?) as $key | $in | getpath($key) | {name,url, path: [$key[0:-2] | ancestors as $a | $in | getpath($a) | .name?] | reverse | join("/") } | .path + "/" + .name + "\t" + .url'
+
+    jq -r "$jq_script" < "$bookmarks_path" \
+        | sed -E $'s/(.*)\t(.*)/\\1\t\x1b[36m\\2\x1b[m/g' \
+        | fzf --ansi \
+        | cut -d$'\t' -f2 \
+        | xargs open
 }

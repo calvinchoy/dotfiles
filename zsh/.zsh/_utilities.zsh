@@ -17,26 +17,6 @@ function ncd(){
 }
 
 # ---------------------------------------------------------------
-# FASD - https://github.com/clvv/fasd
-# ---------------------------------------------------------------
-alias d="fasd_cd -d"
-function fasd_cd() {
-  local fasd_ret="$(fasd -d "$@")"
-  if [[ -d "$fasd_ret" ]]; then
-    cd "$fasd_ret"
-  else
-    print "$fasd_ret"
-  fi
-}
-
-# fasd using fzf
-fzd() {
-  fasdlist=$( fasd -d -l -r $1 | \
-    fzf --query="$1 " --select-1 --exit-0 --height=25% --reverse --tac --no-sort --cycle) &&
-    cd "$fasdlist"
-}
-
-# ---------------------------------------------------------------
 # Dotenv inits
 # ---------------------------------------------------------------
 function pynit(){
