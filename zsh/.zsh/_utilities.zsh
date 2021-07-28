@@ -58,9 +58,15 @@ function venvinit(){
 alias tmn="tmux new -s"
 alias tma="tmux attach -t"
 alias tmls="tmux list-sessions"
-alias tmk="tmux kill-session -t"s
 alias tmka="tmux kill-server"
-alias mux="tmuxinator"
+
+function tmrn(){
+    tmux select-pane -T $1
+}
+
+function tmk(){
+  tmux kill-session -t $1
+}
 
 # ---------------------------------------------------------------
 # NPM

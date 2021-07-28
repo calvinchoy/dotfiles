@@ -19,8 +19,14 @@ Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'joshdick/onedark.vim'
 Plug 'posva/vim-vue'
 Plug 'junegunn/goyo.vim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 " End plugins
 call plug#end()
+
+" import lua configs + plugins are loaded automatically
+lua require("karubin")
+" nvim tree sitter
+lua require'nvim-treesitter.configs'.setup { highlight = { enable = true }, incremental_selection = { enable = true }, textobjects = { enable = true }}
 
 " => Other settings are loaded from ./plugin
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -54,16 +60,6 @@ nmap <C-l> <C-w>l
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and themes
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" if (empty($TMUX))
-"   if (has("nvim"))
-"     "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
-"     let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-"   endif
-"   if (has("termguicolors"))
-"     set termguicolors
-"   endif
-" endif
-
 if (has("termguicolors"))
   set termguicolors
 endif
