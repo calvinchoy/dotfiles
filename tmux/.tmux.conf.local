@@ -319,6 +319,10 @@ tmux_conf_copy_to_os_clipboard=false
 
 
 # -- user customizations -------------------------------------------------------
+# Fix emacs key bindingsd i.e. ctrl+a and ctrl+e navigations
+# set -g mode-keys emacs
+# set -g status-keys emacs
+bind a send-prefix
 
 # window current status style
 tmux_conf_theme_window_status_current_fg="$tmux_conf_theme_colour_1"
@@ -329,7 +333,7 @@ set -g pane-border-format " [ ###P #{pane_title} | #{pane_current_command} ] "
 
 # pane borders colours:
 tmux_conf_theme_pane_border="#4d4d4d"
-tmux_conf_theme_pane_active_border="$tmux_conf_theme_colour_12"
+tmux_conf_theme_pane_active_border="$tmux_conf_theme_colour_7"
 tmux_conf_default_pane_title=""
 
 # Auto hide pane-border-status line when only one pane is displayed
@@ -343,6 +347,7 @@ set-hook -g 'after-resize-pane'  "if-shell -F '#{||:#{==:#{window_panes},1},#{wi
 
 # toggle status bar
 bind-key -n C-d set-option -g status #Ctrl+d  to toggle status bar
+bind-key -n C-s run-shell -b "~/.tmux/plugins/tmux-fzf/scripts/session.sh attach"
 
 # status bar left and right
 tmux_conf_theme_status_left=' ❐ #S '
