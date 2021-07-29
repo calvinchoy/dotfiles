@@ -37,8 +37,10 @@ With the above dependencies installed
 
 ## Todo
 - [ ] neovim LSP config setup
+- [ ] Add Harpoon
 - [ ] neovim eslint + prettier
 - [ ] creating files and directories
+- [ ] Fix vue highlight with tree sitter, bug with template highlighting
 
 ## Resources
 - [ThePrimeagen dotfiles](https://github.com/ThePrimeagen/.dotfiles)

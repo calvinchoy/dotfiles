@@ -17,7 +17,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'joshdick/onedark.vim'
-Plug 'posva/vim-vue'
+Plug 'posva/vim-vue' " treesitter for vue giving issues with template highlighting
 Plug 'junegunn/goyo.vim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 " End plugins
@@ -66,3 +66,8 @@ endif
 
 syntax on
 colorscheme onedark
+
+" keep transparance of terminal
+highlight Normal     ctermbg=NONE guibg=NONE
+highlight LineNr     ctermbg=NONE guibg=NONE
+highlight SignColumn ctermbg=NONE guibg=NONE
