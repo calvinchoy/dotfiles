@@ -27,12 +27,13 @@ zinit light-mode for \
 # Zinit Plugins
 # ---------------------------------------------------------------
 # basics
-zinit light zdharma/fast-syntax-highlighting
-zinit light zsh-users/zsh-history-substring-search
-zinit light zsh-users/zsh-completions
-zinit light zsh-users/zsh-autosuggestions
-#.zsh local extensions and aliases
-zinit snippet ~/.zsh/init.zsh
+zinit wait lucid for \
+  zdharma/fast-syntax-highlighting \
+  zsh-users/zsh-history-substring-search \
+  zsh-users/zsh-completions \
+  zsh-users/zsh-autosuggestions \
+  #.zsh local extensions and aliases
+  zinit snippet ~/.zsh/init.zsh
 
 # ---------------------------------------------------------------
 # ZSH settings

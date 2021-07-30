@@ -37,6 +37,18 @@ inoremap <C-c> <esc>
 imap jj <esc>                               " Easy escaping to normal model
 vnoremap J :m '>+1<CR>gv=gv                 " Swap lines down
 vnoremap K :m '<-2<CR>gv=gv                 " Swap lines up
+inoremap <C-j> <esc>:m .+1<CR>==
+inoremap <C-k> <esc>:m .-2<CR>==
+nnoremap <leader>k :m .-2<CR>==
+nnoremap <leader>j :m .+1<CR>==
+nnoremap Y y$                               " yank till end 
+nnoremap n nzzzv                            " centered search next
+nnoremap N Nzzzv                            " centered search previous
+nnoremap J mzJ`z                            " mark join jump back
+inoremap , ,<c-g>u
+inoremap . .<c-g>u
+inoremap ! !<c-g>u
+inoremap > ?<c-g>u
 vnoremap <leader>p                          "_dP
 nnoremap <leader>y                          "+y
 nnoremap <leader>Y gg                       "+yG
