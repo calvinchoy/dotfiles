@@ -33,41 +33,55 @@ lua require'nvim-treesitter.configs'.setup { highlight = { enable = true }, incr
 " => Remaps
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader = " "
+" Easy escaping to normal model
+imap jj <esc>
 inoremap <C-c> <esc>
-imap jj <esc>                               " Easy escaping to normal model
-vnoremap J :m '>+1<CR>gv=gv                 " Swap lines down
-vnoremap K :m '<-2<CR>gv=gv                 " Swap lines up
+" Swap lines down and up
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
 inoremap <C-j> <esc>:m .+1<CR>==
 inoremap <C-k> <esc>:m .-2<CR>==
 nnoremap <leader>k :m .-2<CR>==
 nnoremap <leader>j :m .+1<CR>==
-nnoremap Y y$                               " yank till end 
-nnoremap n nzzzv                            " centered search next
-nnoremap N Nzzzv                            " centered search previous
-nnoremap J mzJ`z                            " mark join jump back
+" yank till end
+nnoremap Y y$
+" centered search next
+nnoremap n nzzzv
+nnoremap N Nzzzv
+" mark join jump back
+nnoremap J mzJ`z
 inoremap , ,<c-g>u
 inoremap . .<c-g>u
 inoremap ! !<c-g>u
 inoremap > ?<c-g>u
-vnoremap <leader>p                          "_dP
-nnoremap <leader>y                          "+y
-nnoremap <leader>Y gg                       "+yG
-nnoremap <leader>d                          "_d
-nmap <leader>w :w!<cr>                      " Fast saves
-nmap :bp :BufSurfBack<cr>                   " Buffer back
-nmap :bn :BufSurfForward<cr>                " Buffer forward
-cmap w!! w !sudo tee % >/dev/null           " Force write as sudo
+" wud?
+vnoremap <leader>p "_dP
+nnoremap <leader>y "+y
+nnoremap <leader>Y gg "+yG
+vnoremap <leader>d "_d
+nnoremap <leader>d "_d
+" Fast saves
+nmap <leader>w :w!<cr>
+" Force write as sudo
+cmap w!! w !sudo tee % >/dev/null
 cnoremap sudow w !sudo tee % >/dev/null
-nmap vs :vsplit<cr>                         " vert split
-nmap sp :split<cr>                          " hor split
+" Buffer back and forth
+nmap :bp :BufSurfBack<cr>
+nmap :bn :BufSurfForward<cr>
+" v and h splits
+nmap vs :vsplit<cr>
+nmap sp :split<cr>
+" increase and decrease pane sizes
 nnoremap <Leader>+ :vertical resize +10<CR>
 nnoremap <Leader>- :vertical resize -10<CR>
 nnoremap <Leader>rp :resize 100<CR>
-nmap <C-h> <C-w>h                           " window navigation
+" window navigation
+nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
-:nno <C-k> :set hls!<CR>                    " clear search highlights
+" toggle search highlights
+:nno <C-k> :set hls!<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and themes
@@ -80,7 +94,7 @@ syntax on
 let g:tokyonight_style = "storm"
 colorscheme tokyonight
 
-" keep transparent terminal background
+" leave terminal background alone
 highlight Normal     ctermbg=NONE guibg=NONE
 highlight LineNr     ctermbg=NONE guibg=NONE
 highlight SignColumn ctermbg=NONE guibg=NONE

@@ -53,7 +53,6 @@ if [[ ${ZSH_VERSION} != 5.1.1 && ${TERM} != "dumb" ]]; then
 fi
 
 # General
-bindkey -e                  # emacs binding for tmux
 setopt COMBINING_CHARS      # Combine zero-length punctuation characters (accents),  with the base character.
 setopt INTERACTIVE_COMMENTS # Enable comments in interactive shell.
 setopt RC_QUOTES            # Allow 'Henry''s Garage' instead of 'Henry'\''s Garage'.
