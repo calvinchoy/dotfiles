@@ -319,6 +319,11 @@ tmux_conf_copy_to_os_clipboard=false
 
 
 # -- user customizations -------------------------------------------------------
+# Undercurl for tokyonight theme vim
+set -g default-terminal "${TERM}"
+set -as terminal-overrides ',*:Smulx=\E[4::%p1%dm'  # undercurl support
+set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{255}%&%d::%p1%{255}%&%d%;m'  # underscore colours - needs tmux-3.0
+
 # Fix emacs key bindingsd i.e. ctrl+a and ctrl+e navigations
 # set -g mode-keys emacs
 # set -g status-keys emacs
@@ -350,8 +355,8 @@ bind-key -n C-d set-option -g status #Ctrl+d  to toggle status bar
 bind-key -n C-s run-shell -b "~/.tmux/plugins/tmux-fzf/scripts/session.sh attach"
 
 # status bar left and right
-tmux_conf_theme_status_left=' ❐ #S '
-tmux_conf_theme_status_right='#{prefix}#{pairing}, %d %b %H:%M | #{username}#{root} '
+# tmux_conf_theme_status_left=' ❐ #S '
+# tmux_conf_theme_status_right='#{prefix}#{pairing}, %d %b %H:%M | #{username}#{root} '
 
 # status left/right sections separators
 # tmux_conf_theme_left_separator_main=''  # /!\ you don't need to install Powerline
@@ -360,14 +365,14 @@ tmux_conf_theme_status_right='#{prefix}#{pairing}, %d %b %H:%M | #{username}#{ro
 # tmux_conf_theme_right_separator_sub=''  #   PowerlineSymbols.otf font
 
 # status left style
-tmux_conf_theme_status_left_fg="$tmux_conf_theme_colour_6,$tmux_conf_theme_colour_7,$tmux_conf_theme_colour_8"
-tmux_conf_theme_status_left_bg="#00faac,$tmux_conf_theme_colour_10,$tmux_conf_theme_colour_11"
-tmux_conf_theme_status_left_attr="bold,none,none"
+# tmux_conf_theme_status_left_fg="$tmux_conf_theme_colour_6,$tmux_conf_theme_colour_7,$tmux_conf_theme_colour_8"
+# tmux_conf_theme_status_left_bg="#00faac,$tmux_conf_theme_colour_10,$tmux_conf_theme_colour_11"
+# tmux_conf_theme_status_left_attr="bold,none,none"
 
 # status right style
-tmux_conf_theme_status_right_fg="$tmux_conf_theme_colour_12,$tmux_conf_theme_colour_13,$tmux_conf_theme_colour_14"
-tmux_conf_theme_status_right_bg="$tmux_conf_theme_colour_15,$tmux_conf_theme_colour_2,$tmux_conf_theme_colour_17"
-tmux_conf_theme_status_right_attr="none,none,bold"
+# tmux_conf_theme_status_right_fg="$tmux_conf_theme_colour_12,$tmux_conf_theme_colour_13,$tmux_conf_theme_colour_14"
+# tmux_conf_theme_status_right_bg="$tmux_conf_theme_colour_15,$tmux_conf_theme_colour_2,$tmux_conf_theme_colour_17"
+# tmux_conf_theme_status_right_attr="none,none,bold"
 
 # increase history size
 #set -g history-limit 10000

@@ -16,7 +16,7 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
-Plug 'joshdick/onedark.vim'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'posva/vim-vue' " treesitter for vue giving issues with template highlighting
 Plug 'junegunn/goyo.vim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -77,9 +77,10 @@ if (has("termguicolors"))
 endif
 
 syntax on
-colorscheme onedark
+let g:tokyonight_style = "storm"
+colorscheme tokyonight
 
-" keep transparance of terminal
+" keep transparent terminal background
 highlight Normal     ctermbg=NONE guibg=NONE
 highlight LineNr     ctermbg=NONE guibg=NONE
 highlight SignColumn ctermbg=NONE guibg=NONE
