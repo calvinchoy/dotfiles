@@ -20,9 +20,11 @@ Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'posva/vim-vue' " treesitter for vue giving issues with template highlighting
 Plug 'junegunn/goyo.vim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'metakirby5/codi.vim'
+Plug 'neovim/nvim-lspconfig'
+
 " End plugins
 call plug#end()
-
 " import lua configs + plugins are loaded automatically
 lua require("karubin")
 " nvim tree sitter
