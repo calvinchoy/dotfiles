@@ -55,7 +55,7 @@ nnoremap J mzJ`z
 inoremap , ,<c-g>u
 inoremap . .<c-g>u
 inoremap ! !<c-g>u
-inoremap > ?<c-g>u
+inoremap ? ?<c-g>u
 " wud?
 vnoremap <leader>p "_dP
 nnoremap <leader>y "+y
