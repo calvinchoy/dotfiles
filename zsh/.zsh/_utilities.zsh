@@ -35,7 +35,6 @@ function venvinit(){
 # ---------------------------------------------------------------
 # tmux & tmuxinator
 # ---------------------------------------------------------------
-alias tmn="tmux new -s"
 alias tma="tmux attach -t"
 alias tmls="tmux list-sessions"
 alias tmka="tmux kill-server"
@@ -147,4 +146,8 @@ function random2() {
 
 function random3() {
   shuf -i 000-999 -n 1
+}
+
+function encodeBase64(){
+  openssl base64 -in $1
 }

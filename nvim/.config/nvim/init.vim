@@ -22,13 +22,16 @@ Plug 'junegunn/goyo.vim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'metakirby5/codi.vim'
 Plug 'neovim/nvim-lspconfig'
-
+Plug 'hrsh7th/nvim-compe'
 " End plugins
 call plug#end()
+
 " import lua configs + plugins are loaded automatically
 lua require("karubin")
-" nvim tree sitter
+" enable nvim tree sitter
 lua require'nvim-treesitter.configs'.setup { highlight = { enable = true }, incremental_selection = { enable = true }, textobjects = { enable = true }}
+" enable nvim-compe
+lua vim.o.completeopt = "menuone,noselect"
 
 " => Other settings are loaded from ./plugin
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -73,7 +76,7 @@ nmap :bn :BufSurfForward<cr>
 " v and h splits
 nmap vs :vsplit<cr>
 nmap sp :split<cr>
-" increase and decrease pane sizes
+" increase, decrease and reset pane sizes
 nnoremap <Leader>+ :vertical resize +10<CR>
 nnoremap <Leader>- :vertical resize -10<CR>
 nnoremap <Leader>rp :resize 100<CR>
@@ -96,7 +99,7 @@ syntax on
 let g:tokyonight_style = "storm"
 colorscheme tokyonight
 
-" leave terminal background alone
+" leave terminal background alone.
 highlight Normal     ctermbg=NONE guibg=NONE
 highlight LineNr     ctermbg=NONE guibg=NONE
 highlight SignColumn ctermbg=NONE guibg=NONE

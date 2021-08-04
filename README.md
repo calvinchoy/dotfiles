@@ -11,14 +11,17 @@ Dependencies can be installed using a package manager
 - [Nerd fonts](https://github.com/junegunn/vim-plug): patched fonts
 - [Neovim](https://neovim.io/) -  https://neovim.io/
 - [vim-plug](https://github.com/junegunn/vim-plug) - vim plugin manager
-- [Tmux]() - terminal multiplexer: https://github.com/tmux/tmux/wiki
+- [Tmux](https://github.com/tmux/tmux/wiki) - terminal multiplexer
+- [TPM](https://github.com/tmux-plugins/tpm)
 - [Tmux config template](https://github.com/junegunn/vim-plug): tmuxconfig template starter
 - [Fasd](https://github.com/clvv/fasd) - fast directory and file navigation
-- [Fzf](https://github.com/junegunn/fzf) - fuzzt finder
+- [Fzf](https://github.com/junegunn/fzf) - fuzzy finder
 - [fd](https://github.com/sharkdp/fd) - find alternative
 - [Exa](https://the.exa.website/) - fast ls replacement
 - [Bat](https://github.com/sharkdp/bat) - cat improved
 - [Stow](https://www.gnu.org/software/stow/manual/stow.html) - symlink manager
+- [Ag](https://github.com/ggreer/the_silver_searcher) - ag the silver searcher
+- [ag](https://github.com/ggreer/the_silver_searcher) - ag the silver searcher
 
 ## Installation
 With the above dependencies installed
@@ -36,10 +39,12 @@ With the above dependencies installed
 4. Reload your terminal
 
 ## Todo
-- [ ] neovim LSP config setup
+- [x] Neovim LSP config setup
+- [x] Better autocomplete configuration with nvim-compe
 - [ ] Add Harpoon
 - [ ] neovim eslint + prettier
 - [ ] creating files and directories
+- [ ] Figure out using phpactor or intelephense for php
 - [ ] Fix vue highlight with tree sitter, bug with template highlighting
 
 ## Resources
