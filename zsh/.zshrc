@@ -13,14 +13,6 @@ fi
 source "$HOME/.zinit/bin/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
-
-# Load a few important annexes, without Turbo
-# (this is currently required for annexes)
-zinit light-mode for \
-    zinit-zsh/z-a-rust \
-    zinit-zsh/z-a-as-monitor \
-    zinit-zsh/z-a-patch-dl \
-    zinit-zsh/z-a-bin-gem-node
 ### End of Zinit's installer chunk
 
 # ---------------------------------------------------------------
@@ -30,8 +22,8 @@ zinit light-mode for \
 zinit wait lucid for \
   zdharma/fast-syntax-highlighting \
   zsh-users/zsh-history-substring-search \
-  zsh-users/zsh-completions \
   zsh-users/zsh-autosuggestions \
+  zsh-users/zsh-completions
   #.zsh local extensions and aliases
   zinit snippet ~/.zsh/init.zsh
 
@@ -93,4 +85,4 @@ eval "$(starship init zsh)"
 # direnv - https://direnv.net/
 eval "$(direnv hook zsh)"
 # aws completer  - https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html
-complete -C '/usr/local/bin/aws_completer' aws
+# complete -C '/usr/local/bin/aws_completer' aws
