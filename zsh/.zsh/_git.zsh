@@ -17,7 +17,7 @@ function gitAddCommit() {
 alias gd="batdiff"
 git-diff-with-abs-path() {
   gitpath=$(git rev-parse --show-toplevel) &&
-    git diff --name-only --diff-filter=d "$@" | sed "s,^,$gitpath/,"
+  git diff --name-only --diff-filter=d "$@" | sed "s,^,$gitpath/,"
 }
 batdiff() {
   git-diff-with-abs-path | xargs bat --diff
