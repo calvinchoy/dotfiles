@@ -15,6 +15,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'nvim-telescope/telescope-project.nvim'
 Plug 'posva/vim-vue' " treesitter for vue giving issues with template highlighting
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'neovim/nvim-lspconfig'
