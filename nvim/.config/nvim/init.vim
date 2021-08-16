@@ -20,13 +20,19 @@ Plug 'posva/vim-vue' " treesitter for vue giving issues with template highlighti
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
+Plug 'sbdchd/neoformat'
+Plug 'mattn/emmet-vim'
+Plug 'simrat39/rust-tools.nvim'
+Plug 'mfussenegger/nvim-dap'
 " End plugins
 call plug#end()
 
-" import lua configs + plugins are loaded automatically
+" import lua configs in karubin package (lsp, nvim-compe, telescope)
 lua require("karubin")
 " enable nvim tree sitter
 lua require'nvim-treesitter.configs'.setup { highlight = { enable = true }, incremental_selection = { enable = true }, textobjects = { enable = true }}
+" enable rust-tools
+lua require('rust-tools').setup({})
 " enable nvim-compe
 lua vim.o.completeopt = "menuone,noselect"
 
@@ -62,6 +68,8 @@ nnoremap <leader>y "+y
 nnoremap <leader>Y gg "+yG
 vnoremap <leader>d "_d
 nnoremap <leader>d "_d
+" reload vim config without restarting vim
+nnoremap <Leader><CR> :so ~/.config/nvim/init.vim<CR>
 " Fast saves
 nmap <leader>w :w!<cr>
 " Force write as sudo
