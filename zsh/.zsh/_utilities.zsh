@@ -7,13 +7,11 @@ alias rmd="rm -rf"
 alias v="nvim"
 alias vd="nvim ."
 
-function ncd(){
-  local path=""
-  for ((i=1;i<=$1;i++)); do
-    path="../$path"
-  done
-  echo "Moving to $path" >&2
-  cd "$path"
+update-zinit(){
+  echo "Updating and cleaning up zinit modules"
+  zinit self-update
+  zinit update
+  zinit delete --clean yes
 }
 
 # ---------------------------------------------------------------
