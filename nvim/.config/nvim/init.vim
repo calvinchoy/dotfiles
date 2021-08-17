@@ -87,7 +87,7 @@ nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 " toggle search highlights
-:nno <C-k> :set hls!<CR>
+nmap :hl :set hls!<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and themes
