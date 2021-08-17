@@ -4,7 +4,7 @@
 alias gpl="git pull"
 alias gps="git push"
 alias gst="git status"
-alias gstu="gitui"
+alias gstu="lazygit"
 alias gbls="git branch --sort=-committerdate"
 alias gblsr="git branch -r --sort=-committerdate"
 alias grls="git remote -v"
