@@ -5,6 +5,7 @@ alias cl="clear"
 alias szsh='exec zsh'
 alias rmd="rm -rf"
 alias v="nvim"
+alias vd="nvim ."
 
 function ncd(){
   local path=""

@@ -21,13 +21,11 @@ autoload -Uz _zinit
 # Zinit Plugins
 # ---------------------------------------------------------------
 # basics
-zinit ice as"program" pick"bin/git-fuzzy"
 zinit wait lucid for \
   zdharma/fast-syntax-highlighting \
   zsh-users/zsh-history-substring-search \
   zsh-users/zsh-autosuggestions \
   zsh-users/zsh-completions \
-  bigH/git-fuzzy
   #.zsh local extensions and aliases
   zinit snippet ~/.zsh/init.zsh
 
