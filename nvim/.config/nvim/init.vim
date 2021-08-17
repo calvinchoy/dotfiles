@@ -22,8 +22,6 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
 Plug 'sbdchd/neoformat'
 Plug 'mattn/emmet-vim'
-Plug 'simrat39/rust-tools.nvim'
-Plug 'mfussenegger/nvim-dap'
 " End plugins
 call plug#end()
 
@@ -31,8 +29,6 @@ call plug#end()
 lua require("karubin")
 " enable nvim tree sitter
 lua require'nvim-treesitter.configs'.setup { highlight = { enable = true }, incremental_selection = { enable = true }, textobjects = { enable = true }}
-" enable rust-tools
-lua require('rust-tools').setup({})
 " enable nvim-compe
 lua vim.o.completeopt = "menuone,noselect"
 
