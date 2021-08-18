@@ -355,7 +355,7 @@ set-hook -g 'after-split-window' 'run-shell -b "if [ \#{window_panes} -gt 1 ]; t
 set-hook -g 'after-resize-pane'  "if-shell -F '#{||:#{==:#{window_panes},1},#{window_zoomed_flag}}' 'set -g pane-border-status off' 'set -g pane-border-status bottom'"
 
 # toggle status bar
-bind-key -n C-d set-option -g status #Ctrl+d  to toggle status bar
+# bind-key -n C-d set-option -g status #Ctrl+d  to toggle status bar
 bind-key -n C-s run-shell -b "~/.tmux/plugins/tmux-fzf/scripts/session.sh attach"
 
 # status bar left and right

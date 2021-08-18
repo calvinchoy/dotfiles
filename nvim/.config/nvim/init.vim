@@ -5,22 +5,22 @@ call plug#begin('~/.vim/plugged')
 " Startplugins
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'tpope/vim-fugitive'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'kyazdani42/nvim-web-devicons'
-Plug 'airblade/vim-gitgutter'
-Plug 'junegunn/fzf', { 'do': './install --bin' }
-Plug 'junegunn/fzf.vim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
-Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'nvim-telescope/telescope-project.nvim'
-Plug 'posva/vim-vue' " treesitter for vue giving issues with template highlighting
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'posva/vim-vue' " treesitter for vue giving issues with template highlighting
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
 Plug 'sbdchd/neoformat'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'junegunn/fzf', { 'do': './install --bin' }
+Plug 'junegunn/fzf.vim'
 Plug 'mattn/emmet-vim'
 " End plugins
 call plug#end()
