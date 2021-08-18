@@ -4,8 +4,8 @@
 alias cl="clear"
 alias szsh='exec zsh'
 alias rmd="rm -rf"
-alias v="nvim"
-alias vd="nvim ."
+alias v="nvim ."
+alias vo="nvim"
 
 update-zinit(){
   echo "Updating and cleaning up zinit modules"

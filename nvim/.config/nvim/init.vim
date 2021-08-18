@@ -34,8 +34,7 @@ lua require'nvim-treesitter.configs'.setup { highlight = { enable = true }, incr
 lua require('nvim-autopairs').setup{}
 " enable nvim-compe
 lua vim.o.completeopt = "menuone,noselect"
-
-" => Other settings are loaded from ./plugin
+" => Other settings and remaps are loaded from ./plugin
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Remaps
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -43,6 +42,7 @@ let mapleader = " "
 " Easy escaping to normal model
 imap jj <esc>
 inoremap <C-c> <esc>
+
 " Swap lines down and up
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
@@ -50,11 +50,14 @@ inoremap <C-j> <esc>:m .+1<CR>==
 inoremap <C-k> <esc>:m .-2<CR>==
 nnoremap <leader>k :m .-2<CR>==
 nnoremap <leader>j :m .+1<CR>==
+
 " yank till end
 nnoremap Y y$
+
 " centered search next
 nnoremap n nzzzv
 nnoremap N Nzzzv
+
 " mark join jump back
 nnoremap J mzJ`z
 inoremap , ,<c-g>u
@@ -67,30 +70,36 @@ nnoremap <leader>y "+y
 nnoremap <leader>Y gg "+yG
 vnoremap <leader>d "_d
 nnoremap <leader>d "_d
+
 " reload vim config without restarting vim
 nnoremap <Leader><CR> :so ~/.config/nvim/init.vim<CR>
-" Fast saves
+
+" Fast saves and force writes
 nmap <leader>w :w!<cr>
-" Force write as sudo
 cmap w!! w !sudo tee % >/dev/null
 cnoremap sudow w !sudo tee % >/dev/null
+
 " Buffer back and forth
 nmap :bp :BufSurfBack<cr>
 nmap :bn :BufSurfForward<cr>
+
 " v and h splits
 nmap vs :vsplit<cr>
 nmap sp :split<cr>
+
 " increase, decrease and reset pane sizes
 nnoremap <Leader>+ :vertical resize +10<CR>
 nnoremap <Leader>- :vertical resize -10<CR>
 nnoremap <Leader>rp :resize 100<CR>
+
 " window navigation
 nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
+
 " toggle search highlights
-nmap :hl :set hls!<CR>
+nmap thl :set hls!<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and themes

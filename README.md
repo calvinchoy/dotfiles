@@ -50,6 +50,7 @@ With the above dependencies installed
 - [ ] Fix vue highlight with tree sitter, bug with template highlighting
 - [x] Add auto pair functionality for brackets
 - [ ] Add snippets support
+- [ ] Working with search, quickfix lists and telescope
 
 ## Resources
 - [ThePrimeagen dotfiles](https://github.com/ThePrimeagen/.dotfiles)
