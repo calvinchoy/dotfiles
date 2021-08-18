@@ -35,6 +35,7 @@ lua require('nvim-autopairs').setup{}
 " enable nvim-compe
 lua vim.o.completeopt = "menuone,noselect"
 " => Other settings and remaps are loaded from ./plugin
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Remaps
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -51,7 +52,7 @@ inoremap <C-k> <esc>:m .-2<CR>==
 nnoremap <leader>k :m .-2<CR>==
 nnoremap <leader>j :m .+1<CR>==
 
-" yank till end
+" make Y behave, really yank till end
 nnoremap Y y$
 
 " centered search next
@@ -64,12 +65,21 @@ inoremap , ,<c-g>u
 inoremap . .<c-g>u
 inoremap ! !<c-g>u
 inoremap ? ?<c-g>u
-" wud?
+
+" Move around while in insert mode
+inoremap <C-k> <C-o>gk
+inoremap <C-h> <Left>
+inoremap <C-l> <Right>
+inoremap <C-j> <C-o>gj
+
+" delete without updating clipboardkk
 vnoremap <leader>p "_dP
-nnoremap <leader>y "+y
-nnoremap <leader>Y gg "+yG
 vnoremap <leader>d "_d
 nnoremap <leader>d "_d
+
+"Duplicate up/down
+nnoremap <leader>dk m`YPVr <C-o>0y$kP
+nnoremap <leader>dj m`YpVr <C-o>0y$jP
 
 " reload vim config without restarting vim
 nnoremap <Leader><CR> :so ~/.config/nvim/init.vim<CR>
