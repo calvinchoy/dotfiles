@@ -17,6 +17,7 @@ Plug 'posva/vim-vue' " treesitter for vue giving issues with template highlighti
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
 Plug 'sbdchd/neoformat'
+Plug 'windwp/nvim-autopairs'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/fzf', { 'do': './install --bin' }
@@ -29,6 +30,8 @@ call plug#end()
 lua require("karubin")
 " enable nvim tree sitter
 lua require'nvim-treesitter.configs'.setup { highlight = { enable = true }, incremental_selection = { enable = true }, textobjects = { enable = true }}
+" enable nvim autopairs
+lua require('nvim-autopairs').setup{}
 " enable nvim-compe
 lua vim.o.completeopt = "menuone,noselect"
 

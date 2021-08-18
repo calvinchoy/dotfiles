@@ -48,7 +48,7 @@ With the above dependencies installed
 - [x] creating files and directories
 - [x] Figure out using phpactor or intelephense for php
 - [ ] Fix vue highlight with tree sitter, bug with template highlighting
-- [ ] Add auto pair functionality for brackets
+- [x] Add auto pair functionality for brackets
 - [ ] Add snippets support
 
 ## Resources
