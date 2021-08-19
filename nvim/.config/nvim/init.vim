@@ -33,7 +33,9 @@ lua require'nvim-treesitter.configs'.setup { highlight = { enable = true }, incr
 lua require('nvim-autopairs').setup{}
 " enable nvim-compe
 lua vim.o.completeopt = "menuone,noselect"
-" => Other settings and remaps are loaded from ./plugin
+
+" => Plugin specific settings and keymaps are autoloaded from ./plugin 
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Remaps
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -88,6 +90,10 @@ nnoremap <Leader><CR> :so ~/.config/nvim/init.vim<CR>
 nmap <leader>w :w!<cr>
 cmap w!! w !sudo tee % >/dev/null
 cnoremap sudow w !sudo tee % >/dev/null
+
+" Fast and forced quits
+nnoremap <Leader>q :bd<CR>                          
+nnoremap <Leader>qf :bd!<CR>
 
 " Buffer back and forth
 nmap :bp :BufSurfBack<cr>
