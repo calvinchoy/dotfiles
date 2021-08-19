@@ -13,7 +13,7 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'nvim-telescope/telescope-project.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'posva/vim-vue' " treesitter for vue giving issues with template highlighting
+" Plug 'posva/vim-vue' " treesitter for vue giving issues with template highlighting
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
 Plug 'sbdchd/neoformat'
@@ -35,7 +35,6 @@ lua require('nvim-autopairs').setup{}
 " enable nvim-compe
 lua vim.o.completeopt = "menuone,noselect"
 " => Other settings and remaps are loaded from ./plugin
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Remaps
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
