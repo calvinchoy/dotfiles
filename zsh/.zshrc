@@ -1,7 +1,7 @@
 # ---------------------------------------------------------------
 # Zinit
 # ---------------------------------------------------------------
-# Use emacs style keybinding
+# Keep using emacs style keybinding (ctrl+a/e in tmux)
 bindkey -e
 
 ### Added by Zinit's installer

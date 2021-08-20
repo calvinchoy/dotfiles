@@ -22,10 +22,12 @@ Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/fzf', { 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'mattn/emmet-vim'
-" End plugins
+" End plugins - Plugin specific settings and keymaps are autoloaded from ./plugin 
 call plug#end()
 
-" import lua configs in karubin package (lsp, nvim-compe, telescope)
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Lua autoloading and init plugins
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 lua require("karubin")
 " enable nvim tree sitter
 lua require'nvim-treesitter.configs'.setup { highlight = { enable = true }, incremental_selection = { enable = true }, textobjects = { enable = true }}
@@ -34,10 +36,9 @@ lua require('nvim-autopairs').setup{}
 " enable nvim-compe
 lua vim.o.completeopt = "menuone,noselect"
 
-" => Plugin specific settings and keymaps are autoloaded from ./plugin 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Remaps
+" => Vim remaps
+" => Plugin specific remaps can be gound in the ./plugin
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " remap leader to spacebar
 let mapleader = " "
@@ -74,7 +75,7 @@ inoremap <C-h> <Left>
 inoremap <C-l> <Right>
 inoremap <C-j> <C-o>gj
 
-" delete without updating clipboardkk
+" delete without updating clipboard
 vnoremap <leader>p "_dP
 vnoremap <leader>d "_d
 nnoremap <leader>d "_d
