@@ -47,7 +47,7 @@ With the above dependencies installed
 - [ ] neovim eslint + prettier
 - [x] creating files and directories
 - [x] Figure out using phpactor or intelephense for php
-- [ ] Fix vue highlight with tree sitter, bug with template highlighting
+- [x] Fix vue highlight with tree sitter, bug with template highlighting
 - [x] Add auto pair functionality for brackets
 - [ ] Add snippets support
 - [ ] Working with search, quickfix lists and telescope
