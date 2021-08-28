@@ -6,6 +6,8 @@ alias szsh='exec zsh'
 alias rmd="rm -rf"
 alias v="nvim ."
 alias vo="nvim"
+alias b="bat"
+alias npr="npm run"
 
 update-zinit(){
   echo "Updating and cleaning up zinit modules"

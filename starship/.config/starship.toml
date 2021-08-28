@@ -1,10 +1,10 @@
 command_timeout = 2000
 
 [nodejs]
-disabled = true
+disabled = false
 
 [python]
-disabled = true
+disabled = false
 
 [aws]
 disabled = true
