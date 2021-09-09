@@ -12,17 +12,17 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'nvim-telescope/telescope-project.nvim'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
 Plug 'sbdchd/neoformat'
 Plug 'windwp/nvim-autopairs'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
-Plug 'junegunn/fzf', { 'do': './install --bin' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'mattn/emmet-vim'
-" End plugins - Plugin specific settings and keymaps are autoloaded from ./plugin 
+" End plugins - Plugin specific settings and keymaps are autoloaded from ./plugin
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -93,7 +93,7 @@ cmap w!! w !sudo tee % >/dev/null
 cnoremap sudow w !sudo tee % >/dev/null
 
 " Fast and forced quits
-nnoremap <Leader>q :bd<CR>                          
+nnoremap <Leader>q :bd<CR>
 nnoremap <Leader>qf :bd!<CR>
 
 " Buffer back and forth

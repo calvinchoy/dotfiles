@@ -35,7 +35,7 @@ set noshowmode                              " Hide the default mode text (e.g. -
 set clipboard=unnamed                       " Copy pasting, fix for macos
 set noswapfile
 set nobackup
-set undodir=~/.vim/undodir
+set undodir=~/.vim/undodir_nvim
 set undofile
 set incsearch
 set scrolloff=8
