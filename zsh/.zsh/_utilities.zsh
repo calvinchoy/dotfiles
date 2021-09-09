@@ -4,8 +4,7 @@
 alias cl="clear"
 alias szsh='exec zsh'
 alias rmd="rm -rf"
-alias v="nvim ."
-alias vo="nvim"
+alias v="nvim"
 alias b="bat"
 alias npr="npm run"
 

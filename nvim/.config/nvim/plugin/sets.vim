@@ -1,6 +1,9 @@
 filetype off
 filetype plugin indent on
 
+set guicursor=i:ver25-iCursor
+autocmd VimLeave * set guicursor=a:hor20
+
 set relativenumber
 set nu
 set hidden
