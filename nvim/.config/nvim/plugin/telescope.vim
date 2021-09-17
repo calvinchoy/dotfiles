@@ -10,4 +10,3 @@ nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 " => Telescope remaps - customs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <C-p> :lua require('telescope.builtin').git_files()<CR>
-nnoremap <leader>pj :silent :lua require'telescope'.extensions.project.project{}<CR>
