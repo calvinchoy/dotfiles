@@ -37,7 +37,7 @@ With the above dependencies installed
     stow nvim
     stow tmux
     ```
-3. Make sure zinit is installing zsh plugins
+3. Make sure zinit is installing zsh plugins (using alias `zinit-update`)
 4. Make sure to install vim plugins after installing vim-plug by running `:PlugInstall` in nvim
 5. Make sure to install tmux plugins using tpm (`Prefix + I`) it not done automatically
 6. Reload your terminal
@@ -51,8 +51,9 @@ With the above dependencies installed
 - [x] Figure out using phpactor or intelephense for php
 - [x] Fix vue highlight with tree sitter, bug with template highlighting
 - [x] Add auto pair functionality for brackets
-- [ ] Add snippets support
+- [ ] Add snippets support to work with nvim-come
 - [ ] Working with search, quickfix lists and telescope
+- [ ] Create ansible playbook for installation
 
 ## Resources
 - [ThePrimeagen dotfiles](https://github.com/ThePrimeagen/.dotfiles)
