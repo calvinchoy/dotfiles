@@ -26,6 +26,7 @@ zinit wait lucid for \
   zsh-users/zsh-history-substring-search \
   zsh-users/zsh-autosuggestions \
   zsh-users/zsh-completions \
+  urbainvaes/fzf-marks \
   #.zsh local extensions and aliases
   zinit snippet ~/.zsh/init.zsh
 
