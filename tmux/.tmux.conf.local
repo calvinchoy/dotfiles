@@ -317,8 +317,9 @@ tmux_conf_theme_clock_style="24"
 # on Linux, this requires xsel or xclip
 tmux_conf_copy_to_os_clipboard=false
 
-
-# -- user customizations -------------------------------------------------------
+# --------------------------------------------------------------------------------------
+# -- CUSTOM: user customizations 
+# --------------------------------------------------------------------------------------
 # use emacs keybindings
 set -g mode-keys emacs
 set -g status-keys emacs
@@ -356,6 +357,8 @@ set-hook -g 'after-resize-pane'  "if-shell -F '#{||:#{==:#{window_panes},1},#{wi
 
 # toggle status bar
 # bind-key -n C-d set-option -g status #Ctrl+d  to toggle status bar
+
+# bind ctrl + s to tmux-fzf plugin open session popup
 bind-key -n C-s run-shell -b "~/.tmux/plugins/tmux-fzf/scripts/session.sh attach"
 
 # status bar left and right

@@ -38,6 +38,7 @@ function venvinit(){
 # ---------------------------------------------------------------
 # tmux & tmuxinator
 # ---------------------------------------------------------------
+alias stm="tmux source-file ~/.tmux.conf"
 alias tma="tmux attach -t"
 alias tmls="tmux list-sessions"
 alias tmka="tmux kill-server"
@@ -121,18 +122,6 @@ function curDay() {
 # ---------------------------------------------------------------
 # Misc
 # ---------------------------------------------------------------
-# pretty line fullwidth
-alias hr='$PBDB_DEVTOOLS/includes/libraries/external/hr'
-
-function headerBar() {
-  echo -e -n "$(tput setaf 3)"
-  hr '-'
-  echo "$1"
-  echo -e -n "$(tput setaf 3)"
-  hr '-'
-  echo -e -n "$(tput setaf 7)"
-}
-
 # print octal permission for given file
 function oct() {
   perl -e 'printf "%o\n", (stat shift)[2]&07777' $1

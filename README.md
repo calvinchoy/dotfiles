@@ -37,8 +37,10 @@ With the above dependencies installed
     stow nvim
     stow tmux
     ```
-3. Make sure to install vim plugins after installing vim-plug by running `:PlugInstall` in nvim
-4. Reload your terminal
+3. Make sure zinit is installing zsh plugins
+4. Make sure to install vim plugins after installing vim-plug by running `:PlugInstall` in nvim
+5. Make sure to install tmux plugins using tpm (`Prefix + I`) it not done automatically
+6. Reload your terminal
 
 ## Todo
 - [x] Neovim LSP config setup

@@ -102,3 +102,18 @@ function reset-audio() {
   sudo kextunload /System/Library/Extensions/AppleHDA.kext
   sudo kextload /System/Library/Extensions/AppleHDA.kext
 }
+
+# ---------------------------------------------------------------
+# Misc
+# ---------------------------------------------------------------
+# pretty line fullwidth
+alias hr='$PBDB_DEVTOOLS/includes/libraries/external/hr'
+
+function headerBar() {
+  echo -e -n "$(tput setaf 3)"
+  hr '-'
+  echo "$1"
+  echo -e -n "$(tput setaf 3)"
+  hr '-'
+  echo -e -n "$(tput setaf 7)"
+}
