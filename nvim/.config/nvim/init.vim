@@ -13,7 +13,6 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'neovim/nvim-lspconfig'
-Plug 'hrsh7th/nvim-compe'
 Plug 'sbdchd/neoformat'
 Plug 'windwp/nvim-autopairs'
 Plug 'tpope/vim-fugitive'
@@ -32,8 +31,6 @@ lua require("karubin")
 lua require'nvim-treesitter.configs'.setup { highlight = { enable = true }, incremental_selection = { enable = true }, textobjects = { enable = true }}
 " enable nvim autopairs
 lua require('nvim-autopairs').setup{}
-" enable nvim-compe
-lua vim.o.completeopt = "menuone,noselect"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vim remaps
