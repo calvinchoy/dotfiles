@@ -9,9 +9,9 @@ set relativenumber
 set nu
 set hidden
 set nocompatible                            " Disable vi-compatibility
-set tabstop=4                               " a tab is four spaces
-set shiftwidth=4                            " number of spaces to use for autoindenting
-set softtabstop=4                           " when hitting <BS>, pretend like a tab is removed, even if spaces
+set tabstop=2                               " a tab is four spaces
+set shiftwidth=2                            " number of spaces to use for autoindenting
+set softtabstop=2                           " when hitting <BS>, pretend like a tab is removed, even if spaces
 set expandtab                               " expand tabs by default (overloadable per file type later)
 set smarttab
 set smartindent
@@ -44,6 +44,7 @@ set undofile
 set incsearch
 set scrolloff=8
 set signcolumn=yes
+set completeopt=menu,menuone,noselect       " auto complete options for nvim-cmp
 
 set wildignore+=*/vendor/**
 set wildignore+=*/node_modules/**
