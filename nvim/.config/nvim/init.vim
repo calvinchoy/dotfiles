@@ -3,8 +3,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
 " Theme/UI
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'nvim-lualine/lualine.nvim'
 Plug 'airblade/vim-gitgutter'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'kyazdani42/nvim-web-devicons'
@@ -137,6 +136,8 @@ let g:tokyonight_style = "storm"
 colorscheme tokyonight
 
 " leave terminal background alone.
-highlight Normal     ctermbg=NONE guibg=NONE
-highlight LineNr     ctermbg=NONE guibg=NONE
-highlight SignColumn ctermbg=NONE guibg=NONE
+highlight Normal          ctermbg=NONE guibg=NONE
+highlight SignColumn      ctermbg=NONE guibg=NONE
+" Custom linenumber highlights
+highlight LineNr          ctermbg=NONE guifg=#616B9B guibg=NONE
+highlight CursorLineNr    ctermbg=NONE guifg=#93A3EA guibg=NONE

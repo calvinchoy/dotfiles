@@ -51,9 +51,13 @@ With the above dependencies installed
 - [x] Figure out using phpactor or intelephense for php
 - [x] Fix vue highlight with tree sitter, bug with template highlighting
 - [x] Add auto pair functionality for brackets
-- [ ] Add snippets support to work with nvim-come
+- [x] Add snippets support to work with nvim-cmp
 - [ ] Working with search, quickfix lists and telescope
 - [ ] Create ansible playbook for installation
+- [ ] Configure nvim-cmp, results and context what snippets to load
+- [ ] nvim tree install and configuration
+- [ ] lspsaga install and configuration
+- [ ] replace airline with lualine for better performance
 
 ## Resources
 - [ThePrimeagen dotfiles](https://github.com/ThePrimeagen/.dotfiles)

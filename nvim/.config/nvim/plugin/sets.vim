@@ -1,12 +1,13 @@
 filetype off
 filetype plugin indent on
 
+set termguicolors
 set guicursor=i:ver25-iCursor
 autocmd VimLeave * set guicursor=a:hor20
 
 set cursorline                              " Highlight current activeline
 set relativenumber
-set nu
+set rnu
 set hidden
 set nocompatible                            " Disable vi-compatibility
 set tabstop=2                               " a tab is four spaces
