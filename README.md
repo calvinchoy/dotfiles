@@ -55,9 +55,8 @@ With the above dependencies installed
 - [ ] Working with search, quickfix lists and telescope
 - [ ] Create ansible playbook for installation
 - [ ] Configure nvim-cmp, results and context what snippets to load
-- [ ] nvim tree install and configuration
 - [ ] lspsaga install and configuration
-- [ ] replace airline with lualine for better performance
+- [x] replace airline with lualine for better performance
 
 ## Resources
 - [ThePrimeagen dotfiles](https://github.com/ThePrimeagen/.dotfiles)

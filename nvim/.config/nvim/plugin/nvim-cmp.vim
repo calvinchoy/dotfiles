@@ -1,4 +1,7 @@
--- Setup nvim-cmp.
+lua << EOF
+-- -----------------------------------------------------------
+-- Setup nvim-cmp
+-------------------------------------------------------------
 local cmp = require'cmp'
 
 cmp.setup({
@@ -28,33 +31,9 @@ cmp.setup({
     })
 })
 
-require('nvim-autopairs').setup{}
-require("nvim-autopairs.completion.cmp").setup({
-  map_cr = true, --  map <CR> on insert mode
-  map_complete = true, -- it will auto insert `(` (map_char) after select function or method item
-  auto_select = true, -- automatically select the first item
-  insert = false, -- use insert confirm behavior instead of replace
-  map_char = { -- modifies the function or method delimiter by filetypes
-    all = '(',
-    tex = '{'
-  }
-})
-
-local function config(_config)
-    return vim.tbl_deep_extend("force", {
-        capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-    }, _config or {})
-end
-
--- language language configurations
-require'lspconfig'.tsserver.setup(config())
-require'lspconfig'.vuels.setup(config())
-require'lspconfig'.pyright.setup(config())
-require'lspconfig'.rust_analyzer.setup(config())
--- require'lspconfig'.svelte.setup(config())
--- require'lspconfig'.phpactor.setup{}
-
--- Snippets
+-- -----------------------------------------------------------
+-- Snippets setup 
+-- -----------------------------------------------------------
 local snippets_paths = function()
     local plugins = { "friendly-snippets" }
     local paths = {}
@@ -74,3 +53,4 @@ require("luasnip.loaders.from_vscode").lazy_load({
     include = nil,  -- Load all languages
     exclude = {}
 })
+EOF

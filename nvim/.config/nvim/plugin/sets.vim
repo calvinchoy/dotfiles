@@ -4,6 +4,7 @@ filetype plugin indent on
 set termguicolors
 set guicursor=i:ver25-iCursor
 autocmd VimLeave * set guicursor=a:hor20
+" autocmd VimEnter,VimLeave * silent !tmux set status 
 
 set cursorline                              " Highlight current activeline
 set relativenumber

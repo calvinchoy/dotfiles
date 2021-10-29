@@ -4,9 +4,9 @@
 call plug#begin('~/.vim/plugged')
 " Theme/UI
 Plug 'nvim-lualine/lualine.nvim'
-Plug 'airblade/vim-gitgutter'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'kyazdani42/nvim-web-devicons'
+Plug 'folke/trouble.nvim'
 " Telescope
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
@@ -15,7 +15,7 @@ Plug 'nvim-telescope/telescope-fzy-native.nvim'
 " Tree shitter and LSP
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'neovim/nvim-lspconfig'
-Plug 'neovim/nvim-lspconfig'
+Plug 'glepnir/lspsaga.nvim'
 " Autocomplete
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
@@ -24,9 +24,10 @@ Plug 'saadparwaiz1/cmp_luasnip'
 " Snippets
 Plug 'l3mon4d3/luasnip'
 Plug 'rafamadriz/friendly-snippets'
-" Code formatting
+" Code formatting and linting
 Plug 'sbdchd/neoformat'
 Plug 'windwp/nvim-autopairs'
+Plug 'mfussenegger/nvim-lint'
 " Tools
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -38,7 +39,7 @@ call plug#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Lua autoloading and init plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-lua require("karubin")
+" lua require("karubin")
 " enable nvim tree sitter
 lua require'nvim-treesitter.configs'.setup { highlight = { enable = true }, incremental_selection = { enable = true }, textobjects = { enable = true }}
 
@@ -123,7 +124,6 @@ nmap <C-l> <C-w>l
 
 " toggle search highlights
 nmap thl :set hls!<CR>
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and themes
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
