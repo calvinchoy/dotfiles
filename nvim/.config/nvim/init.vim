@@ -6,7 +6,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'kyazdani42/nvim-web-devicons'
-Plug 'folke/trouble.nvim'
+Plug 'folke/trouble.nvim', { 'branch': 'main' }
 " Telescope
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
@@ -15,15 +15,15 @@ Plug 'nvim-telescope/telescope-fzy-native.nvim'
 " Tree shitter and LSP
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'neovim/nvim-lspconfig'
-Plug 'glepnir/lspsaga.nvim'
+Plug 'glepnir/lspsaga.nvim', { 'branch': 'main' }
 " Autocomplete
-Plug 'hrsh7th/nvim-cmp'
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/nvim-cmp', { 'branch': 'main' }
+Plug 'hrsh7th/cmp-nvim-lsp', { 'branch': 'main' }
+Plug 'hrsh7th/cmp-buffer', { 'branch': 'main' }
 Plug 'saadparwaiz1/cmp_luasnip'
 " Snippets
 Plug 'l3mon4d3/luasnip'
-Plug 'rafamadriz/friendly-snippets'
+Plug 'rafamadriz/friendly-snippets', { 'branch': 'main' }
 " Code formatting and linting
 Plug 'sbdchd/neoformat'
 Plug 'windwp/nvim-autopairs'
@@ -40,7 +40,6 @@ call plug#end()
 " => Lua autoloading and init plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " lua require("karubin")
-" enable nvim tree sitter
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vim remaps
