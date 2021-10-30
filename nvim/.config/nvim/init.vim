@@ -41,7 +41,6 @@ call plug#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " lua require("karubin")
 " enable nvim tree sitter
-lua require'nvim-treesitter.configs'.setup { highlight = { enable = true }, incremental_selection = { enable = true }, textobjects = { enable = true }}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vim remaps

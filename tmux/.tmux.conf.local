@@ -322,6 +322,7 @@ tmux_conf_copy_to_os_clipboard=false
 # --------------------------------------------------------------------------------------
 # General
 # set-option -g status-position top
+set-option -s escape-time 10
 
 # Undercurl for tokyonight theme vim
 set -g default-terminal "${TERM}"
