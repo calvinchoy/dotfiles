@@ -47,7 +47,7 @@ set incsearch
 set scrolloff=8
 set signcolumn=yes
 set completeopt=menu,menuone,noselect       " auto complete options for nvim-cmp
-
+set updatetime=100                          " async update for signify
 set wildignore+=*/vendor/**
 set wildignore+=*/node_modules/**
 set wildignore+=*/bower_modules/**

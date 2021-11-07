@@ -15,7 +15,6 @@ Plug 'nvim-telescope/telescope-fzy-native.nvim'
 " Tree shitter and LSP
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'neovim/nvim-lspconfig'
-Plug 'glepnir/lspsaga.nvim', { 'branch': 'main' }
 " Autocomplete
 Plug 'hrsh7th/nvim-cmp', { 'branch': 'main' }
 Plug 'hrsh7th/cmp-nvim-lsp', { 'branch': 'main' }
@@ -30,9 +29,11 @@ Plug 'windwp/nvim-autopairs'
 Plug 'mfussenegger/nvim-lint'
 " Tools
 Plug 'tpope/vim-fugitive'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+Plug 'mhinz/vim-signify'
+Plug 'kyazdani42/nvim-tree.lua'
 Plug 'mattn/emmet-vim'
+Plug 'metakirby5/codi.vim'
+
 " End plugins - Plugin specific settings and keymaps are autoloaded from ./plugin
 call plug#end()
 
@@ -107,11 +108,11 @@ nmap :bn :BufSurfForward<cr>
 
 " v and h splits
 nmap vs :vsplit<cr>
-nmap sp :split<cr>
+nmap hp :split<cr>
 
 " increase, decrease and reset pane sizes
-nnoremap <Leader>+ :vertical resize +10<CR>
-nnoremap <Leader>- :vertical resize -10<CR>
+nnoremap <Leader>= :vertical resize +15<CR>
+nnoremap <Leader>- :vertical resize -15<CR>
 nnoremap <Leader>rp :resize 100<CR>
 
 " window navigation

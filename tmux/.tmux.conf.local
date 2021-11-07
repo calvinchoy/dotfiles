@@ -358,6 +358,10 @@ set-hook -g 'after-resize-pane'  "if-shell -F '#{||:#{==:#{window_panes},1},#{wi
 # toggle status bar
 # bind-key -n C-d set-option -g status #Ctrl+d  to toggle status bar
 
+# Swap tmux windows left and right
+bind-key -n C-S-Left swap-window -t -1
+bind-key -n C-S-Right swap-window -t +1
+
 # bind ctrl + s to tmux-fzf plugin open session popup
 bind-key -n C-s run-shell -b "~/.tmux/plugins/tmux-fzf/scripts/session.sh attach"
 
