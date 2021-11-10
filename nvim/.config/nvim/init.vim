@@ -26,7 +26,6 @@ Plug 'rafamadriz/friendly-snippets', { 'branch': 'main' }
 " Code formatting and linting
 Plug 'sbdchd/neoformat'
 Plug 'windwp/nvim-autopairs'
-Plug 'mfussenegger/nvim-lint'
 " Tools
 Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify'

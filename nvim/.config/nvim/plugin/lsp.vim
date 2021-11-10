@@ -19,4 +19,9 @@ require'lspconfig'.tsserver.setup(config())
 require'lspconfig'.vuels.setup(config())
 require'lspconfig'.pyright.setup(config())
 require'lspconfig'.rust_analyzer.setup(config())
+require'lspconfig'.cssls.setup(config())
+require'lspconfig'.html.setup(config())
+require'lspconfig'.jsonls.setup(config())
+require'lspconfig'.eslint.setup(config())
+
 EOF
