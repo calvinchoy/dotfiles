@@ -8,3 +8,6 @@ disabled = false
 
 [aws]
 disabled = true
+
+[ruby]
+detect_variables = []

@@ -118,6 +118,10 @@ function findfile() {
   find . -print | grep -i $1
 }
 
+function listPorts(){
+  lsof -PiTCP -sTCP:LISTEN
+}
+
 function findProcessByPort() {
   lsof -i tcp:$1
 }
