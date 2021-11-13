@@ -364,6 +364,8 @@ bind-key -n C-S-Right swap-window -t +1
 
 # bind ctrl + s to tmux-fzf plugin open session popup
 bind-key -n C-s run-shell -b "~/.tmux/plugins/tmux-fzf/scripts/session.sh attach"
+# Hide preview window
+TMUX_FZF_PREVIEW=0
 
 # status bar left and right
 # tmux_conf_theme_status_left=' ❐ #S '

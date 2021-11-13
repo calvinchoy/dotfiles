@@ -139,3 +139,4 @@ highlight SignColumn      ctermbg=NONE guibg=NONE
 " Custom linenumber highlights
 highlight LineNr          ctermbg=NONE guifg=#616B9B guibg=NONE
 highlight CursorLineNr    ctermbg=NONE guifg=#93A3EA guibg=NONE
+

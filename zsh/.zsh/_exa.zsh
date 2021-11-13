@@ -23,7 +23,7 @@ function exa-lsl() {
   if [ -n "$1" ]; then
     TREE_LEVEL=$1
   fi
-  exa --long --icons --git --tree -L $TREE_LEVEL --group-directories-first -b -g
+  exa --long --icons --tree -L $TREE_LEVEL --group-directories-first -b -g
 }
 
 alias lsd="exa-lsd"
