@@ -9,16 +9,19 @@ local function config(_config)
     }, _config or {})
 end
 
+-- change default lsp gutter signs
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
 for type, icon in pairs(signs) do
   local hl = "DiagnosticSign" .. type
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
 
+-- configure lsp diagnostics
 vim.lsp.handlers["textDocument/publishDiagnostics"] =
   vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics,
   {
+    virtual_text = false,
     underline = false
   }
 )
@@ -33,3 +36,5 @@ require'lspconfig'.jsonls.setup(config())
 require'lspconfig'.eslint.setup(config())
 
 EOF
+
+nnoremap <Leader>dg :lua vim.lsp.diagnostic.show_line_diagnostics({focusable=false})<CR>

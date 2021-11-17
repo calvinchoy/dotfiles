@@ -28,7 +28,7 @@ Plug 'sbdchd/neoformat'
 Plug 'windwp/nvim-autopairs'
 " Tools
 Plug 'tpope/vim-fugitive'
-Plug 'mhinz/vim-signify'
+Plug 'lewis6991/gitsigns.nvim', {'branch': 'main'}
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'mattn/emmet-vim'
 Plug 'metakirby5/codi.vim'
