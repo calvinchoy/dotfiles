@@ -5,3 +5,4 @@ lua << EOF
 require('trouble').setup {}
 
 EOF
+nnoremap <M+t> <cmd>:Trouble<cr>

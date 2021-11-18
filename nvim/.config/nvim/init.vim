@@ -70,6 +70,17 @@ nnoremap Y y$
 " centered search next
 nnoremap n nzzzv
 nnoremap N Nzzzv
+"
+" greatest remap ever
+xnoremap <leader>p "_dP
+
+" next greatest remap ever : asbjornHaland
+nnoremap <leader>y "+y
+vnoremap <leader>y "+y
+nnoremap <leader>Y gg"+yG
+
+nnoremap <leader>d "_d
+vnoremap <leader>d "_d
 
 " mark join jump back
 nnoremap J mzJ`z
@@ -83,11 +94,6 @@ inoremap <C-k> <C-o>gk
 inoremap <C-h> <Left>
 inoremap <C-l> <Right>
 inoremap <C-j> <C-o>gj
-
-" delete without updating clipboard
-vnoremap <leader>p "_dP
-vnoremap <leader>d "_d
-nnoremap <leader>d "_d
 
 "Duplicate up/down
 nnoremap <leader>dk m`YPVr <C-o>0y$kP
