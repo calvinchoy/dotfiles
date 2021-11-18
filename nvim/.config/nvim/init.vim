@@ -15,10 +15,13 @@ Plug 'nvim-telescope/telescope-fzy-native.nvim'
 " Tree shitter and LSP
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'neovim/nvim-lspconfig'
+Plug 'onsails/lspkind-nvim'
+Plug 'simrat39/symbols-outline.nvim'
 " Autocomplete
 Plug 'hrsh7th/nvim-cmp', { 'branch': 'main' }
 Plug 'hrsh7th/cmp-nvim-lsp', { 'branch': 'main' }
 Plug 'hrsh7th/cmp-buffer', { 'branch': 'main' }
+Plug 'hrsh7th/cmp-path', { 'branch': 'main' }
 Plug 'saadparwaiz1/cmp_luasnip'
 " Snippets
 Plug 'l3mon4d3/luasnip'
@@ -31,6 +34,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'lewis6991/gitsigns.nvim', {'branch': 'main'}
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'mattn/emmet-vim'
+Plug 'tpope/vim-commentary'
 Plug 'metakirby5/codi.vim'
 
 " End plugins - Plugin specific settings and keymaps are autoloaded from ./plugin
