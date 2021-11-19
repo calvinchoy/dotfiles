@@ -26,6 +26,22 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] =
   }
 )
 
+vim.lsp.handlers["textDocument/hover"] =
+  vim.lsp.with(
+  vim.lsp.handlers.hover,
+  {
+    border = "single"
+  }
+)
+
+vim.lsp.handlers["textDocument/signatureHelp"] =
+  vim.lsp.with(
+  vim.lsp.handlers.signature_help,
+  {
+    border = "single"
+  }
+)
+
 require'lspconfig'.tsserver.setup(config())
 require'lspconfig'.vuels.setup(config())
 require'lspconfig'.pyright.setup(config())
@@ -35,6 +51,9 @@ require'lspconfig'.html.setup(config())
 require'lspconfig'.jsonls.setup(config())
 require'lspconfig'.eslint.setup(config())
 
+-- show diagnostic on hover
+vim.o.updatetime = 250
+vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.lsp.diagnostic.show_position_diagnostics({border = "single", focusable=false})]]
 EOF
 
-nnoremap <Leader>dg :lua vim.lsp.diagnostic.show_line_diagnostics({focusable=false})<CR>
+nnoremap <Leader>dg :lua vim.lsp.diagnostic.show_line_diagnostics({border = "single", focusable=false})<CR>

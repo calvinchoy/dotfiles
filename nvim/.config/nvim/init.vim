@@ -34,6 +34,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'lewis6991/gitsigns.nvim', {'branch': 'main'}
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'mattn/emmet-vim'
+Plug 'windwp/nvim-ts-autotag', {'branch': 'main'}
 Plug 'tpope/vim-commentary'
 Plug 'metakirby5/codi.vim'
 
