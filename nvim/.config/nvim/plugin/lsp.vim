@@ -22,7 +22,6 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] =
   vim.lsp.diagnostic.on_publish_diagnostics,
   {
     virtual_text = false,
-    underline = false
   }
 )
 
@@ -50,10 +49,12 @@ require'lspconfig'.cssls.setup(config())
 require'lspconfig'.html.setup(config())
 require'lspconfig'.jsonls.setup(config())
 require'lspconfig'.eslint.setup(config())
+require'lspconfig'.vimls.setup(config())
 
 -- show diagnostic on hover
 vim.o.updatetime = 250
 vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.lsp.diagnostic.show_position_diagnostics({border = "single", focusable=false})]]
 EOF
 
-nnoremap <Leader>dg :lua vim.lsp.diagnostic.show_line_diagnostics({border = "single", focusable=false})<CR>
+" Manually show diagnostics float details -- disabled for cursor hover
+" nnoremap <Leader>dg :lua vim.lsp.diagnostic.show_line_diagnostics({border = "single", focusable=false})<CR>
