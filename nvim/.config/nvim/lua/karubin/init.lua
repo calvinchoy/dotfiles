@@ -1,1 +1,1 @@
--- require("karubin.<module>")
+require("karubin.telescope")
