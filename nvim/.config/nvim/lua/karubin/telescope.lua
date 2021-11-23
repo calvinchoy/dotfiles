@@ -65,7 +65,7 @@ M.document_symbols = function()
   local opts = {
     prompt_title = " Navigate Code", 
     layout_config = {
-      width = 0.5, 
+      width = 0.5,
       height = 0.35
     }
   }
@@ -77,7 +77,6 @@ end
 M.browse_files = function()
   local opts = {
     depth = 2,
-    hidden = true,
     previewer = false,
     layout_config = {
       width = 0.5,

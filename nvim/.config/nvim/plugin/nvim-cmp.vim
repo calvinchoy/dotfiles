@@ -64,6 +64,7 @@ require("luasnip.loaders.from_vscode").lazy_load({
 })
 EOF
 
+" some tab autocompletion mappings from theprimeagaon dot files
 imap <silent><expr> <Tab> luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<Tab>'
 inoremap <silent> <S-Tab> <cmd>lua require'luasnip'.jump(-1)<Cr>
 

@@ -61,7 +61,7 @@ gli() {
                 xargs -I % sh -c 'git show --color=always % | less -R') << 'FZF-EOF'
                 {}
                 FZF-EOF" \
-      --preview-window=right:65% \
+      --preview-window=right:50% \
       --height 80%
 }
 
@@ -72,7 +72,7 @@ fzf-git-branch() {
   git rev-parse HEAD >/dev/null 2>&1 || return
   git branch --color=always --all --sort=-committerdate |
     grep -v HEAD |
-    fzf --height 80% --reverse --ansi --no-multi --preview-window right:65% \
+    fzf --height 80% --reverse --ansi --no-multi --preview-window right:50% \
       --preview 'git log -n 50 --color=always --date=short --pretty="format:%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit $(sed "s/.* //" <<< {})' |
     sed "s/.* //"
 }
@@ -106,7 +106,7 @@ fzf-git-tag() {
   git rev-parse HEAD >/dev/null 2>&1 || return
   git --no-pager tag |
     grep -v HEAD |
-    fzf --height 80% --reverse --ansi --no-multi --preview-window right:65% \
+    fzf --height 80% --reverse --ansi --no-multi --preview-window right:50% \
       --preview 'git log -n 50 --color=always --date=short --pretty="format:%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit $(sed "s/.* //" <<< {})' |
     sed "s/.* //"
 }
@@ -231,7 +231,7 @@ alias gbd="fzf-git-delete-branches"
 fzf-git-delete-branches() {
  local branches branch
   branches=$(git for-each-ref --count=30 --sort=-committerdate refs/heads/ --format="%(refname:short)") &&
-  branch=$(echo "$branches" | fzf --multi --reverse  --preview-window right:65% \
+  branch=$(echo "$branches" | fzf --multi --reverse  --preview-window right:50% \
       --preview 'git log -n 50 --color=always --date=short --pretty="%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit $(sed "s/.* //" <<< {})' |
     sed "s/.* //") &&
   git branch -D $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")

@@ -1,12 +1,14 @@
-"Symbols""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vimplug package management
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
 " Theme/UI
 Plug 'nvim-lualine/lualine.nvim'
+Plug 'kyazdani42/nvim-tree.lua'
+Plug 'lewis6991/gitsigns.nvim', {'branch': 'main'}
+Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'kyazdani42/nvim-web-devicons'
-Plug 'folke/trouble.nvim', { 'branch': 'main' }
 " Telescope
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
@@ -17,28 +19,28 @@ Plug 'nvim-telescope/telescope-file-browser.nvim'
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'neovim/nvim-lspconfig'
 Plug 'onsails/lspkind-nvim'
-Plug 'simrat39/symbols-outline.nvim'
+Plug 'folke/trouble.nvim', { 'branch': 'main' }
 " Autocomplete
 Plug 'hrsh7th/nvim-cmp', { 'branch': 'main' }
 Plug 'hrsh7th/cmp-nvim-lsp', { 'branch': 'main' }
 Plug 'hrsh7th/cmp-buffer', { 'branch': 'main' }
 Plug 'hrsh7th/cmp-path', { 'branch': 'main' }
 Plug 'saadparwaiz1/cmp_luasnip'
-" Snippets
+" Snippets to make nvim-cmp actually do something
 Plug 'l3mon4d3/luasnip'
 Plug 'rafamadriz/friendly-snippets', { 'branch': 'main' }
 " Code formatting and linting
 Plug 'sbdchd/neoformat'
-Plug 'windwp/nvim-autopairs'
 " Tools
+Plug 'terrortylor/nvim-comment', { 'branch': 'main' }
+Plug 'JoosepAlviste/nvim-ts-context-commentstring', { 'branch': 'main' }
 Plug 'tpope/vim-fugitive'
-Plug 'lewis6991/gitsigns.nvim', {'branch': 'main'}
-Plug 'kyazdani42/nvim-tree.lua'
-Plug 'mattn/emmet-vim'
-Plug 'windwp/nvim-ts-autotag', {'branch': 'main'}
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-sensible'
 Plug 'wellle/targets.vim'
-Plug 'tpope/vim-commentary'
-Plug 'metakirby5/codi.vim'
+Plug 'windwp/nvim-autopairs'
+Plug 'windwp/nvim-ts-autotag', {'branch': 'main'}
+Plug 'mattn/emmet-vim'
 
 " End plugins - Plugin specific settings and keymaps are autoloaded from ./plugin
 call plug#end()

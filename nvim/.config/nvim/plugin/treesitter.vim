@@ -1,2 +1,17 @@
-
-lua require'nvim-treesitter.configs'.setup { highlight = { enable = true }, incremental_selection = { enable = true }, textobjects = { enable = true }}
+lua << EOF
+require('nvim-treesitter.configs').setup({ 
+  highlight = {
+    enable = true
+  }, 
+  incremental_selection = {
+    enable = true
+  },
+  textobjects = {
+    enable = true
+  },
+  context_commentstring =
+  {
+    enable = true
+  }
+})
+EOF
