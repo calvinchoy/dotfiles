@@ -40,6 +40,7 @@ Plug 'tpope/vim-sensible'
 Plug 'wellle/targets.vim'
 Plug 'windwp/nvim-autopairs'
 Plug 'windwp/nvim-ts-autotag', {'branch': 'main'}
+Plug 'dhruvmanila/telescope-bookmarks.nvim', { 'branch': 'main' } 
 Plug 'mattn/emmet-vim'
 
 " End plugins - Plugin specific settings and keymaps are autoloaded from ./plugin

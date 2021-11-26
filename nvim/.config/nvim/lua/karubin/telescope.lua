@@ -16,7 +16,7 @@ require('telescope').setup{
           ['<M-p>'] = action_layout.toggle_preview
         },
         i = {
-          ["<esc>"] = actions.close,
+          -- ["<esc>"] = actions.close,
           ['<M-p>'] = action_layout.toggle_preview
         }
       }
@@ -25,13 +25,17 @@ require('telescope').setup{
       fzy_native = {
           override_generic_sorter = false,
           override_file_sorter = true,
+      },
+      bookmarks = {
+        selected_browser = 'google_chrome',
+        url_open_command = 'open'
       }
   }
 }
 
 require('telescope').load_extension('fzy_native')
 require("telescope").load_extension('file_browser')
-
+require('telescope').load_extension('bookmarks')
 --------------------------------------------------
 -- Custom telescope pickers
 --------------------------------------------------
@@ -65,7 +69,7 @@ M.document_symbols = function()
   local opts = {
     prompt_title = " Navigate Code", 
     layout_config = {
-      width = 0.5,
+      width = 0.5, 
       height = 0.35
     }
   }
@@ -76,15 +80,22 @@ end
 -- Sleek file browser to create new folder and files
 M.browse_files = function()
   local opts = {
-    depth = 2,
+    depth = 1,
     previewer = false,
     layout_config = {
       width = 0.5,
       height = 0.35
+    },
+    file_ignore_patterns = {
+      "node_modules"
     }
   }
 
   require'telescope'.extensions.file_browser.file_browser(require('telescope.themes').get_dropdown(opts))
+end
+
+M.browser_bookmarks = function()
+  require('telescope').extensions.bookmarks.bookmarks()
 end
 
 return M
