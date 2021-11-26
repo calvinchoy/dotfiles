@@ -84,11 +84,12 @@ require'lspconfig'.jsonls.setup(config())
 require'lspconfig'.eslint.setup(config())
 require'lspconfig'.vimls.setup(config())
 require'lspconfig'.gopls.setup(config())
+require'lspconfig'.yamlls.setup(config())
+require'lspconfig'.bashls.setup(config())
+require'lspconfig'.dotls.setup(config())
+require'lspconfig'.emmet_ls.setup(config())
 
--- show diagnostic on hover
+-- show diagnostic on hover - nvim 0.6+
 vim.o.updatetime = 250
 vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.lsp.diagnostic.show_position_diagnostics({border = "single", focusable=false})]]
 EOF
-
-" Manually show diagnostics float details -- disabled for cursor hover
-" nnoremap <Leader>dg :lua vim.lsp.diagnostic.show_line_diagnostics({border = "single", focusable=false})<CR>

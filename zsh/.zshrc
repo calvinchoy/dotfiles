@@ -82,8 +82,10 @@ setopt EXTENDED_GLOB        # Use extended globbing syntax.
 unsetopt CLOBBER            # Do not overwrite existing files with > and >>. Use >! and >>! to bypass.
 
 # ---------------------------------------------------------------
-# Hooks
+# Hooks and environment settings
 # ---------------------------------------------------------------
+# disable autoupdate homebrew packages
+HOMEBREW_NO_AUTO_UPDATE=1
 # Starship prompt setup - ~/.config/starship.toml
 eval "$(starship init zsh)"
 # direnv - https://direnv.net/
