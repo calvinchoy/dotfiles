@@ -18,6 +18,3 @@ nnoremap <leader>dg <cmd>lua require('telescope.builtin').lsp_document_diagnosti
 " Basic git helpers
 nnoremap <leader>gb <cmd>lua require('telescope.builtin').git_branches()<cr>
 nnoremap <leader>gl <cmd>lua require('telescope.builtin').git_bcommits()<cr>
-
-" Custom
-nnoremap <leader>bm <cmd>lua require('karubin.telescope').browser_bookmarks()<cr>

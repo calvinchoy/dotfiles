@@ -24,17 +24,12 @@ require("telescope").setup({
 		fzy_native = {
 			override_generic_sorter = false,
 			override_file_sorter = true,
-		},
-		bookmarks = {
-			selected_browser = "google_chrome",
-			url_open_command = "open",
-		},
-	},
+		}
+	}
 })
 
 require("telescope").load_extension("fzy_native")
 require("telescope").load_extension("file_browser")
-require("telescope").load_extension("bookmarks")
 --------------------------------------------------
 -- Custom telescope pickers
 --------------------------------------------------
@@ -95,8 +90,8 @@ M.browse_files = function()
 	require("telescope").extensions.file_browser.file_browser(require("telescope.themes").get_dropdown(opts))
 end
 
-M.browser_bookmarks = function()
-	require("telescope").extensions.bookmarks.bookmarks()
-end
+-- custom picker creation
+--  https://github.com/nvim-telescope/telescope.nvim/blob/master/developers.md
+--  https://www.reddit.com/r/neovim/comments/n9vt6d/chaining_2_telescope_pickers/
 
 return M
