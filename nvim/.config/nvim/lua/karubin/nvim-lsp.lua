@@ -1,4 +1,3 @@
-lua << EOF
 -- nvim-cmp
 local function config(_config)
     return vim.tbl_deep_extend("force", {
@@ -89,5 +88,3 @@ require'lspconfig'.emmet_ls.setup(config())
 -- show diagnostic on hover - nvim 0.6+
 vim.o.updatetime = 250
 vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.lsp.diagnostic.show_position_diagnostics({border = "single", focusable=false})]]
-
-EOF

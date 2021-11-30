@@ -36,6 +36,9 @@ require'nvim-tree'.setup {
     dotfiles = false,
     custom = {}
   },
+  git = {
+    enable = false
+  },
   view = {
     width = 35,
     height = 30,

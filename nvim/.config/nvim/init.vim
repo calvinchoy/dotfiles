@@ -29,9 +29,9 @@ Plug 'saadparwaiz1/cmp_luasnip'
 " Snippets to make nvim-cmp actually do something
 Plug 'l3mon4d3/luasnip'
 Plug 'rafamadriz/friendly-snippets', { 'branch': 'main' }
-" Code formatting and linting
+" " Code formatting and linting
 Plug 'sbdchd/neoformat'
-" Tools
+" " Tools
 Plug 'terrortylor/nvim-comment', { 'branch': 'main' }
 Plug 'JoosepAlviste/nvim-ts-context-commentstring', { 'branch': 'main' }
 Plug 'tpope/vim-fugitive'
@@ -40,7 +40,7 @@ Plug 'tpope/vim-sensible'
 Plug 'wellle/targets.vim'
 Plug 'windwp/nvim-autopairs'
 Plug 'windwp/nvim-ts-autotag', {'branch': 'main'}
-Plug 'dhruvmanila/telescope-bookmarks.nvim', { 'branch': 'main' } 
+Plug 'dhruvmanila/telescope-bookmarks.nvim', { 'branch': 'main' }
 Plug 'mattn/emmet-vim'
 
 " End plugins - Plugin specific settings and keymaps are autoloaded from ./plugin
