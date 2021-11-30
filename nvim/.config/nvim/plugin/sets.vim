@@ -6,6 +6,8 @@ set guicursor=i:ver25-iCursor
 autocmd VimLeave * set guicursor=a:hor20
 
 set cursorline                              " Highlight current activeline
+set guicursor=i:ver1                        " Enable vert cursor in insert mode
+set guicursor+=a:blinkon1                   " turnon cursor blink
 set relativenumber
 set rnu
 set hidden
