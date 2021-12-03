@@ -1,5 +1,5 @@
 " Default mappings from documentation
-nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files({no_ignore = true, hidden = true})<cr>
 nnoremap <leader>bf <cmd>lua require('karubin.telescope').browse_files()<cr>
 nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>

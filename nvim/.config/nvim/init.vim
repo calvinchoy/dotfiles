@@ -17,6 +17,7 @@ Plug 'nvim-telescope/telescope-file-browser.nvim'
 " Tree shitter and LSP
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'neovim/nvim-lspconfig'
+
 Plug 'onsails/lspkind-nvim'
 Plug 'folke/trouble.nvim', { 'branch': 'main' }
 " Autocomplete
@@ -39,6 +40,7 @@ Plug 'tpope/vim-sensible'
 Plug 'wellle/targets.vim'
 Plug 'windwp/nvim-autopairs'
 Plug 'windwp/nvim-ts-autotag', {'branch': 'main'}
+Plug 'justinmk/vim-sneak'
 Plug 'mattn/emmet-vim'
 
 " End plugins - Plugin specific settings and keymaps are autoloaded from ./plugin
@@ -151,7 +153,9 @@ colorscheme tokyonight
 " leave terminal background alone.
 " highlight Normal          ctermbg=NONE guibg=NONE
 " highlight SignColumn      ctermbg=NONE guibg=NONE
+
 " Custom linenumber highlights
 highlight LineNr          ctermbg=NONE guifg=#616B9B guibg=NONE
 highlight CursorLineNr    ctermbg=NONE guifg=#93A3EA guibg=NONE
+highlight CursorLine      ctermbg=darkred guifg=NONE guibg=#22273D
 

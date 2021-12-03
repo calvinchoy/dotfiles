@@ -46,16 +46,16 @@ With the above dependencies installed
 - [x] Neovim LSP config setup
 - [x] Better autocomplete configuration with nvim-compe
 - [ ] Add Harpoon
+- [ ] Use git worktrees workflow
 - [x] neovim eslint using nvim-lint 
-- [ ] neovim prettier by estlind --fix
 - [x] creating files and directories
 - [x] Figure out using phpactor or intelephense for php
 - [x] Fix vue highlight with tree sitter, bug with template highlighting
 - [x] Add auto pair functionality for brackets
 - [x] Add snippets support to work with nvim-cmp
-- [ ] Working with search, quickfix lists and telescope
+- [ ] Working with search, quickfix lists 
 - [ ] Create ansible playbook for installation
-- [ ] Configure nvim-cmp, results and context what snippets to load
+- [x] Configure nvim-cmp, results and context what snippets to load
 - [x] lspsaga install and configuration (not using because unstable)
 - [x] replace airline with lualine for better performance
 
