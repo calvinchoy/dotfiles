@@ -10,10 +10,10 @@ nnoremap <C-p> <cmd>lua require('karubin.telescope').project_files()<cr>
 nnoremap <S-p> <cmd>lua require('karubin.telescope').document_symbols()<cr>
 nnoremap <leader>fz <cmd>:Telescope current_buffer_fuzzy_find<cr>
 " 
-" " LSP related
-nnoremap <leader>gd <cmd>lua require('telescope.builtin').lsp_definitions()<cr>
-nnoremap <leader>fr <cmd>lua require('telescope.builtin').lsp_references()<cr>
-nnoremap <leader>dg <cmd>lua require('telescope.builtin').lsp_document_diagnostics()<cr>
+" " LSP related - see Trouble plugin
+" nnoremap <leader>gd <cmd>lua require('telescope.builtin').lsp_definitions()<cr>
+" nnoremap <leader>fr <cmd>lua require('telescope.builtin').lsp_references()<cr>
+" nnoremap <leader>dg <cmd>lua require('telescope.builtin').lsp_document_diagnostics()<cr>
 
 " Basic git helpers
 nnoremap <leader>gb <cmd>lua require('telescope.builtin').git_branches()<cr>

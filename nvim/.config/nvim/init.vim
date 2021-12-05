@@ -11,6 +11,7 @@ Plug 'kyazdani42/nvim-web-devicons'
 " Telescope
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
+Plug 'ThePrimeagen/harpoon'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'nvim-telescope/telescope-file-browser.nvim'
@@ -29,11 +30,10 @@ Plug 'saadparwaiz1/cmp_luasnip'
 " Snippets to make nvim-cmp actually do something
 Plug 'l3mon4d3/luasnip'
 Plug 'rafamadriz/friendly-snippets', { 'branch': 'main' }
-" " Code formatting and linting
+" Code formatting and linting
 Plug 'sbdchd/neoformat'
-" " Tools
-Plug 'terrortylor/nvim-comment', { 'branch': 'main' }
-Plug 'JoosepAlviste/nvim-ts-context-commentstring', { 'branch': 'main' }
+" Tools and motion
+Plug 'numToStr/Comment.nvim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-sensible'
@@ -41,7 +41,7 @@ Plug 'wellle/targets.vim'
 Plug 'windwp/nvim-autopairs'
 Plug 'windwp/nvim-ts-autotag', {'branch': 'main'}
 Plug 'justinmk/vim-sneak'
-Plug 'mattn/emmet-vim'
+Plug 'mattn/emmet-vim', {'for': ['vue', 'html']}
 
 " End plugins - Plugin specific settings and keymaps are autoloaded from ./plugin
 call plug#end()

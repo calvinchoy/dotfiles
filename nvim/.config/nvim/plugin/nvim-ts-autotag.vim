@@ -1,3 +1,5 @@
 lua << EOF
-require('nvim-ts-autotag').setup()
+require('nvim-ts-autotag').setup({
+  filetypes = {'html', 'xml', 'vue'}
+})
 EOF
