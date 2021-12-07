@@ -2,8 +2,8 @@ filetype off
 filetype plugin indent on
 
 set termguicolors
-set guicursor=i:ver25-iCursor
-autocmd VimLeave * set guicursor=a:hor20
+" set guicursor=i:ver25-iCursor
+" autocmd VimLeave * set guicursor=a:hor20
 
 set cursorline                              " Highlight current activeline
 set guicursor=i:ver1                        " Enable vert cursor in insert mode
@@ -49,8 +49,3 @@ set scrolloff=8
 set signcolumn=yes
 set completeopt=menu,menuone,noselect       " auto complete options for nvim-cmp
 set updatetime=100                          " async update for signify
-set wildignore+=*/vendor/**
-set wildignore+=*/node_modules/**
-set wildignore+=*/bower_modules/**
-set wildignore+=*/.git/**
-set wildignore+=*/storage/**

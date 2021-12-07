@@ -1,6 +1,16 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vimplug package management
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set path+=**
+
+set wildignore
+set wildignore+=**/vendor/*
+set wildignore+=**/node_modules/*
+set wildignore+=**/.git/*
+set wildignore+=**/storage/*
+set wildignore+=**/coverage/*
+set wildignore+=**/dist/*
+
 call plug#begin('~/.vim/plugged')
 " Theme/UI
 Plug 'nvim-lualine/lualine.nvim'
@@ -36,7 +46,6 @@ Plug 'sbdchd/neoformat'
 Plug 'numToStr/Comment.nvim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-sensible'
 Plug 'wellle/targets.vim'
 Plug 'windwp/nvim-autopairs'
 Plug 'windwp/nvim-ts-autotag', {'branch': 'main'}
