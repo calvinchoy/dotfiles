@@ -108,6 +108,7 @@ end
 
 M.browse_frecency = function()
 	local opts = {
+	  prompt_title = " Frecency",
 		previewer = false,
 		layout_config = {
 			width = 0.5,
