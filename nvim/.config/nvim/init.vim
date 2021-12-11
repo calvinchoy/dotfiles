@@ -144,8 +144,6 @@ nmap thl :set hls!<CR>
 " duplicate current current file
 nnoremap <silent> <Leader>dd :clear<bar>silent exec "!cp '%:p' '%:p:h/%:t:r-copy.%:e'"<bar>redraw<bar>echo "Copied " . expand('%:t') . ' to ' . expand('%:t:r') . '-copy.' . expand('%:e')<cr>
 
-" easy escape from nvim terminal
-:tnoremap <Esc> <C-\><C-n><cmd>ToggleTerm<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and themes
