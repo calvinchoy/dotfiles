@@ -13,12 +13,19 @@ alias grls="git remote -v"
 function gr(){
   cd $(git rev-parse --show-toplevel)
 }
-
+alias ga="git add ."
 alias gca="gitAddCommit"
 function gitAddCommit() {
   git add .
   git commit -a
 }
+
+alias gza="gitCommitzenAdd"
+function gitCommitzenAdd(){
+  git add .
+  git cz
+}
+
 alias gd="batdiff"
 git-diff-with-abs-path() {
   gitpath=$(git rev-parse --show-toplevel) &&

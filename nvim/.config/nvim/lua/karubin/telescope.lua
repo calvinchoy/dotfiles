@@ -29,7 +29,8 @@ require("telescope").setup({
 })
 
 require("telescope").load_extension("fzy_native")
-require("telescope").load_extension("file_browser")
+require("telescope").load_extension("file_browser")                                                   
+require("telescope").load_extension("frecency")
 --------------------------------------------------
 -- Custom telescope pickers
 --------------------------------------------------
@@ -76,6 +77,7 @@ end
 -- Sleek file browser to create new folder and files
 M.browse_files = function()
 	local opts = {
+	  hidden = true,
 		depth = 1,
 		previewer = false,
 		layout_config = {
@@ -83,6 +85,7 @@ M.browse_files = function()
 			height = 0.35,
 		},
 		file_ignore_patterns = {
+		  ".git",
 			"node_modules",
 		},
 	}
@@ -90,6 +93,30 @@ M.browse_files = function()
 	require("telescope").extensions.file_browser.file_browser(require("telescope.themes").get_dropdown(opts))
 end
 
+M.browse_buffers = function()
+  local opts = {
+    prompt_title = "﬘ Buffers",
+    previewer = false,
+    layout_config = {
+      width = 0.5,
+      height = 0.35
+    }
+  }
+
+  require('telescope.builtin').buffers(require("telescope.themes").get_dropdown(opts))
+end
+
+M.browse_frecency = function()
+	local opts = {
+		previewer = false,
+		layout_config = {
+			width = 0.5,
+			height = 0.35,
+		}
+	}
+
+	require("telescope").extensions.frecency.frecency(require("telescope.themes").get_dropdown(opts))
+end
 -- custom picker creation
 --  https://github.com/nvim-telescope/telescope.nvim/blob/master/developers.md
 --  https://www.reddit.com/r/neovim/comments/n9vt6d/chaining_2_telescope_pickers/

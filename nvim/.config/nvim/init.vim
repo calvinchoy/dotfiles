@@ -1,16 +1,6 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vimplug package management
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set path+=**
-
-set wildignore
-set wildignore+=**/vendor/*
-set wildignore+=**/node_modules/*
-set wildignore+=**/.git/*
-set wildignore+=**/storage/*
-set wildignore+=**/coverage/*
-set wildignore+=**/dist/*
-
 call plug#begin('~/.vim/plugged')
 " Theme/UI
 Plug 'nvim-lualine/lualine.nvim'
@@ -25,6 +15,8 @@ Plug 'ThePrimeagen/harpoon'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'nvim-telescope/telescope-file-browser.nvim'
+Plug 'tami5/sqlite.lua'                                             
+Plug 'nvim-telescope/telescope-frecency.nvim'
 " Tree shitter and LSP
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'neovim/nvim-lspconfig'
@@ -147,6 +139,10 @@ nmap <C-l> <C-w>l
 
 " toggle search highlights
 nmap thl :set hls!<CR>
+
+" duplicate current current file
+nnoremap <silent> <Leader>dd :clear<bar>silent exec "!cp '%:p' '%:p:h/%:t:r-copy.%:e'"<bar>redraw<bar>echo "Copied " . expand('%:t') . ' to ' . expand('%:t:r') . '-copy.' . expand('%:e')<cr>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and themes
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
