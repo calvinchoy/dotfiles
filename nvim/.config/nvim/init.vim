@@ -43,6 +43,7 @@ Plug 'windwp/nvim-autopairs'
 Plug 'windwp/nvim-ts-autotag', {'branch': 'main'}
 Plug 'justinmk/vim-sneak'
 Plug 'mattn/emmet-vim', {'for': ['vue', 'html']}
+Plug 'akinsho/toggleterm.nvim'
 
 " End plugins - Plugin specific settings and keymaps are autoloaded from ./plugin
 call plug#end()
@@ -142,6 +143,9 @@ nmap thl :set hls!<CR>
 
 " duplicate current current file
 nnoremap <silent> <Leader>dd :clear<bar>silent exec "!cp '%:p' '%:p:h/%:t:r-copy.%:e'"<bar>redraw<bar>echo "Copied " . expand('%:t') . ' to ' . expand('%:t:r') . '-copy.' . expand('%:e')<cr>
+
+" easy escape from nvim terminal
+:tnoremap <Esc> <C-\><C-n><cmd>ToggleTerm<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and themes
