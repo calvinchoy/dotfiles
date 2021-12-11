@@ -3,6 +3,7 @@ nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files({no_ignore 
 nnoremap <leader>bf <cmd>lua require('karubin.telescope').browse_files()<cr>
 nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>fb <cmd>lua require('karubin.telescope').browse_buffers()<cr>
+nnoremap <leader>ft <cmd>lua require('karubin.telescope').term_finder()<cr>
 nnoremap <S-e> <cmd>lua require('karubin.telescope').browse_buffers()<cr>
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 nnoremap <leader>fz <cmd>:Telescope current_buffer_fuzzy_find<cr>

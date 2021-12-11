@@ -31,6 +31,7 @@ require("telescope").setup({
 require("telescope").load_extension("fzy_native")
 require("telescope").load_extension("file_browser")                                                   
 require("telescope").load_extension("frecency")
+require('telescope').load_extension("termfinder")
 --------------------------------------------------
 -- Custom telescope pickers
 --------------------------------------------------
@@ -117,6 +118,18 @@ M.browse_frecency = function()
 	}
 
 	require("telescope").extensions.frecency.frecency(require("telescope.themes").get_dropdown(opts))
+end
+M.term_finder = function()
+	local opts = {
+	  prompt_title = " Terminal",
+		previewer = false,
+		layout_config = {
+			width = 0.5,
+			height = 0.35,
+		}
+	}
+
+	require("telescope").extensions.termfinder.find(require("telescope.themes").get_dropdown(opts))
 end
 -- custom picker creation
 --  https://github.com/nvim-telescope/telescope.nvim/blob/master/developers.md

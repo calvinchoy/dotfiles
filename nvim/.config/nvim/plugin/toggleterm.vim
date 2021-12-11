@@ -61,3 +61,4 @@ let g:toggleterm_terminal_mapping = '<C-t>'
 nnoremap <silent><c-t> <Cmd>exe v:count1 . "ToggleTerm"<CR>
 inoremap <silent><c-t> <Esc><Cmd>exe v:count1 . "ToggleTerm"<CR>
 tnoremap <Esc> <C-\><C-n><cmd>ToggleTerm<cr>
+nnoremap <S-t> <cmd>ToggleTermToggleAll<cr>
