@@ -42,6 +42,12 @@ With the above dependencies installed
 5. Make sure to install tmux plugins using tpm (`Prefix + I`) it not done automatically
 6. Reload your terminal
 
+## Some personal mappings
+- Harpoon 4 indexes are mappt to C-h, C-j, C-k, C-l. Harpoon menu is mapped to M-h
+- File and code navigations (using telescope) are mapped modifiers + p combinations: C-p (fuzzy project files), M-p (navigate by symbols), S-p (toggle preview in telescope)
+- Terminals are mapped to C-t and can be browser using telescope using <leader>ft
+- Lazygit terminal is mapped to <leader> g
+
 ## Todo
 - [x] Neovim LSP config setup
 - [x] Better autocomplete configuration with nvim-compe
