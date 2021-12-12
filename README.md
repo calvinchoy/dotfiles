@@ -45,7 +45,7 @@ With the above dependencies installed
 ## Todo
 - [x] Neovim LSP config setup
 - [x] Better autocomplete configuration with nvim-compe
-- [ ] Add Harpoon
+- [x] Setup Harpoon
 - [ ] Use git worktrees workflow
 - [x] neovim eslint using nvim-lint 
 - [x] creating files and directories
