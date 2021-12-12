@@ -143,7 +143,7 @@ nmap <C-l> <C-w>l
 nmap thl :set hls!<CR>
 
 " duplicate current current file
-nnoremap <silent> <Leader>dd :clear<bar>silent exec "!cp '%:p' '%:p:h/%:t:r-copy.%:e'"<bar>redraw<bar>echo "Copied " . expand('%:t') . ' to ' . expand('%:t:r') . '-copy.' . expand('%:e')<cr>
+nnoremap <silent> <Leader>df :clear<bar>silent exec "!cp '%:p' '%:p:h/%:t:r-copy.%:e'"<bar>redraw<bar>echo "Copied " . expand('%:t') . ' to ' . expand('%:t:r') . '-copy.' . expand('%:e')<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
