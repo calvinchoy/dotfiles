@@ -123,6 +123,8 @@ nnoremap <Leader>qf :bd!<CR>
 " Buffer back and forth
 nnoremap <silent><Tab> :bn<CR>
 nnoremap <silent><M-Tab> :bp<CR>
+nnoremap <silent>]b :bn<CR>
+nnoremap <silent>[b :bp<CR>
 
 " v and h splits
 nmap vs :vsplit<cr>
