@@ -121,8 +121,8 @@ nnoremap <Leader>q :bd<CR>
 nnoremap <Leader>qf :bd!<CR>
 
 " Buffer back and forth
-nmap :bp :BufSurfBack<cr>
-nmap :bn :BufSurfForward<cr>
+nnoremap <silent><Tab> :bn<CR>
+nnoremap <silent><M-Tab> :bp<CR>
 
 " v and h splits
 nmap vs :vsplit<cr>
