@@ -19,8 +19,8 @@ cmp.setup({
       ['<CR>'] = cmp.mapping.confirm({ select = true }),
     },
     sources = {
-      { name = 'nvim_lsp', keyword_length = 3, max_item_count = 5 },
       { name = 'luasnip', keyword_length = 2, max_item_count = 5 },
+      { name = 'nvim_lsp', keyword_length = 3, max_item_count = 5 },
       { name = 'path', keyword_length = 3, max_item_count = 5 },
       { name = 'buffer', keyword_length = 3, max_item_count = 5 },
     },
@@ -43,25 +43,7 @@ cmp.setup({
 -- -----------------------------------------------------------
 -- Snippets setup 
 -- -----------------------------------------------------------
-local snippets_paths = function()
-    local plugins = { "friendly-snippets" }
-    local paths = {}
-    local path
-    local root_path = vim.env.HOME .. '/.vim/plugged/'
-    for _, plug in ipairs(plugins) do
-        path = root_path .. plug
-        if vim.fn.isdirectory(path) ~= 0 then
-            table.insert(paths, path)
-        end
-    end
-    return paths
-end
-
-require("luasnip.loaders.from_vscode").lazy_load({
-    paths = snippets_paths(),
-    include = nil,  -- Load all languages
-    exclude = {}
-})
+require("luasnip.loaders.from_vscode").lazy_load()
 EOF
 
 " some tab autocompletion mappings from theprimeagaon dot files

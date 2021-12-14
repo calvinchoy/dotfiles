@@ -146,26 +146,3 @@ nmap thl :set hls!<CR>
 
 " duplicate current current file
 nnoremap <silent> <Leader>df :clear<bar>silent exec "!cp '%:p' '%:p:h/%:t:r-copy.%:e'"<bar>redraw<bar>echo "Copied " . expand('%:t') . ' to ' . expand('%:t:r') . '-copy.' . expand('%:e')<cr>
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Colors and themes
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-if (has("termguicolors"))
-  set termguicolors
-endif
-
-syntax on
-let g:tokyonight_transparent = "true"
-let g:tokyonight_style = "storm"
-colorscheme tokyonight
-
-" leave terminal background alone.
-" highlight Normal          ctermbg=NONE guibg=NONE
-" highlight SignColumn      ctermbg=NONE guibg=NONE
-
-" Custom linenumber highlights
-highlight LineNr          ctermbg=NONE guifg=#616B9B guibg=NONE
-highlight CursorLineNr    ctermbg=NONE guifg=#93A3EA guibg=NONE
-highlight CursorLine      ctermbg=darkred guifg=NONE guibg=#22273D
-
