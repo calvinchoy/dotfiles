@@ -30,7 +30,7 @@ cmp.setup({
         luasnip.expand_or_jump()
       elseif has_words_before() then
         cmp.complete()
-      else
+     else
         fallback()
       end
     end, { "i", "s" }),
