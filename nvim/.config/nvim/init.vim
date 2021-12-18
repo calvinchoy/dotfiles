@@ -96,13 +96,17 @@ nnoremap J mzJ`z
 inoremap , ,<c-g>u
 inoremap . .<c-g>u
 inoremap ! !<c-g>u
-inoremap ? ?<c-g>u
+noremap ? ?<c-g>u
 
 " Move around while in insert mode
 inoremap <C-k> <C-o>gk
 inoremap <C-h> <Left>
 inoremap <C-l> <Right>
 inoremap <C-j> <C-o>gj
+
+" Quickly open new lines
+inoremap OJ <Esc>o
+inoremap OK <Esc>O
 
 "Duplicate up/down
 nnoremap <leader>dk m`YPVr <C-o>0y$kP
@@ -140,6 +144,7 @@ nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
+
 
 " toggle search highlights
 nmap thl :set hls!<CR>
