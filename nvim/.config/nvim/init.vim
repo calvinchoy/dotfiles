@@ -15,8 +15,6 @@ Plug 'ThePrimeagen/harpoon'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'nvim-telescope/telescope-file-browser.nvim'
-Plug 'tami5/sqlite.lua'
-Plug 'nvim-telescope/telescope-frecency.nvim'
 Plug 'tknightz/telescope-termfinder.nvim'
 " Tree shitter and LSP
 Plug 'nvim-treesitter/nvim-treesitter'
