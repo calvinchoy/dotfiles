@@ -30,7 +30,6 @@ require("telescope").setup({
 
 require("telescope").load_extension("fzy_native")
 require("telescope").load_extension("file_browser")                                                   
-require("telescope").load_extension("frecency")
 require('telescope').load_extension("termfinder")
 --------------------------------------------------
 -- Custom telescope pickers
@@ -107,18 +106,6 @@ M.browse_buffers = function()
   require('telescope.builtin').buffers(require("telescope.themes").get_dropdown(opts))
 end
 
-M.browse_frecency = function()
-	local opts = {
-	  prompt_title = " Frecency",
-		previewer = false,
-		layout_config = {
-			width = 0.5,
-			height = 0.35,
-		}
-	}
-
-	require("telescope").extensions.frecency.frecency(require("telescope.themes").get_dropdown(opts))
-end
 M.term_finder = function()
 	local opts = {
 	  prompt_title = " Terminal",
