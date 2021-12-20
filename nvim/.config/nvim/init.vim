@@ -37,7 +37,7 @@ Plug 'rafamadriz/friendly-snippets', { 'branch': 'main' }
 Plug 'sbdchd/neoformat'
 " Tools and motion
 Plug 'numToStr/Comment.nvim'
-Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive', { 'on': ['G', 'Gdiff'] }
 Plug 'tpope/vim-surround'
 Plug 'wellle/targets.vim'
 Plug 'windwp/nvim-autopairs'
