@@ -37,8 +37,18 @@ vim.lsp.handlers["textDocument/signatureHelp"] =
   }
 )
 
+local function isWindows()
+  return vim.loop.os_uname().sysname == "Windows_NT"
+end
+
+-- Change path with env variable
 local sumneko_binary_path = vim.fn.exepath('lua-language-server')
 local sumneko_root_path = vim.fn.fnamemodify(sumneko_binary_path, ':h:h:h')
+
+if isWindows() then
+  sumneko_root_path = "C:\\Users\\Calvin\\Tools\\lua-language-server"
+  sumneko_binary_path = sumneko_root_path.."\\bin\\lua-language-server"
+end
 
 local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, "lua/?.lua")
