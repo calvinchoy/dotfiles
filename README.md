@@ -25,7 +25,7 @@ Dependencies can be installed using a package manager of your os:
 - [Ag](https://github.com/ggreer/the_silver_searcher) - ag the silver searcher
 - [Lazygit](https://github.com/jesseduffield/lazygit) - lazygit terminal interface for git
 
-## Installation
+## Installation macos/linux
 With the above dependencies installed
 1. Clone this repository to your home directory into `.dotfiles`
 2. Symlink the configurations into your home directory using `stow` inside the `.dotfiles` directory:
@@ -41,6 +41,9 @@ With the above dependencies installed
 4. Make sure to install vim plugins after installing vim-plug by running `:PlugInstall` in nvim
 5. Make sure to install tmux plugins using tpm (`Prefix + I`) it not done automatically
 6. Reload your terminal
+
+## Installatioon windows powershell
+Note: You can use WSL2 with for example ubuntu, but performance is slow. 
 
 ## Some personal mappings
 - Harpoon 4 indexes are mappt to C-h, C-j, C-k, C-l. Harpoon menu is mapped to M-h
