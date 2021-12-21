@@ -4,9 +4,10 @@ Dot files for ZSH terminal setup with configurations for:
 - NeoVim
 - Tmux
 
-Note: setup only used in macos environment. Should work in linux environments fine.
-## Dependencies
-Dependencies can be installed using a package manager of your os:
+## Installation macos/linux
+Note: dependencies can be installed using a package manager of your os:
+
+### Dependencies
 - [Zsh](https://zsh.sourceforge.io/) - Z shell, v5.X
 - [Zinit](https://github.com/ryanoasis/nerd-fonts) - a zsh plugin manager
 - [Starship prompt](https://starship.rs/) -  cross shell prompt
@@ -25,7 +26,7 @@ Dependencies can be installed using a package manager of your os:
 - [Ag](https://github.com/ggreer/the_silver_searcher) - ag the silver searcher
 - [Lazygit](https://github.com/jesseduffield/lazygit) - lazygit terminal interface for git
 
-## Installation
+## Configuration and setup
 With the above dependencies installed
 1. Clone this repository to your home directory into `.dotfiles`
 2. Symlink the configurations into your home directory using `stow` inside the `.dotfiles` directory:
@@ -42,8 +43,51 @@ With the above dependencies installed
 5. Make sure to install tmux plugins using tpm (`Prefix + I`) it not done automatically
 6. Reload your terminal
 
-## Some personal mappings
-- Harpoon 4 indexes are mappt to C-h, C-j, C-k, C-l. Harpoon menu is mapped to M-h
+## Installation windows powershell
+Note: You can use WSL2 with for example ubuntu, but performance is slow. 
+
+### Dependencies
+- Powershell, 7.2.1 as of writing
+- Windows Terminal
+- scoop, packagemanager
+- chocolatey, packagemanager
+- neovim + check treesitter windows guide top install gcc
+- z, fuzzy navigation like fasd
+- Nerd fonts, I use Jetbrains Mono font
+- Colortheme, i use tokyonight storm
+- Terminal-Icons module
+- Fzf and PSFzf module
+
+## Config and setup
+1. Update appearance of Widows Terminal (font, transparancy, theme in settings json)
+2. Install dependencies using Scoop, chocolatey and PS Modules
+3. Reconfigure nvim default config path to align with linux:
+```
+setx /M XDG_CONFIG_HOME "%USERPROFILE%\\.config”
+```
+4. Use symlinks to link dot files to your .config folder:
+```
+new-item -itemtype symboliclink -path . -name OldDrivers -value f:\driver\olddrivers
+```
+5. Install and activate terminal icons:
+```
+Install-Module -Name Terminal-Icons -Repository PSGallery --Force
+Import-Module Terminal-Icons
+
+```
+6. Install and setup fzf and readline module:
+```
+scoop install fzf
+Install-Module -Name PSFzf -Scope CurrentUser -Force
+Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory 'Ctrl+r’
+```
+7. Make sure to execute your `.config/powershell/user_profile.ps1` in `$PROFILE.CurrentUserCurrentHost`:
+```
+. $env:USERPROFILE\.config\powershell.user_profile.ps1
+```
+
+## Some neovim personal mappings
+- Harpoon 4 indexes are mappt to h1, h2, h3 and h4. Harpoon menu is mapped to M-h
 - File and code navigations (using telescope) are mapped modifiers + p combinations: C-p (fuzzy project files), M-p (navigate by symbols), S-p (toggle preview in telescope)
 - Terminals are mapped to C-t and can be browser using telescope using <leader>ft
 - Lazygit terminal is mapped to <leader> g
@@ -64,6 +108,7 @@ With the above dependencies installed
 - [x] Configure nvim-cmp, results and context what snippets to load
 - [x] lspsaga install and configuration (not using because unstable)
 - [x] replace airline with lualine for better performance
+- [x] create workable powershell neovim setup with fzf and z navigation
 
 ## Resources
 - [ThePrimeagen dotfiles](https://github.com/ThePrimeagen/.dotfiles)
