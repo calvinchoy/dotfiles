@@ -8,6 +8,7 @@ Plug 'lewis6991/gitsigns.nvim', {'branch': 'main'}
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'kyazdani42/nvim-web-devicons'
+Plug 'kyazdani42/nvim-tree.lua' 
 " Telescope
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
