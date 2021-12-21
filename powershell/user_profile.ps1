@@ -25,15 +25,28 @@ function folderUp{
 }
 
 function addCommit{
-    git add .
-    git commit -am
+  git add .
+  git commit -a
 }
+
+function removeDirectory{
+  rm -Recurse -Force
+}
+
+function newItem{
+  New-Item
+}
+
 
 Set-Alias -Name vim -Value nvim
 Set-Alias -Name v -Value nvim
 Set-Alias -Name .. -Value folderUp
 Set-Alias -Name d -Value z                             
 Set-Alias -Name cl -Value clear
+Set-Alias -Name cl -Value clear                               
+Set-Alias -Name rmd -Value removeDirectory
+Set-Alias -Name touch -Value newItem                                          
 # Git
 Set-Alias -Name gst -Value gitStatus 
+Set-Alias -Name gca -Value addCommit                                      
 
