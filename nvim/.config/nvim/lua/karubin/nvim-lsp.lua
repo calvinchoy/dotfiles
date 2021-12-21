@@ -17,7 +17,7 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] =
   vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics,
   {
-    virtual_text = false,
+    virtual_text = true,
   }
 )
 
@@ -96,5 +96,6 @@ require'lspconfig'.dotls.setup(config())
 require'lspconfig'.emmet_ls.setup(config())
 
 -- show diagnostic on hover - nvim 0.6+
-vim.o.updatetime = 250
-vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.lsp.diagnostic.show_position_diagnostics({border = "single", focusable=false})]]
+-- This is disabled due to messy ui when using nvim-cmp
+-- vim.o.updatetime = 250
+-- vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.lsp.diagnostic.show_position_diagnostics({border = "single", focusable=false})]]

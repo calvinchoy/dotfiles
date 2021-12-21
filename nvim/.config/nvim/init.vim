@@ -20,6 +20,7 @@ Plug 'tknightz/telescope-termfinder.nvim'
 " Tree shitter and LSP
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'neovim/nvim-lspconfig'
+Plug 'WhoIsSethDaniel/toggle-lsp-diagnostics.nvim'
 
 Plug 'onsails/lspkind-nvim'
 Plug 'folke/trouble.nvim', { 'branch': 'main' }
