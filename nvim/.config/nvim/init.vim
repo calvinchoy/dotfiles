@@ -4,9 +4,9 @@
 call plug#begin('~/.vim/plugged')
 " Theme/UI
 Plug 'nvim-lualine/lualine.nvim'
-Plug 'lewis6991/gitsigns.nvim', {'branch': 'main'}
+Plug 'lewis6991/gitsigns.nvim'
 Plug 'lukas-reineke/indent-blankline.nvim'
-Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'folke/tokyonight.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua' 
 " Telescope
@@ -23,16 +23,16 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'WhoIsSethDaniel/toggle-lsp-diagnostics.nvim'
 
 Plug 'onsails/lspkind-nvim'
-Plug 'folke/trouble.nvim', { 'branch': 'main' }
+Plug 'folke/trouble.nvim'
 " Autocomplete
-Plug 'hrsh7th/nvim-cmp', { 'branch': 'main' }
-Plug 'hrsh7th/cmp-nvim-lsp', { 'branch': 'main' }
-Plug 'hrsh7th/cmp-buffer', { 'branch': 'main' }
-Plug 'hrsh7th/cmp-path', { 'branch': 'main' }
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
 Plug 'saadparwaiz1/cmp_luasnip'
 " Snippets to make nvim-cmp actually do something
 Plug 'l3mon4d3/luasnip'
-Plug 'rafamadriz/friendly-snippets', { 'branch': 'main' }
+Plug 'rafamadriz/friendly-snippets'
 " Code formatting and linting
 Plug 'sbdchd/neoformat'
 " Tools and motion
