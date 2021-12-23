@@ -37,9 +37,14 @@ function newItem{
   New-Item
 }
 
+function vimCurrentDir{
+   nvim .
+}
+
 
 Set-Alias -Name vim -Value nvim
 Set-Alias -Name v -Value nvim
+Set-Alias -Name vd -Value vimCurrentDir                             
 Set-Alias -Name .. -Value folderUp
 Set-Alias -Name d -Value z                             
 Set-Alias -Name cl -Value clear
