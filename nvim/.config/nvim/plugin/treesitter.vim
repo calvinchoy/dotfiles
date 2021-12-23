@@ -1,7 +1,10 @@
 lua << EOF
 require('nvim-treesitter.configs').setup({ 
+  ensure_insalled = "maintained",
+  sync_install = false,
   highlight = {
-    enable = true
+    enable = true,
+    additional_vim_regex_highlighting = true,
   }, 
   incremental_selection = {
     enable = true
@@ -12,6 +15,7 @@ require('nvim-treesitter.configs').setup({
   context_commentstring =
   {
     enable = true
-  }
+  },
+  indent = {enable = true, disable = {}}
 })
 EOF
