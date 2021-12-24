@@ -7,6 +7,8 @@ Plug 'nvim-lualine/lualine.nvim'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'folke/tokyonight.nvim'
+Plug 'rebelot/kanagawa.nvim'
+Plug 'norcalli/nvim-colorizer.lua'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua' 
 " Telescope
@@ -48,7 +50,6 @@ Plug 'akinsho/toggleterm.nvim'
 
 " End plugins - Plugin specific settings and keymaps are autoloaded from ./plugin
 call plug#end()
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Lua autoloading and init plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -130,7 +131,7 @@ nnoremap <silent><M-Tab> :bp<CR>
 nnoremap <silent>]b :bn<CR>
 nnoremap <silent>[b :bp<CR>
 
-" v and h splits
+" v and h spli
 nmap vs :vsplit<cr>
 nmap hp :split<cr>
 
@@ -150,4 +151,3 @@ nmap <C-l> <C-w>l
 nmap thl :set hls!<CR>
 
 " duplicate current current file
-nnoremap <silent> <Leader>df :clear<bar>silent exec "!cp '%:p' '%:p:h/%:t:r-copy.%:e'"<bar>redraw<bar>echo "Copied " . expand('%:t') . ' to ' . expand('%:t:r') . '-copy.' . expand('%:e')<cr>

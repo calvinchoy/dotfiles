@@ -1,4 +1,3 @@
-lua << EOF
 require('nvim-treesitter.configs').setup({ 
   ensure_insalled = "maintained",
   sync_install = false,
@@ -16,6 +15,4 @@ require('nvim-treesitter.configs').setup({
   {
     enable = true
   },
-  indent = {enable = true, disable = {}}
 })
-EOF

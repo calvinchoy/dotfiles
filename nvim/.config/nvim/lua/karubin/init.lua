@@ -1,4 +1,5 @@
 require("karubin.telescope")
 require("karubin.nvim-lsp")
-require("karubin.nvim-tree")                           
+require("karubin.nvim-tree")
+require("karubin.nvim-treesitter")
 -- require("karubin.local")

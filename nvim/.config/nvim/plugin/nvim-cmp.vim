@@ -51,18 +51,18 @@ cmp.setup({
     end, { "i", "s" }),
     },
     sources = {
-      { name = 'luasnip', keyword_length = 2, max_item_count = 5 },
-      { name = 'nvim_lsp', keyword_length = 3, max_item_count = 5 },
-      { name = 'path', keyword_length = 3, max_item_count = 5 },
-      { name = 'buffer', keyword_length = 3, max_item_count = 5 },
+      { name = 'luasnip', keyword_length = 2, max_item_count = 5, priority_weight = 1 },
+      { name = 'nvim_lsp', keyword_length = 3, max_item_count = 5, priortiy_weight = 2 },
+      { name = 'buffer', keyword_length = 3, max_item_count = 5, priority_weight = 3 },
+      { name = 'path', keyword_length = 3, max_item_count = 5, priority_weight = 4},
     },
     formatting = {
       format = lspkind.cmp_format {
         with_text = true,
         menu = {
-          buffer = "[buf]",
-          nvim_lsp = "[lsp]",
           luasnip = "[snip]",
+          nvim_lsp = "[lsp]",
+          buffer = "[buf]",
         }
       }
     },
