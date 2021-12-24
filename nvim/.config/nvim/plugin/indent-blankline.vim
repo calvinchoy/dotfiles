@@ -21,6 +21,26 @@ require("indent_blankline").setup({
         "IndentBlanklineIndent7",
         "IndentBlanklineIndent8",
     }, 
+    space_highlight_list = {
+        "IndentBlanklineIndent1",
+        "IndentBlanklineIndent2",
+        "IndentBlanklineIndent3",
+        "IndentBlanklineIndent4",
+        "IndentBlanklineIndent5",
+        "IndentBlanklineIndent6",
+        "IndentBlanklineIndent7",
+        "IndentBlanklineIndent8",
+    }, 
+    space_char_blank_highlight_list = {
+        "IndentBlanklineIndent1",
+        "IndentBlanklineIndent2",
+        "IndentBlanklineIndent3",
+        "IndentBlanklineIndent4",
+        "IndentBlanklineIndent5",
+        "IndentBlanklineIndent6",
+        "IndentBlanklineIndent7",
+        "IndentBlanklineIndent8",
+    }, 
 })
 EOF
 
