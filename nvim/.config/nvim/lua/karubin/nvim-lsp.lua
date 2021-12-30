@@ -37,15 +37,11 @@ vim.lsp.handlers["textDocument/signatureHelp"] =
   }
 )
 
-local function isWindows()
-  return vim.loop.os_uname().sysname == "Windows_NT"
-end
-
 -- Change path with env variable
 local sumneko_binary_path = vim.fn.exepath('lua-language-server')
 local sumneko_root_path = vim.fn.fnamemodify(sumneko_binary_path, ':h:h:h')
 
-if isWindows() then
+if IsWindows() then
   sumneko_root_path = "C:\\Users\\Calvin\\Tools\\lua-language-server"
   sumneko_binary_path = sumneko_root_path.."\\bin\\lua-language-server"
 end
@@ -94,8 +90,3 @@ require'lspconfig'.yamlls.setup(config())
 require'lspconfig'.bashls.setup(config())
 require'lspconfig'.dotls.setup(config())
 require'lspconfig'.emmet_ls.setup(config())
-
--- show diagnostic on hover - nvim 0.6+
--- This is disabled due to messy ui when using nvim-cmp
--- vim.o.updatetime = 250
--- vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.lsp.diagnostic.show_position_diagnostics({border = "single", focusable=false})]]

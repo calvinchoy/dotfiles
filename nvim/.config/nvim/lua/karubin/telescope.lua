@@ -10,6 +10,10 @@ require("telescope").setup({
 		file_previewer = require("telescope.previewers").vim_buffer_cat.new,
 		grep_previewer = require("telescope.previewers").vim_buffer_vimgrep.new,
 		qflist_previewer = require("telescope.previewers").vim_buffer_qflist.new,
+		file_ignore_patterns = {
+		  ".git",
+			"node_modules",
+		},
 		mappings = {
 			n = {
 				["<M-p>"] = action_layout.toggle_preview,
@@ -84,10 +88,6 @@ M.browse_files = function()
 			width = 0.5,
 			height = 0.35,
 		},
-		file_ignore_patterns = {
-		  ".git",
-			"node_modules",
-		},
 	}
 
 	require("telescope").extensions.file_browser.file_browser(require("telescope.themes").get_dropdown(opts))
@@ -121,5 +121,24 @@ end
 -- custom picker creation
 --  https://github.com/nvim-telescope/telescope.nvim/blob/master/developers.md
 --  https://www.reddit.com/r/neovim/comments/n9vt6d/chaining_2_telescope_pickers/
+
+-- dotfiles pickers quick access
+M.browse_dotfiles = function()
+  local dotfiles_path = HOME_PATH .. "/.dotfiles"
+  if IsWindows() then
+    local home_path = os.getenv("USERPROFILE")
+    dotfiles_path = HOME_PATH .. "\\dotfiles"
+  end
+  local opts = {
+    prompt_title = " Dotfiles",
+    cwd = dotfiles_path,
+    previewer = false,
+    layout_config = {
+      width = 0.5,
+      height = 0.35,
+    }
+  }
+  require("telescope.builtin").git_files(require("telescope.themes").get_dropdown(opts))
+end
 
 return M
