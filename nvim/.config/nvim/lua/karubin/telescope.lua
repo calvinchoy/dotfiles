@@ -141,4 +141,13 @@ M.browse_dotfiles = function()
   require("telescope.builtin").git_files(require("telescope.themes").get_dropdown(opts))
 end
 
+-- WIP: picker to execute command
+M.command_execute = function()
+  local previewers = require("telescope.previewers")
+  local pickers = require("telescope.pickers")
+  local sorters = require("telescope.sorters")
+  local finders = require("telescope.finders")
+end
+
 return M
+

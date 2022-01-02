@@ -49,8 +49,8 @@ Note: You can use WSL2 with for example ubuntu, but performance is slow.
 ### Dependencies
 - Powershell, 7.2.1 as of writing
 - Windows Terminal
-- scoop, packagemanager
-- chocolatey, packagemanager
+- scoop, package manager
+- chocolatey, package manager
 - neovim + check treesitter windows guide top install gcc
 - z, fuzzy navigation like fasd
 - Nerd fonts, I use Jetbrains Mono font
