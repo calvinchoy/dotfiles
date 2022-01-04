@@ -9,6 +9,7 @@ nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 nnoremap <leader>fz <cmd>:Telescope current_buffer_fuzzy_find<cr>
 nnoremap <C-p> <cmd>lua require('karubin.telescope').project_files()<cr>
 nnoremap <S-p> <cmd>lua require('karubin.telescope').document_symbols()<cr>
+nnoremap <leader>dcf <cmd>lua require('karubin.telescope').browse_dotfiles()<cr>
 
 " 
 " " LSP related - see Trouble plugin

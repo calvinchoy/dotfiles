@@ -49,8 +49,8 @@ Note: You can use WSL2 with for example ubuntu, but performance is slow.
 ### Dependencies
 - Powershell, 7.2.1 as of writing
 - Windows Terminal
-- scoop, packagemanager
-- chocolatey, packagemanager
+- scoop, package manager
+- chocolatey, package manager
 - neovim + check treesitter windows guide top install gcc
 - z, fuzzy navigation like fasd
 - Nerd fonts, I use Jetbrains Mono font
@@ -67,7 +67,7 @@ setx /M XDG_CONFIG_HOME "%USERPROFILE%\\.config”
 ```
 4. Use symlinks to link dot files to your .config folder:
 ```
-new-item -itemtype symboliclink -path . -name OldDrivers -value f:\driver\olddrivers
+new-item -itemtype symboliclink -path . -name FakeFolder -value f:\driver\RealFolder
 ```
 5. Install and activate terminal icons:
 ```
@@ -106,9 +106,10 @@ Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory
 - [ ] Working with search, quickfix lists 
 - [ ] Create ansible playbook for installation
 - [x] Configure nvim-cmp, results and context what snippets to load
-- [x] lspsaga install and configuration (not using because unstable)
 - [x] replace airline with lualine for better performance
 - [x] create workable powershell neovim setup with fzf and z navigation
+- [x] Create telescope picker for dotfiles
+- [ ] Create telescope picker to execute shell commands
 
 ## Resources
 - [ThePrimeagen dotfiles](https://github.com/ThePrimeagen/.dotfiles)
