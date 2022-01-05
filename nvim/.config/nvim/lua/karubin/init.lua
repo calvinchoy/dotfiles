@@ -3,7 +3,12 @@ function IsWindows()
   return vim.loop.os_uname().sysname == "Windows_NT"
 end
 
+-- shortcut to set keymaps
 Keymap = vim.api.nvim_set_keymap
+
+-- lua set leader key to space
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 -- set global variable for home path based on os (win/macos)
 HOME_PATH = os.getenv("HOME")

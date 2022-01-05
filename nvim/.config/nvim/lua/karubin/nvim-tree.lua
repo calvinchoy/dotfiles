@@ -13,4 +13,4 @@ require("nvim-tree").setup({
 
 -- keymaps
 local opts = { noremap = true, silent = true }
-Keymap("n", "<C-n>", ":NvimTreeToggle<CR>", opts)
+vim.api.nvim_set_keymap("n", "<C-n>", ":NvimTreeToggle<CR>", opts)
