@@ -56,28 +56,27 @@ vim.api.nvim_set_keymap("n", "<leader>g", "<cmd>lua _lazygit_toggle()<cr>", { no
 
 -- floating terminal generic
 local floatterminal = Terminal:new({
-  cmd = "",
-  dir = "git_dir",
-  direction = "float",
-  float_opts = {
-    border = "single",
-  },
-  -- function to run on opening the terminal
-  on_open = function(term)
-    vim.cmd("startinsert!")
---    vim.api.nvim_buf_set_keymap(term.bufnr, "n", "q", "<cmd>close<CR>", {noremap = true, silent = true})
-  end,
-  -- function to run on closing the terminal
-  on_close = function(term)
- --   vim.cmd("q")
-  end,
+	dir = "git_dir",
+	direction = "float",
+	float_opts = {
+		border = "single",
+	},
+	-- function to run on opening the terminal
+	on_open = function(term)
+		vim.cmd("startinsert!")
+		vim.api.nvim_buf_set_keymap(term.bufnr, "n", "q", "<cmd>close<CR>", { noremap = true, silent = true })
+	end,
+	-- function to run on closing the terminal
+	on_close = function(term)
+		--   vim.cmd("q")
+	end,
 })
 
 function _floatterminal_toggle()
-  floatterminal:toggle()
+	floatterminal:toggle()
 end
 
-vim.api.nvim_set_keymap("n", "<leader>/", "<cmd>lua _floatterminal_toggle()<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<leader>/", "<cmd>lua _floatterminal_toggle()<CR>", { noremap = true, silent = true })
 
 local opts = { noremap = true, silent = true }
 Keymap("n", "<C-t>", '<Cmd>exe v:count1 . "ToggleTerm"<CR>', opts)
