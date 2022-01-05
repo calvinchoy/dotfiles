@@ -40,6 +40,7 @@ Plug 'rafamadriz/friendly-snippets'
 Plug 'sbdchd/neoformat'
 " Tools and motion
 Plug 'lewis6991/impatient.nvim'
+Plug 'famiu/bufdelete.nvim'
 Plug 'numToStr/Comment.nvim'
 Plug 'tpope/vim-fugitive', { 'on': ['G', 'Gdiff'] }
 Plug 'tpope/vim-surround'
@@ -124,8 +125,8 @@ cmap w!! w !sudo tee % >/dev/null
 cnoremap sudow w !sudo tee % >/dev/null
 
 " Fast and forced quits
-nnoremap <Leader>q :bd<CR>
-nnoremap <Leader>qf :bd!<CR>
+nnoremap <Leader>q :Bdelete<CR>
+nnoremap <Leader>qf :Bdelete!<CR>
 
 " Buffer back and forth
 nnoremap <silent><Tab> :bn<CR>
