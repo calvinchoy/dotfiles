@@ -1,4 +1,3 @@
-lua << EOF
 -- -----------------------------------------------------------
 -- Setup nvim-cmp
 -------------------------------------------------------------
@@ -77,4 +76,3 @@ cmp.setup({
 -- -----------------------------------------------------------
 -- Check luasnip github for examples on how to load snippets
 require("luasnip.loaders.from_vscode").lazy_load()
-EOF

@@ -1,7 +1,3 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => nvim devicons
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-lua << EOF
 require('nvim-web-devicons').setup {
     override = {
         zsh = {
@@ -12,4 +8,3 @@ require('nvim-web-devicons').setup {
     };
     default = true;
 }
-EOF

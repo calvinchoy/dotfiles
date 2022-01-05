@@ -1,7 +1,3 @@
-lua << EOF
--- -----------------------------------------------------------
--- Setup nvim-autopairs
--- -----------------------------------------------------------
 require('nvim-autopairs').setup{}
 require("cmp").setup({
   map_cr = true, --  map <CR> on insert mode
@@ -9,4 +5,3 @@ require("cmp").setup({
   auto_select = true, -- automatically select the first item
   insert = false, -- use insert confirm behavior instead of replace
 })
-EOF

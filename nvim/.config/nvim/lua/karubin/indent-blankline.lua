@@ -1,4 +1,3 @@
-lua << EOF
 vim.opt.list = true
 vim.cmd [[highlight IndentBlanklineIndent1 guifg=#2f2f40 gui=nocombine]]
 vim.cmd [[highlight IndentBlanklineIndent2 guifg=#2f2f40 gui=nocombine]]
@@ -42,6 +41,6 @@ require("indent_blankline").setup({
         "IndentBlanklineIndent8",
     }, 
 })
-EOF
 
-nnoremap <leader>id <cmd>IndentBlanklineToggle<cr>
+local opts = { noremap = true, silent = true }
+Keymap("n", "<leader>id", "<CMD>IndentBlanklineToggle<CR>", opts)

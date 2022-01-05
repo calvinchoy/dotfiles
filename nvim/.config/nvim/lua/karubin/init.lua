@@ -3,14 +3,29 @@ function IsWindows()
   return vim.loop.os_uname().sysname == "Windows_NT"
 end
 
+Keymap = vim.api.nvim_set_keymap
+
 -- set global variable for home path based on os (win/macos)
 HOME_PATH = os.getenv("HOME")
 if IsWindows() then
   HOME_PATH = os.getenv("USERPROFILE")
 end
 
-require("karubin.telescope")
+-- plugins with custom lua config
+require("karubin.devicons")
+require("karubin.indent-blankline")
+require("karubin.lualine")
+require("karubin.nvim-autopairs")
+require("karubin.nvim-cmp")
 require("karubin.nvim-lsp")
 require("karubin.nvim-tree")
 require("karubin.nvim-treesitter")
+require("karubin.nvim-ts-autotag")
+require("karubin.telescope")
+require("karubin.toggleterm")
+require("karubin.trouble")
 -- require("karubin.local")
+
+-- plugins using default config
+require('Comment').setup()
+require('gitsigns').setup()

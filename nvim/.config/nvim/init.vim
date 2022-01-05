@@ -38,6 +38,7 @@ Plug 'rafamadriz/friendly-snippets'
 " Code formatting and linting
 Plug 'sbdchd/neoformat'
 " Tools and motion
+Plug 'lewis6991/impatient.nvim'
 Plug 'numToStr/Comment.nvim'
 Plug 'tpope/vim-fugitive', { 'on': ['G', 'Gdiff'] }
 Plug 'tpope/vim-surround'
@@ -53,6 +54,7 @@ call plug#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Lua autoloading and init plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+lua require('impatient')
 lua require("karubin")
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
