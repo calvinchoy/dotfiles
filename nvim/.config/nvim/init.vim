@@ -4,6 +4,7 @@
 call plug#begin('~/.vim/plugged')
 " Theme/UI
 Plug 'nvim-lualine/lualine.nvim'
+Plug 'akinsho/bufferline.nvim'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'folke/tokyonight.nvim'
@@ -56,7 +57,6 @@ call plug#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 lua require('impatient')
 lua require("karubin")
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vim remaps
 " => Plugin specific remaps can be gound in the ./plugin

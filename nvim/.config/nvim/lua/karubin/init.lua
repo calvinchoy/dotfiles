@@ -17,6 +17,7 @@ if IsWindows() then
 end
 
 -- plugins with custom lua config
+require("karubin.bufferline")
 require("karubin.devicons")
 require("karubin.indent-blankline")
 require("karubin.lualine")
