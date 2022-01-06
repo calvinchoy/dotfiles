@@ -6,12 +6,6 @@ require("nvim-tree").setup({
 		enable = true,
 		auto_open = false,
 	},
-	update_cwd = false,
-	update_focused_file = {
-		enable = false,
-		update_cwd = false,
-		ignore_list = { ".git", "node_modules", ".cache" },
-	},
 	git = {
 		enable = false,
 	},
@@ -19,4 +13,5 @@ require("nvim-tree").setup({
 
 -- keymaps
 local opts = { noremap = true, silent = true }
-vim.api.nvim_set_keymap("n", "<C-n>", ":NvimTreeToggle<CR>", opts)
+Keymap("n", "<C-n>", ":NvimTreeToggle<CR>", opts)
+Keymap("n", "<leader>fl", ":NvimTreeFindFile<CR>", opts)
