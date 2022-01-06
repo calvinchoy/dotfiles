@@ -27,7 +27,9 @@ function _G.set_terminal_keymaps()
 	vim.api.nvim_buf_set_keymap(0, "t", "<C-l>", [[<C-\><C-n><C-W>l]], opts)
 end
 
+-- -----------------------------------------------------------
 -- Lazy git toggle
+-- -----------------------------------------------------------
 vim.cmd("autocmd! TermOpen term://* lua set_terminal_keymaps()")
 local Terminal = require("toggleterm.terminal").Terminal
 local lazygit = Terminal:new({
@@ -54,7 +56,9 @@ end
 
 vim.api.nvim_set_keymap("n", "<leader>g", "<cmd>lua _lazygit_toggle()<cr>", { noremap = true, silent = true })
 
--- floating terminal generic
+-- -----------------------------------------------------------
+-- Floating terminal toggle
+-- -----------------------------------------------------------
 local floatterminal = Terminal:new({
 	dir = "git_dir",
 	direction = "float",
@@ -78,6 +82,9 @@ end
 
 vim.api.nvim_set_keymap("n", "<leader>/", "<cmd>lua _floatterminal_toggle()<CR>", { noremap = true, silent = true })
 
+-- -----------------------------------------------------------
+-- Mappings 
+-- -----------------------------------------------------------
 local opts = { noremap = true, silent = true }
 Keymap("n", "<C-t>", '<Cmd>exe v:count1 . "ToggleTerm"<CR>', opts)
 Keymap("i", "<C-t>", '<Esc><Cmd>exe v:count1 . "ToggleTerm"<CR>', opts)
