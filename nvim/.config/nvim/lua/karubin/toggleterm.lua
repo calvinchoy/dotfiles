@@ -7,7 +7,7 @@ require("toggleterm").setup({
 			return vim.o.columns * 0.3
 		end
 	end,
-	open_mapping = [[<C-t>]],
+	open_mapping = [[<C-\>]],
 	hide_numbers = true, -- hide the number column in toggleterm buffers
 	shade_filetypes = {},
 	shade_terminals = true,
@@ -72,7 +72,7 @@ local floatterminal = Terminal:new({
 	end,
 	-- function to run on closing the terminal
 	on_close = function(term)
-		--   vim.cmd("q")
+		  -- vim.cmd("exit")
 	end,
 })
 
@@ -88,4 +88,4 @@ vim.api.nvim_set_keymap("n", "<leader>/", "<cmd>lua _floatterminal_toggle()<CR>"
 local opts = { noremap = true, silent = true }
 Keymap("n", "<C-t>", '<Cmd>exe v:count1 . "ToggleTerm"<CR>', opts)
 Keymap("i", "<C-t>", '<Esc><Cmd>exe v:count1 . "ToggleTerm"<CR>', opts)
-Keymap("n", "<S-t>", "<CMD>ToggleTermToggleAll<CR>", opts)
+Keymap("n", "<S-t>", "<CMD>Telescope termfinder find<CR>", opts)
