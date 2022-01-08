@@ -129,9 +129,6 @@ M.term_finder = function()
 
 	require("telescope").extensions.termfinder.find(require("telescope.themes").get_dropdown(opts))
 end
--- custom picker creation
---  https://github.com/nvim-telescope/telescope.nvim/blob/master/developers.md
---  https://www.reddit.com/r/neovim/comments/n9vt6d/chaining_2_telescope_pickers/
 
 -- dotfiles pickers quick access
 M.browse_dotfiles = function()
@@ -152,6 +149,9 @@ M.browse_dotfiles = function()
   require("telescope.builtin").git_files(require("telescope.themes").get_dropdown(opts))
 end
 
+-- custom picker creation
+--  https://github.com/nvim-telescope/telescope.nvim/blob/master/developers.md
+--  https://www.reddit.com/r/neovim/comments/n9vt6d/chaining_2_telescope_pickers/
 -- WIP: picker to execute command
 M.command_execute = function()
   local previewers = require("telescope.previewers")

@@ -40,10 +40,11 @@ Plug 'rafamadriz/friendly-snippets'
 Plug 'sbdchd/neoformat'
 " Tools and motion
 Plug 'lewis6991/impatient.nvim'
+Plug 'szw/vim-maximizer'
 Plug 'famiu/bufdelete.nvim'
 Plug 'numToStr/Comment.nvim'
 Plug 'tpope/vim-fugitive', { 'on': ['G', 'Gdiff'] }
-Plug 'tpope/vim-surround'
+Plug 'machakann/vim-sandwich'
 Plug 'wellle/targets.vim'
 Plug 'windwp/nvim-autopairs'
 Plug 'windwp/nvim-ts-autotag', {'branch': 'main'}
@@ -53,11 +54,14 @@ Plug 'akinsho/toggleterm.nvim'
 
 " End plugins - Plugin specific settings and keymaps are autoloaded from ./plugin
 call plug#end()
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Lua autoloading and init plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 lua require('impatient')
 lua require("karubin")
+" use tpop vim-surround mappings
+runtime macros/sandwich/keymap/surround.vim 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vim remaps
 " => Plugin specific remaps can be gound in the ./plugin
