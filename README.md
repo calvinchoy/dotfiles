@@ -110,6 +110,7 @@ Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory
 - [x] create workable powershell neovim setup with fzf and z navigation
 - [x] Create telescope picker for dotfiles
 - [ ] Create telescope picker to execute shell commands
+- [ ] Add git blame plugin
 
 ## Resources
 - [ThePrimeagen dotfiles](https://github.com/ThePrimeagen/.dotfiles)
