@@ -52,7 +52,7 @@ Plug 'justinmk/vim-sneak'
 Plug 'mattn/emmet-vim', {'for': ['vue', 'html']}
 Plug 'akinsho/toggleterm.nvim'
 
-" End plugins - Plugin specific settings and keymaps are autoloaded from ./plugin
+" End plugins -  specific config and keymaps are autoloaded from plugin and lua folder
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -153,8 +153,5 @@ nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 
-
 " toggle search highlights
 nmap thl :set hls!<CR>
-
-" duplicate current current file

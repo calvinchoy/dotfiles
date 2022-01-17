@@ -1,33 +1,43 @@
 --------------------------------------------------
 -- Default telescope setup
---------------------------------------------------
 local action_layout = require("telescope.actions.layout")
 require("telescope").setup({
 	defaults = {
-		file_sorter = require("telescope.sorters").get_fzy_sorter,
+file_sorter = require("telescope.sorters").get_fzy_sorter,
 		prompt_prefix = " > ",
 		color_devicons = true,
 		file_previewer = require("telescope.previewers").vim_buffer_cat.new,
 		grep_previewer = require("telescope.previewers").vim_buffer_vimgrep.new,
 		qflist_previewer = require("telescope.previewers").vim_buffer_qflist.new,
+		vimgrep_arguments = {
+          "rg",
+          "--color=never",
+          "--no-heading",
+          "--with-filename",
+          "--line-number",
+          "--column",
+          "--smart-case",
+          "--hidden"
+		},
 		file_ignore_patterns = {
 		  ".git",
 			"node_modules",
 		},
 		mappings = {
 			n = {
-				["<M-p>"] = action_layout.toggle_preview,
+			["<M-p>"] = action_layout.toggle_preview,
 			},
 			i = {
 				-- ["<esc>"] = actions.close,
 				["<M-p>"] = action_layout.toggle_preview,
 			},
+
 		},
 	},
 	extensions = {
     fzf = {
-      fuzzy = true,                    -- false will only do exact matching
-      override_generic_sorter = false,  -- override the generic sorter
+      fuzzy = true,                   -- false will only do exact matching
+      override_generic_sorter = true,  -- override the generic sorter
       override_file_sorter = true,     -- override the file sorter
       case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
     },
@@ -147,6 +157,26 @@ M.browse_dotfiles = function()
     }
   }
   require("telescope.builtin").git_files(require("telescope.themes").get_dropdown(opts))
+end
+
+M.generic_live_grep = function()
+  local opts = {
+    prompt_title = " Find all",
+    layout_config = {
+      height = 0.5,
+    }
+  }
+  require("telescope.builtin").live_grep(require("telescope.themes").get_ivy(opts))
+end
+
+M.fuzzy_buffer_grep = function()
+  local opts = {
+    prompt_title = " Find in buffer",
+    layout_config = {
+      height = 0.5,
+    }
+  }
+  require("telescope.builtin").current_buffer_fuzzy_find(require("telescope.themes").get_ivy(opts))
 end
 
 -- custom picker creation
