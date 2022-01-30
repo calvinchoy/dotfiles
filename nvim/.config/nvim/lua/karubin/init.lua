@@ -1,7 +1,14 @@
--- global stuff
+-- Global stuff
 function IsWindows()
   return vim.loop.os_uname().sysname == "Windows_NT"
 end
+
+-- set global variable for home path based on os (win/macos)
+HOME_PATH = os.getenv("HOME")
+if IsWindows() then
+  HOME_PATH = os.getenv("USERPROFILE")
+end
+
 
 -- shortcut to set keymaps
 Keymap = vim.api.nvim_set_keymap
@@ -10,15 +17,15 @@ Keymap = vim.api.nvim_set_keymap
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- set global variable for home path based on os (win/macos)
-HOME_PATH = os.getenv("HOME")
-if IsWindows() then
-  HOME_PATH = os.getenv("USERPROFILE")
-end
-
 -- impatient to speed things up
 require('impatient')
 -- plugins with custom lua config
+require("karubin.sets")
+require("karubin.netrw")
+require("karubin.colors")
+require("karubin.harpoon")
+require("karubin.vim-sneak")
+require("karubin.emmet")
 require("karubin.bufferline")
 require("karubin.devicons")
 require("karubin.indent-blankline")
@@ -31,9 +38,8 @@ require("karubin.nvim-treesitter")
 require("karubin.nvim-ts-autotag")
 require("karubin.telescope")
 require("karubin.toggleterm")
+require("karubin.vim-maximizer")
 require("karubin.trouble")
--- require("karubin.local")
-
 -- plugins using default config
 require('Comment').setup()
 require('gitsigns').setup()

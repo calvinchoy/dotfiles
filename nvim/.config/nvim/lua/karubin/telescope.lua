@@ -56,6 +56,27 @@ file_sorter = require("telescope.sorters").get_fzy_sorter,
 require("telescope").load_extension("fzf")
 require("telescope").load_extension("file_browser")
 require('telescope').load_extension("termfinder")
+
+--------------------------------------------------
+-- Mappings
+--------------------------------------------------
+local opts = { noremap = true, silent = true }
+Keymap("n", "<leader>ff", "<cmd>lua require('telescope.builtin').find_files({no_ignore = true, hidden = true})<cr>", opts)
+Keymap("n", "<leader>bf", "<cmd>lua require('karubin.telescope').browse_files()<cr>", opts)
+Keymap("n", "<leader>fg", "<cmd>lua require('karubin.telescope').generic_live_grep()<cr>", opts)
+Keymap("n", "<leader>fb", "<cmd>lua require('karubin.telescope').browse_buffers()<cr>", opts)
+Keymap("n", "<leader>ft", "<cmd>lua require('karubin.telescope').term_finder()<cr>", opts)
+Keymap("n", "<S-t>", "<cmd>lua require('karubin.telescope').term_finder()<cr>", opts)
+Keymap("n", "<S-e>", "<cmd>lua require('karubin.telescope').browse_buffers()<cr>", opts)
+Keymap("n", "<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<cr>", opts)
+Keymap("n", "<leader>fz", "<cmd>lua require('karubin.telescope').fuzzy_buffer_grep()<cr>", opts)
+Keymap("n", "<C-p>", "<cmd>lua require('karubin.telescope').project_files()<cr>", opts)
+Keymap("n", "<S-p>", "<cmd>lua require('karubin.telescope').document_symbols()<cr>", opts)
+Keymap("n", "<leader>dcf", "<cmd>lua require('karubin.telescope').browse_dotfiles()<cr>", opts)
+-- Basic git helper
+Keymap("n", "<leader>gb", "<cmd>lua require('telescope.builtin').git_branches()<cr>", opts)
+Keymap("n", "<leader>gl", "<cmd>lua require('telescope.builtin').git_bcommits()<cr>", opts)
+
 --------------------------------------------------
 -- Custom telescope pickers
 --------------------------------------------------
