@@ -1,67 +1,12 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => vimplug package management
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-call plug#begin('~/.vim/plugged')
-" Theme/UI
-Plug 'nvim-lualine/lualine.nvim'
-Plug 'akinsho/bufferline.nvim'
-Plug 'lewis6991/gitsigns.nvim'
-Plug 'lukas-reineke/indent-blankline.nvim'
-Plug 'folke/tokyonight.nvim'
-Plug 'rebelot/kanagawa.nvim'
-Plug 'norcalli/nvim-colorizer.lua'
-Plug 'kyazdani42/nvim-web-devicons'
-Plug 'kyazdani42/nvim-tree.lua' 
-" Telescope
-Plug 'nvim-lua/popup.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'ThePrimeagen/harpoon'
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
-Plug 'nvim-telescope/telescope-file-browser.nvim'
-Plug 'tknightz/telescope-termfinder.nvim'
-" Tree shitter and LSP
-Plug 'nvim-treesitter/nvim-treesitter'
-Plug 'neovim/nvim-lspconfig'
-Plug 'WhoIsSethDaniel/toggle-lsp-diagnostics.nvim'
-
-Plug 'onsails/lspkind-nvim'
-Plug 'folke/trouble.nvim'
-" Autocomplete
-Plug 'hrsh7th/nvim-cmp'
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'hrsh7th/cmp-buffer'
-Plug 'hrsh7th/cmp-path'
-Plug 'saadparwaiz1/cmp_luasnip'
-" Snippets to make nvim-cmp actually do something
-Plug 'l3mon4d3/luasnip'
-Plug 'rafamadriz/friendly-snippets'
-" Code formatting and linting
-Plug 'sbdchd/neoformat'
-" Tools and motion
-Plug 'lewis6991/impatient.nvim'
-Plug 'szw/vim-maximizer'
-Plug 'famiu/bufdelete.nvim'
-Plug 'numToStr/Comment.nvim'
-Plug 'tpope/vim-fugitive', { 'on': ['G', 'Gdiff'] }
-Plug 'machakann/vim-sandwich'
-Plug 'wellle/targets.vim'
-Plug 'windwp/nvim-autopairs'
-Plug 'windwp/nvim-ts-autotag', {'branch': 'main'}
-Plug 'justinmk/vim-sneak'
-Plug 'mattn/emmet-vim', {'for': ['vue', 'html']}
-Plug 'akinsho/toggleterm.nvim'
-
-" End plugins -  specific config and keymaps are autoloaded from plugin and lua folder
-call plug#end()
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Lua autoloading and init plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+lua require('plugins')
 lua require('impatient')
 lua require("karubin")
 " use tpop vim-surround mappings
 runtime macros/sandwich/keymap/surround.vim 
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vim remaps
 " => Plugin specific remaps can be gound in the ./plugin
@@ -133,8 +78,8 @@ nnoremap <Leader>q :Bdelete<CR>
 nnoremap <Leader>qf :Bdelete!<CR>
 
 " Buffer back and forth
-nnoremap <silent><Tab> :bn<CR>
-nnoremap <silent><M-Tab> :bp<CR>
+" nnoremap <silent><Tab> :bn<CR>
+" nnoremap <silent><M-Tab> :bp<CR>
 nnoremap <silent>]b :bn<CR>
 nnoremap <silent>[b :bp<CR>
 
