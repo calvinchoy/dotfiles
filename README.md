@@ -103,7 +103,7 @@ Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory
 - [x] Fix vue highlight with tree sitter, bug with template highlighting
 - [x] Add auto pair functionality for brackets
 - [x] Add snippets support to work with nvim-cmp
-- [ ] Working with search, quickfix lists 
+- [x] Working with search, quickfix lists 
 - [ ] Create ansible playbook for installation
 - [x] Configure nvim-cmp, results and context what snippets to load
 - [x] replace airline with lualine for better performance
@@ -111,6 +111,7 @@ Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory
 - [x] Create telescope picker for dotfiles
 - [ ] Create telescope picker to execute shell commands
 - [ ] Add git blame plugin
+- [X] Replace vim-plug with packer
 
 ## Resources
 - [ThePrimeagen dotfiles](https://github.com/ThePrimeagen/.dotfiles)

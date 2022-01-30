@@ -16,6 +16,8 @@ if IsWindows() then
   HOME_PATH = os.getenv("USERPROFILE")
 end
 
+-- impatient to speed things up
+require('impatient')
 -- plugins with custom lua config
 require("karubin.bufferline")
 require("karubin.devicons")
@@ -35,3 +37,4 @@ require("karubin.trouble")
 -- plugins using default config
 require('Comment').setup()
 require('gitsigns').setup()
+require'toggle_lsp_diagnostics'.init()
