@@ -90,6 +90,7 @@ return packer.startup(function(use)
 	use("justinmk/vim-sneak")
 	use({ "mattn/emmet-vim", ft = { "html, vue" } })
 	use("akinsho/toggleterm.nvim")
+	use("vim-test/vim-test")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

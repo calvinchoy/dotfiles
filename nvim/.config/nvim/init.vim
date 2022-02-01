@@ -3,7 +3,6 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 lua require('plugins')
 lua require("karubin")
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vim remaps
 " => Plugin specific remaps can be gound in the ./plugin
