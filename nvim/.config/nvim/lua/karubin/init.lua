@@ -40,6 +40,7 @@ require("karubin.telescope")
 require("karubin.toggleterm")
 require("karubin.vim-maximizer")
 require("karubin.trouble")
+require("karubin.vim-test")
 -- plugins using default config
 require('Comment').setup()
 require('gitsigns').setup()
