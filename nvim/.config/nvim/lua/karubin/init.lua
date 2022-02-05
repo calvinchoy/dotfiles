@@ -19,6 +19,7 @@ vim.g.maplocalleader = " "
 
 -- impatient to speed things up
 require('impatient')
+require('packer_compiled')
 -- plugins with custom lua config
 require("karubin.sets")
 require("karubin.netrw")

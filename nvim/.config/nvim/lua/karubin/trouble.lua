@@ -1,4 +1,6 @@
-require('trouble').setup {}
+require('trouble').setup {
+  height = 23
+}
 require'toggle_lsp_diagnostics'.init()
 
 local opts = { noremap = true, silent = true }

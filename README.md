@@ -14,6 +14,7 @@ Note: dependencies can be installed using a package manager of your os:
 - [Nerd fonts](https://github.com/junegunn/vim-plug): patched fonts
 - [Neovim](https://neovim.io/) -  https://neovim.io/
 - [vim-plug](https://github.com/junegunn/vim-plug) - vim plugin manager
+- [packer.nvim](https://github.com/wbthomason/packer.nvim) - packer.nvim
 - [Tmux](https://github.com/tmux/tmux/wiki) - terminal multiplexer
 - [Tmux config template](https://github.com/gpakosz/.tmux): tmuxconfig template starter
 - [TPM](https://github.com/tmux-plugins/tpm): Tmux package manager
@@ -87,7 +88,7 @@ Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory
 ```
 
 ## Some neovim personal mappings
-- Harpoon 4 indexes are mappt to h1, h2, h3 and h4. Harpoon menu is mapped to M-h
+- Harpoon 4 indexes are mappt to <leader>1, <leader>2, <leader>3 and <leader>4. Harpoon menu is mapped to M-h
 - File and code navigations (using telescope) are mapped modifiers + p combinations: C-p (fuzzy project files), M-p (navigate by symbols), S-p (toggle preview in telescope)
 - Terminals are mapped to C-t and can be browser using telescope using <leader>ft
 - Lazygit terminal is mapped to <leader> g
@@ -109,9 +110,9 @@ Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory
 - [x] replace airline with lualine for better performance
 - [x] create workable powershell neovim setup with fzf and z navigation
 - [x] Create telescope picker for dotfiles
-- [ ] Create telescope picker to execute shell commands
 - [ ] Add git blame plugin
-- [X] Replace vim-plug with packer
+- [x] Replace vim-plug with packer
+- [x] Add Neogen for docs scaffolds
 
 ## Resources
 - [ThePrimeagen dotfiles](https://github.com/ThePrimeagen/.dotfiles)
