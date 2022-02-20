@@ -9,6 +9,7 @@ alias gstl="lazygit"
 alias gbls="git branch --sort=-committerdate"
 alias gblsr="git branch -r --sort=-committerdate"
 alias grls="git remote -v"
+alias gz="cz"
 
 function gr(){
   cd $(git rev-parse --show-toplevel)

@@ -20,7 +20,7 @@ file_sorter = require("telescope.sorters").get_fzy_sorter,
           "--hidden"
 		},
 		file_ignore_patterns = {
-		  ".git",
+		  ".git/.*",
 			"node_modules",
 		},
 		mappings = {

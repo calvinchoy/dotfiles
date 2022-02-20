@@ -77,7 +77,7 @@ require'lspconfig'.sumneko_lua.setup(config({
 }))
 
 -- check: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
-require'lspconfig'.phpactor.setup{}
+-- require'lspconfig'.phpactor.setup(config())
 require'lspconfig'.tsserver.setup(config())
 require'lspconfig'.vuels.setup(config())
 require'lspconfig'.pyright.setup(config())
