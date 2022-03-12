@@ -41,7 +41,7 @@ require("karubin.toggleterm")
 require("karubin.vim-maximizer")
 require("karubin.trouble")
 require("karubin.vim-test")
+require("karubin.gitsigns")
 -- plugins using default config
 require('Comment').setup()
-require('gitsigns').setup()
 require'toggle_lsp_diagnostics'.init()

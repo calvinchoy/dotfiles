@@ -74,7 +74,29 @@ gli() {
 }
 
 #----------------------------------------------------------------------------------------------------------------
-# FZF
+# GIT WORKTREE
+#----------------------------------------------------------------------------------------------------------------
+is-worktree()
+{
+  git rev-parse --is-inside-work-tree  
+}
+set-remotes(){
+  git config --local --add remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
+  git fetch origin
+}
+
+set-upstream(){
+  currentBranch=$(git rev-parse --abbrev-ref HEAD)
+  git branch --set-upstream-to=origin/$currentBranch $currentBranch 
+}
+
+alias gwa="git worktree add"
+alias gwr="git worktree remove"
+alias gwd="git worktree remove"
+alias gwls="git worktree list"
+
+#----------------------------------------------------------------------------------------------------------------
+# FZF - Checkout branch
 #----------------------------------------------------------------------------------------------------------------
 fzf-git-branch() {
   git rev-parse HEAD >/dev/null 2>&1 || return
@@ -109,6 +131,10 @@ fzf-git-checkout-branch() {
   fi
 }
 
+
+#----------------------------------------------------------------------------------------------------------------
+# FZF - Checkout Tag
+#----------------------------------------------------------------------------------------------------------------
 alias gt="fzf-git-tag"
 fzf-git-tag() {
   git rev-parse HEAD >/dev/null 2>&1 || return

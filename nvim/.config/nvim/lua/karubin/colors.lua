@@ -4,6 +4,7 @@
 vim.cmd([[
     set termguicolors
     let g:tokyonight_transparent = "true"
+    let g:tokyonight_transparent_sidebar = "true"
     let g:tokyonight_style = "storm"
     colorscheme tokyonight
 

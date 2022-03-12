@@ -56,6 +56,7 @@ file_sorter = require("telescope.sorters").get_fzy_sorter,
 require("telescope").load_extension("fzf")
 require("telescope").load_extension("file_browser")
 require('telescope').load_extension("termfinder")
+require("telescope").load_extension("git_worktree")
 
 --------------------------------------------------
 -- Mappings

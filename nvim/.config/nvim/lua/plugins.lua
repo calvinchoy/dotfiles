@@ -44,6 +44,7 @@ packer.init({
 return packer.startup({
 	function(use)
 		use("wbthomason/packer.nvim")
+		use("lewis6991/impatient.nvim")
 		-- Theme/UI
 		use("nvim-lualine/lualine.nvim")
 		use("akinsho/bufferline.nvim")
@@ -57,6 +58,7 @@ return packer.startup({
 		use("nvim-lua/popup.nvim")
 		use("nvim-lua/plenary.nvim")
 		use("ThePrimeagen/harpoon")
+		use("ThePrimeagen/git-worktree.nvim")
 		use("nvim-telescope/telescope.nvim")
 		use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
 		use("nvim-telescope/telescope-file-browser.nvim")
@@ -79,18 +81,18 @@ return packer.startup({
 		-- Code formatting and linting
 		use({ "sbdchd/neoformat", cmd = { "Neoformat" } })
 		-- Tools and motion
-		use("lewis6991/impatient.nvim")
 		use("szw/vim-maximizer")
 		use("famiu/bufdelete.nvim")
 		use("numToStr/Comment.nvim")
-		use({ "tpope/vim-fugitive", cmd = { "G", "Gstatus", "G diff", "Gdiffsplit" } })
+		use({"tpope/vim-fugitive", cmd = { "G", "Gstatus", "G diff", "Gdiffsplit" } })
 		use("machakann/vim-sandwich")
 		use("wellle/targets.vim")
 		use("windwp/nvim-autopairs")
 		use("windwp/nvim-ts-autotag")
 		use("tpope/vim-repeat")
 		use("ggandor/lightspeed.nvim")
-		use({ "mattn/emmet-vim", ft = { "html, vue" } })
+		use("chaoren/vim-wordmotion")
+		use({"mattn/emmet-vim", ft = { "html, vue" } })
 		use("akinsho/toggleterm.nvim")
 		use("vim-test/vim-test")
 
