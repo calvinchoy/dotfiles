@@ -11,6 +11,19 @@ hs.hotkey.bind({"cmd"}, "`", function()
 end
 )
 
+hs.hotkey.bind({"alt"}, "/", function()
+  local alacritty = hs.application.get('Alacritty')
+  if alacritty ~= nil and alacritty:isFrontmost() then
+    alacritty:hide()
+  else
+    hs.application.launchOrFocus("/Applications/Alacritty.app")
+    local alacritty = hs.application.get('Alacritty')
+    alacritty.setFrontmost(alacritty)
+    alacritty.activate(alacritty)
+  end
+end
+)
+
 hs.hotkey.bind({"cmd", "alt"}, "h", function()
   local current = hs.window.frontmostWindow()
   current.focusWindowWest()
