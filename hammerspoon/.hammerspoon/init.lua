@@ -11,7 +11,7 @@ hs.hotkey.bind({"cmd"}, "`", function()
 end
 )
 
-hs.hotkey.bind({"alt"}, "/", function()
+hs.hotkey.bind({"cmd"}, "escape", function()
   local alacritty = hs.application.get('Alacritty')
   if alacritty ~= nil and alacritty:isFrontmost() then
     alacritty:hide()

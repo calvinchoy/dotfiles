@@ -11,6 +11,7 @@ vim.cmd([[
     set wildignore+=**/coverage/*
     set wildignore+=**/dist/*
     
+    set laststatus=3
     set cursorline                              " Highlight current activeline
     set guicursor=i:ver1                        " Enable vert cursor in insert mode
     set guicursor+=a:blinkon1                   " turnon cursor blink
