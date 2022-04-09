@@ -53,22 +53,21 @@ return packer.startup({
 		use("folke/tokyonight.nvim")
 		use("norcalli/nvim-colorizer.lua")
 		use("kyazdani42/nvim-web-devicons")
-		use("kyazdani42/nvim-tree.lua")
+		-- use("kyazdani42/nvim-tree.lua")
 		-- Telescope
 		use("nvim-lua/popup.nvim")
 		use("nvim-lua/plenary.nvim")
 		use("ThePrimeagen/harpoon")
 		use("ThePrimeagen/git-worktree.nvim")
 		use("nvim-telescope/telescope.nvim")
-		use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
+		use({"nvim-telescope/telescope-fzf-native.nvim", run = "make" })
 		use("nvim-telescope/telescope-file-browser.nvim")
-		use("tknightz/telescope-termfinder.nvim")
+		-- use("tknightz/telescope-termfinder.nvim")
 		-- Tree shitter and LSP
 		use("nvim-treesitter/nvim-treesitter")
 		use("neovim/nvim-lspconfig")
-		use("WhoIsSethDaniel/toggle-lsp-diagnostics.nvim")
 		use("onsails/lspkind-nvim")
-		use( "folke/trouble.nvim")
+		use("folke/trouble.nvim")
 		-- Autocomplete
 		use("hrsh7th/nvim-cmp")
 		use("hrsh7th/cmp-nvim-lsp")
@@ -81,7 +80,6 @@ return packer.startup({
 		-- Code formatting and linting
 		use({ "sbdchd/neoformat", cmd = { "Neoformat" } })
 		-- Tools and motion
-		use("szw/vim-maximizer")
 		use("famiu/bufdelete.nvim")
 		use("numToStr/Comment.nvim")
 		use({"tpope/vim-fugitive", cmd = { "G", "Gstatus", "G diff", "Gdiffsplit" } })
@@ -89,7 +87,6 @@ return packer.startup({
 		use("wellle/targets.vim")
 		use("windwp/nvim-autopairs")
 		use("windwp/nvim-ts-autotag")
-		use("tpope/vim-repeat")
 		use("ggandor/lightspeed.nvim")
 		use("chaoren/vim-wordmotion")
 		use({"mattn/emmet-vim", ft = { "html, vue" } })

@@ -26,6 +26,7 @@ zinit wait lucid for \
   zsh-users/zsh-autosuggestions \
   zsh-users/zsh-completions \
   urbainvaes/fzf-marks \
+  lukechilds/zsh-nvm \
   #.zsh local extensions and aliases
   zinit snippet ~/.zsh/init.zsh
 
@@ -80,11 +81,12 @@ setopt MULTIOS              # Write to multiple descriptors.
 setopt EXTENDED_GLOB        # Use extended globbing syntax.
 unsetopt CLOBBER            # Do not overwrite existing files with > and >>. Use >! and >>! to bypass.
 
+# Disable git checkout autocompletion slowing down command
+zstyle :completion::complete:git-checkout:argument-rest:headrefs command "git for-each-ref --format='%(refname)' refs/heads 2>/dev/null"
+
 # ---------------------------------------------------------------
 # Hooks and environment settings
 # ---------------------------------------------------------------
-# disable autoupdate homebrew packages
-HOMEBREW_NO_AUTO_UPDATE=1
 # Starship prompt setup - ~/.config/starship.toml
 eval "$(starship init zsh)"
 # direnv - https://direnv.net/

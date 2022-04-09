@@ -55,8 +55,7 @@ file_sorter = require("telescope.sorters").get_fzy_sorter,
 
 require("telescope").load_extension("fzf")
 require("telescope").load_extension("file_browser")
-require('telescope').load_extension("termfinder")
-require("telescope").load_extension("git_worktree")
+-- require('telescope').load_extension("termfinder")
 
 --------------------------------------------------
 -- Mappings
@@ -74,6 +73,7 @@ Keymap("n", "<leader>fz", "<cmd>lua require('karubin.telescope').fuzzy_buffer_gr
 Keymap("n", "<C-p>", "<cmd>lua require('karubin.telescope').project_files()<cr>", opts)
 Keymap("n", "<S-p>", "<cmd>lua require('karubin.telescope').document_symbols()<cr>", opts)
 Keymap("n", "<leader>dcf", "<cmd>lua require('karubin.telescope').browse_dotfiles()<cr>", opts)
+
 -- Basic git helper
 Keymap("n", "<leader>gb", "<cmd>lua require('telescope.builtin').git_branches()<cr>", opts)
 Keymap("n", "<leader>gl", "<cmd>lua require('telescope.builtin').git_bcommits()<cr>", opts)

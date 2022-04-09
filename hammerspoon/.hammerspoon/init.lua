@@ -1,3 +1,6 @@
+-- ----------------------------------------------------
+-- Shortcut to toggle alacritty
+-- ----------------------------------------------------
 hs.hotkey.bind({"cmd"}, "`", function()
   local alacritty = hs.application.get('Alacritty')
   if alacritty ~= nil and alacritty:isFrontmost() then
@@ -24,6 +27,9 @@ hs.hotkey.bind({"cmd"}, "escape", function()
 end
 )
 
+-- ----------------------------------------------------
+-- Vim inspired bindings to navigate between windows
+-- ----------------------------------------------------
 hs.hotkey.bind({"cmd", "alt"}, "h", function()
   local current = hs.window.frontmostWindow()
   current.focusWindowWest()
