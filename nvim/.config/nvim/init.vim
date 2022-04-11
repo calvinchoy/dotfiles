@@ -95,5 +95,9 @@ nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 
+" map recording to leader q
+noremap <expr> q reg_recording() is# '' ? '\<Nop>' : 'q'
+nnoremap <leader>q q
+
 " toggle search highlights
 nmap thl :set hls!<CR>
