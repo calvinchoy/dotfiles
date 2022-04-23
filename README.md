@@ -9,12 +9,15 @@ Note: dependencies can be installed using a package manager of your os:
 
 ### Dependencies
 - [Zsh](https://zsh.sourceforge.io/) - Z shell, v5.X
+  - Plugin overview in .zshrc zinit section
 - [Zinit](https://github.com/zdharma-continuum/zinit) - a zsh plugin manager
 - [Starship prompt](https://starship.rs/) -  cross shell prompt
 - [Nerd fonts](https://www.nerdfonts.com/): patched fonts
 - [Neovim](https://neovim.io/) -  https://neovim.io/
 - [packer.nvim](https://github.com/wbthomason/packer.nvim) - packer.nvim
+  - Plugins overview in plugins.lua file
 - [Tmux](https://github.com/tmux/tmux/wiki) - terminal multiplexer
+  - Plugins overview in tmux.conf.local tpm section
 - [Tmux config template](https://github.com/gpakosz/.tmux): tmuxconfig template starter
 - [TPM](https://github.com/tmux-plugins/tpm): Tmux package manager
 - [Fasd](https://github.com/clvv/fasd) - fast directory and file navigation
@@ -31,6 +34,8 @@ Note: dependencies can be installed using a package manager of your os:
 With the above dependencies installed
 1. Clone this repository to your home directory into `.dotfiles`
 2. Symlink the configurations into your home directory using `stow` inside the `.dotfiles` directory:
+
+Note: Stow is used to manage aliasing/symlinking dotfiles, stow what you want to use
 
     ```sh
     # ~/.dotfiles
