@@ -9,9 +9,9 @@ Note: dependencies can be installed using a package manager of your os:
 
 ### Dependencies
 - [Zsh](https://zsh.sourceforge.io/) - Z shell, v5.X
-- [Zinit](https://github.com/ryanoasis/nerd-fonts) - a zsh plugin manager
+- [Zinit](https://github.com/zdharma-continuum/zinit) - a zsh plugin manager
 - [Starship prompt](https://starship.rs/) -  cross shell prompt
-- [Nerd fonts](https://github.com/junegunn/vim-plug): patched fonts
+- [Nerd fonts](https://www.nerdfonts.com/): patched fonts
 - [Neovim](https://neovim.io/) -  https://neovim.io/
 - [packer.nvim](https://github.com/wbthomason/packer.nvim) - packer.nvim
 - [Tmux](https://github.com/tmux/tmux/wiki) - terminal multiplexer
@@ -40,8 +40,7 @@ With the above dependencies installed
     stow tmux
     ```
 3. Make sure zinit is installing zsh plugins (using alias `zinit-update`)
-4. Make sure to install vim plugins after installing vim-plug by running `:PlugInstall` in nvim
-5. Make sure to install tmux plugins using tpm (`Prefix + I`) it not done automatically
+5. Make sure to install tmux plugins using tpm (`Prefix + I`) if not done automatically
 6. Reload your terminal
 
 ## Installation windows powershell
@@ -95,7 +94,7 @@ Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory
 
 ## Todo
 - [x] Neovim LSP config setup
-- [x] Better autocomplete configuration with nvim-compe
+- [x] Better autocomplete configuration with nvim-cmp
 - [x] Setup Harpoon
 - [ ] Use git worktrees workflow
 - [x] neovim eslint using nvim-lint 
@@ -115,7 +114,6 @@ Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory
 - [x] Add Neogen for docs scaffolds
 
 ## Resources
-- [ThePrimeagen dotfiles](https://github.com/ThePrimeagen/.dotfiles)
 - [Awsesome zsh plugins](https://github.com/unixorn/awesome-zsh-plugins)
 - [Zsh users community plugins](https://github.com/zsh-users)
 - [Prezto modules](https://github.com/sorin-ionescu/prezto/tree/master/modules)
