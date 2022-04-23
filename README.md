@@ -133,5 +133,6 @@ Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory
 - [Awsesome zsh plugins](https://github.com/unixorn/awesome-zsh-plugins)
 - [Zsh users community plugins](https://github.com/zsh-users)
 - [Awesome rust tools](https://github.com/unpluggedcoder/awesome-rust-tools)
+- [Awesome neovim](https://github.com/rockerBOO/awesome-neovim)
 - [Prezto modules](https://github.com/sorin-ionescu/prezto/tree/master/modules)
 - [Oh-my-zsh plugins](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins)
