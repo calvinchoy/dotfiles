@@ -30,7 +30,7 @@ Note: dependencies can be installed using a package manager of your os:
 - [Ag](https://github.com/ggreer/the_silver_searcher) - ag the silver searcher
 - [Lazygit](https://github.com/jesseduffield/lazygit) - lazygit terminal interface for git
 
-## Configuration and setup
+## Installation MacOS (linux)
 With the above dependencies installed
 1. Clone this repository to your home directory into `.dotfiles`
 2. Symlink the configurations into your home directory using `stow` inside the `.dotfiles` directory:
@@ -50,6 +50,7 @@ Note: Stow is used to manage aliasing/symlinking dotfiles, stow what you want to
 
 ## Installation windows powershell
 Note: You can use WSL2 with for example ubuntu, but performance is slow. 
+Resource: [devaslife](https://www.youtube.com/watch?v=5-aK2_WwrmM)
 
 ### Dependencies
 - Powershell, 7.2.1 as of writing
@@ -63,7 +64,7 @@ Note: You can use WSL2 with for example ubuntu, but performance is slow.
 - Terminal-Icons module
 - Fzf and PSFzf module
 
-## Config and setup
+### Config and setup
 1. Update appearance of Widows Terminal (font, transparancy, theme in settings json)
 2. Install dependencies using Scoop, chocolatey and PS Modules
 3. Reconfigure nvim default config path to align with linux:
