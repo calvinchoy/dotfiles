@@ -13,12 +13,12 @@ Note: dependencies can be installed using a package manager of your os:
 - [Starship prompt](https://starship.rs/) -  cross shell prompt
 - [Nerd fonts](https://github.com/junegunn/vim-plug): patched fonts
 - [Neovim](https://neovim.io/) -  https://neovim.io/
-- [vim-plug](https://github.com/junegunn/vim-plug) - vim plugin manager
 - [packer.nvim](https://github.com/wbthomason/packer.nvim) - packer.nvim
 - [Tmux](https://github.com/tmux/tmux/wiki) - terminal multiplexer
 - [Tmux config template](https://github.com/gpakosz/.tmux): tmuxconfig template starter
 - [TPM](https://github.com/tmux-plugins/tpm): Tmux package manager
 - [Fasd](https://github.com/clvv/fasd) - fast directory and file navigation
+- [zoxide](https://github.com/ajeetdsouza/zoxide) - maybe a better alternative for fasd as cd alternative
 - [Fzf](https://github.com/junegunn/fzf) - fuzzy finder
 - [fd](https://github.com/sharkdp/fd) - find alternative
 - [Exa](https://the.exa.website/) - fast ls replacement
