@@ -92,7 +92,7 @@ return packer.startup({
 		use({"mattn/emmet-vim", ft = { "html, vue" } })
 		use("akinsho/toggleterm.nvim")
 		use("vim-test/vim-test")
-
+    use("folke/zen-mode.nvim")
 		-- Automatically set up your configuration after cloning packer.nvim
 		-- Put this at the end after all plugins
 		if PACKER_BOOTSTRAP then
