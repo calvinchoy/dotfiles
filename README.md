@@ -116,13 +116,21 @@ Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory
 - [ ] Add git blame plugin
 - [x] Replace vim-plug with packer
 - [x] Add Neogen for docs scaffolds
-- [ ] Improve performance by reducing amount of plugins, lazyloading etc.
+- [ ] Improve performance by reducing amount of plugins, lazyloading in packer etc.
+- [ ] Add which key plugin to see overview of keymappings
+- [ ] Migrate init.vim to full lua
+- [ ] lua, telescope plugin creation
+- [ ] Improve faster fuzzy search with telescope, fg sometimes hangs, use regular grep and QL
+- [ ] Using QL and cdo patterns, vimgrep and grep
 
 ## Notes
-- if you are using nvm, make sure to lazy load it. Will improve zsh startuptime.
+- zsh setup uses zinit for package management.
+- Not using prezto oh oh-my-zsh to reduce bloat.
+- If you are using nvm, make sure to lazy load it. Will improve zsh startuptime.
 
 ## Resources
 - [Awsesome zsh plugins](https://github.com/unixorn/awesome-zsh-plugins)
 - [Zsh users community plugins](https://github.com/zsh-users)
+- [Awesome rust tools](https://github.com/unpluggedcoder/awesome-rust-tools)
 - [Prezto modules](https://github.com/sorin-ionescu/prezto/tree/master/modules)
 - [Oh-my-zsh plugins](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins)
