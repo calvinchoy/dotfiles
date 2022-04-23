@@ -17,6 +17,7 @@ cmp.setup({
         require('luasnip').lsp_expand(args.body)
       end,
     },
+    -- autocomplete keybindings and expanding behaviour
     mapping = {
       ['<C-j>'] = cmp.mapping.select_next_item(),
       ['<C-k>'] = cmp.mapping.select_prev_item(),
@@ -49,12 +50,14 @@ cmp.setup({
       end
     end, { "i", "s" }),
     },
+    -- load cmp wih some additonal extensions for autocompletion
     sources = {
       { name = 'luasnip', keyword_length = 2, max_item_count = 5, priority_weight = 1 },
       { name = 'nvim_lsp', keyword_length = 3, max_item_count = 5, priortiy_weight = 2 },
       { name = 'buffer', keyword_length = 3, max_item_count = 5, priority_weight = 3 },
       { name = 'path', keyword_length = 3, max_item_count = 5, priority_weight = 4},
     },
+    -- menu formatting
     formatting = {
       format = lspkind.cmp_format {
         with_text = true,
@@ -72,7 +75,7 @@ cmp.setup({
 })
 
 -- -----------------------------------------------------------
--- Snippets setup 
+-- Snippets setup
 -- -----------------------------------------------------------
 -- Check luasnip github for examples on how to load snippets
 require("luasnip.loaders.from_vscode").lazy_load()

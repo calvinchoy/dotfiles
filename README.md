@@ -96,8 +96,7 @@ Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory
 - [x] Neovim LSP config setup
 - [x] Better autocomplete configuration with nvim-cmp
 - [x] Setup Harpoon
-- [ ] Use git worktrees workflow
-- [x] neovim eslint using nvim-lint 
+- [x] Use git worktrees workflow
 - [x] creating files and directories
 - [x] Figure out using phpactor or intelephense for php
 - [x] Fix vue highlight with tree sitter, bug with template highlighting
@@ -112,6 +111,10 @@ Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory
 - [ ] Add git blame plugin
 - [x] Replace vim-plug with packer
 - [x] Add Neogen for docs scaffolds
+- [ ] Improve performance by reducing amount of plugins, lazyloading etc.
+
+## Notes
+- if you are using nvm, make sure to lazy load it. Will improve zsh startuptime.
 
 ## Resources
 - [Awsesome zsh plugins](https://github.com/unixorn/awesome-zsh-plugins)
