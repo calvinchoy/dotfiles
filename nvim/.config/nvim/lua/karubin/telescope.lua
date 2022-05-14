@@ -22,6 +22,7 @@ file_sorter = require("telescope.sorters").get_fzy_sorter,
 		file_ignore_patterns = {
 		  ".git/.*",
 			"node_modules",
+			"**/*.svg",
 		},
 		mappings = {
 			n = {
@@ -205,12 +206,12 @@ end
 --  https://github.com/nvim-telescope/telescope.nvim/blob/master/developers.md
 --  https://www.reddit.com/r/neovim/comments/n9vt6d/chaining_2_telescope_pickers/
 -- WIP: picker to execute command
-M.command_execute = function()
-  local previewers = require("telescope.previewers")
-  local pickers = require("telescope.pickers")
-  local sorters = require("telescope.sorters")
-  local finders = require("telescope.finders")
-end
+-- M.command_execute = function()
+--   local previewers = require("telescope.previewers")
+--   local pickers = require("telescope.pickers")
+--   local sorters = require("telescope.sorters")
+--   local finders = require("telescope.finders")
+-- end
 
 return M
 

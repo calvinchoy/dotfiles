@@ -53,7 +53,7 @@ return packer.startup({
 		use("folke/tokyonight.nvim")
 		use("norcalli/nvim-colorizer.lua")
 		use("kyazdani42/nvim-web-devicons")
-		-- use("kyazdani42/nvim-tree.lua")
+		use("kyazdani42/nvim-tree.lua")
 		-- Telescope
 		use("nvim-lua/popup.nvim")
 		use("nvim-lua/plenary.nvim")
@@ -62,7 +62,6 @@ return packer.startup({
 		use("nvim-telescope/telescope.nvim")
 		use({"nvim-telescope/telescope-fzf-native.nvim", run = "make" })
 		use("nvim-telescope/telescope-file-browser.nvim")
-		-- use("tknightz/telescope-termfinder.nvim")
 		-- Tree shitter and LSP
 		use("nvim-treesitter/nvim-treesitter")
 		use("neovim/nvim-lspconfig")

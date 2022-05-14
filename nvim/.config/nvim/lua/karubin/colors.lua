@@ -9,7 +9,7 @@ vim.cmd([[
     colorscheme tokyonight
 
     " Custom linenumber highlights
-    highlight LineNr          ctermbg=NONE guifg=#616B9B guibg=NONE
+    highlight LineNr          ctermbg=NONE guifg=#4d5478 guibg=NONE
     highlight CursorLineNr    ctermbg=NONE guifg=#CCCCCC guibg=NONE
     highlight CursorLine      ctermbg=darkred guifg=NONE guibg=#22273D
 ]])

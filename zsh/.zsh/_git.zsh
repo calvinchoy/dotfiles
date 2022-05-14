@@ -53,6 +53,7 @@ function git-log-author() {
   git log --author="$1" --graph --pretty=format:$GIT_LOG_FORMAT --abbrev-commit
 }
 
+# Interactive git log using fzf
 gli() {
   local filter
   if [ -n $@ ] && [ -f $@ ]; then

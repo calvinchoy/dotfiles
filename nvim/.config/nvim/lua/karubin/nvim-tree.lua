@@ -1,7 +1,6 @@
 require("nvim-tree").setup({
 	disable_netrw = false,
 	hijack_netrw = false,
-	auto_close = false,
 	update_to_buf_dir = {
 		enable = true,
 		auto_open = false,
