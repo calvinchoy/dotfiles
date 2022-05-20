@@ -9,7 +9,7 @@
   tasks:
     - name: Set homebrew tap for cask-fonts
       homebrew_tap:
-        name: homebrew/cask-fonts
+        name: [homebrew/cask-fonts, espanso/espanso]
         state: present
     - name: install some utilities using macos homebrew
       homebrew:
@@ -32,7 +32,7 @@
             "htop",
             "vim",
             "font-hack-nerd-font",
-            "azure-cli",
+            "espanso",
           ]
         state: present
 
@@ -43,3 +43,18 @@
 
     - name: Clone dotfiles from github to .dotfiles in home directory
       command: git clone https://github.com/calvinchoy/dotfiles.git {{lookup('env','HOME')}}/.dotfiles
+
+    - name: Change to home/.dotfiles directory
+      command: cd {{lookup('env','HOME')}}/.dotfiles
+
+    - name: Alias dotfiles to home directory using stow
+      shell: stow {{ item }}
+      with_items:
+        - alacritty
+        - commitzen
+        - espanso
+        - hammerspoon
+        - lazygit
+        - nvim
+        - starship
+        - zsh
