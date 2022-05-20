@@ -1,0 +1,45 @@
+---
+# pip install ansible
+# usage dry-run: ansible-playbook playbook.yml --check --extra-vars "userid=C#####"
+# usage provision: ansible-playbook playbook.yml --extra-vars "userid=C#####"
+
+- name: Setup shell environment 
+  hosts: 127.0.0.1
+  connection: local
+  tasks:
+    - name: Set homebrew tap for cask-fonts
+      homebrew_tap:
+        name: homebrew/cask-fonts
+        state: present
+    - name: install some utilities using macos homebrew
+      homebrew:
+        name:
+          [
+            "zsh",
+            "starship",
+            "tmux",
+            "exa",
+            "bat",
+            "fzf",
+            "zoxide",
+            "stow",
+            "the_silver_searcher",
+            "ripgrep",
+            "fd",
+            "lazygit",
+            "tree",
+            "jq",
+            "htop",
+            "vim",
+            "font-hack-nerd-font",
+            "azure-cli",
+          ]
+        state: present
+
+    - name: Install nightly build of neovim
+      homebrew:
+        name: neovim
+        state: head
+
+    - name: Clone dotfiles from github to .dotfiles in home directory
+      command: git clone https://github.com/calvinchoy/dotfiles.git {{lookup('env','HOME')}}/.dotfiles
