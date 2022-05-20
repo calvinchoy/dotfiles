@@ -92,6 +92,7 @@ return packer.startup({
 		use("akinsho/toggleterm.nvim")
 		use("vim-test/vim-test")
     use("folke/zen-mode.nvim")
+    use({"WhoIsSethDaniel/toggle-lsp-diagnostics.nvim", config = function() require('toggle_lsp_diagnostics').init() end})
 		-- Automatically set up your configuration after cloning packer.nvim
 		-- Put this at the end after all plugins
 		if PACKER_BOOTSTRAP then

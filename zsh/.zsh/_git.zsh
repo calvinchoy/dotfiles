@@ -9,6 +9,7 @@ alias gstl="lazygit"
 alias gbls="git branch --sort=-committerdate"
 alias gblsr="git branch -r --sort=-committerdate"
 alias grls="git remote -v"
+alias gcb="git checkout -b"
 alias gz="cz"
 
 function gr(){

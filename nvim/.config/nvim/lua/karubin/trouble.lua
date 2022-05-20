@@ -1,5 +1,6 @@
 require('trouble').setup {
-  height = 23
+  height = 23,
+  mode = "document_diagnostics"
 }
 -- require'toggle_lsp_diagnostics'.init()
 

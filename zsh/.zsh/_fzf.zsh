@@ -42,14 +42,16 @@ tm() {
   session=$(tmux list-sessions -F "#{session_name}" 2>/dev/null | fzf --exit-0) &&  tmux $change -t "$session" || echo "No sessions found."
 }
 
-# fuzzy fasd
+# fuzzy fasd - Deprecated in favor of zoxide
 eval "$(fasd --init auto)"
-alias d="fzf_fasd_d"
 fzf_fasd_d() {
     [ $# -gt 0 ] && fasd_cd -d "$*" && return
     local dir
     dir="$(fasd -Rdl "$1" | fzf -1 -0 --no-sort +m)" && cd "${dir}" || return 1
 }
+
+alias d="z"
+alias di="zi"
 
 # ---------------------------------------------------------------
 # Opening using fzf + editor

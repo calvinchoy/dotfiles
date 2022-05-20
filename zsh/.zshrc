@@ -82,7 +82,7 @@ setopt EXTENDED_GLOB        # Use extended globbing syntax.
 unsetopt CLOBBER            # Do not overwrite existing files with > and >>. Use >! and >>! to bypass.
 
 # Disable git checkout autocompletion slowing down when typing
-zstyle :completion::complete:git-checkout:argument-rest:headrefs command "git for-each-ref --format='%(refname)' refs/heads 2>/dev/null"
+# zstyle :completion::complete:git-checkout:argument-rest:headrefs command "git for-each-ref --format='%(refname)' refs/heads 2>/dev/null"
 
 # ---------------------------------------------------------------
 # Hooks and environment settings
@@ -91,5 +91,7 @@ zstyle :completion::complete:git-checkout:argument-rest:headrefs command "git fo
 eval "$(starship init zsh)"
 # direnv - https://direnv.net/
 eval "$(direnv hook zsh)"
+# init zoxide
+eval "$(zoxide init zsh)"
 # aws completer  - https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html
 # complete -C '/usr/local/bin/aws_completer' aws

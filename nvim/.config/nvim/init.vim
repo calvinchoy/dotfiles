@@ -79,6 +79,7 @@ nnoremap <Leader>qf :Bdelete!<CR>
 " Buffer back and forth
 nnoremap <silent>]b :bn<CR>
 nnoremap <silent>[b :bp<CR>
+nnoremap <Leader>b :b#<CR>
 
 " v and h spli
 nmap vs :vsplit<cr>

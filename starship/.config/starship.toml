@@ -5,6 +5,12 @@ command_timeout = 2000
 # truncation_length = 2
 # truncation_symbol = "…/" 
 
+[azure]
+disabled = false
+format = "on [$symbol($subscription)]($style) "
+symbol = "ﴃ "
+style = "blue bold"
+
 [nodejs]
 disabled = false
 

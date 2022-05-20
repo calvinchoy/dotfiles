@@ -185,6 +185,7 @@ end
 M.generic_live_grep = function()
   local opts = {
     prompt_title = " Find all",
+    previewer = false,
     layout_config = {
       height = 0.5,
     }

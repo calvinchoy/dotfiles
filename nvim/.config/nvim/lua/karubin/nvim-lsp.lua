@@ -12,15 +12,6 @@ for type, icon in pairs(signs) do
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
 
--- configure lsp diagnostics
-vim.lsp.handlers["textDocument/publishDiagnostics"] =
-  vim.lsp.with(
-  vim.lsp.diagnostic.on_publish_diagnostics,
-  {
-    virtual_text = true,
-  }
-)
-
 vim.lsp.handlers["textDocument/hover"] =
   vim.lsp.with(
   vim.lsp.handlers.hover,
@@ -80,7 +71,7 @@ require'lspconfig'.sumneko_lua.setup(config({
 -- require'lspconfig'.phpactor.setup(config())
 require'lspconfig'.tsserver.setup(config())
 require'lspconfig'.vuels.setup(config())
--- require'lspconfig'.pyright.setup(config())
+require'lspconfig'.pyright.setup(config())
 -- require'lspconfig'.rust_analyzer.setup(config())
 require'lspconfig'.cssls.setup(config())
 require'lspconfig'.html.setup(config())
