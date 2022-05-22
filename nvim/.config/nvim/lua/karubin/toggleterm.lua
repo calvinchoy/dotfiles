@@ -88,3 +88,4 @@ vim.api.nvim_set_keymap("n", "<leader>/", "<cmd>lua _floatterminal_toggle()<CR>"
 local opts = { noremap = true, silent = true }
 Keymap("n", "<C-t>", '<Cmd>exe v:count1 . "ToggleTerm"<CR>', opts)
 Keymap("i", "<C-t>", '<Esc><Cmd>exe v:count1 . "ToggleTerm"<CR>', opts)
+Map({"n", "i", "t"}, "<M-\\>", '<Cmd> ToggleTermToggleAll <CR>')

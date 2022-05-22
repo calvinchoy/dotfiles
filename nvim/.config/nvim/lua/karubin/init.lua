@@ -13,6 +13,10 @@ end
 -- shortcut to set keymaps
 Keymap = vim.api.nvim_set_keymap
 
+function Map(mode, l, r, opts)
+  opts = opts or {}
+  vim.keymap.set(mode, l, r, opts)
+end
 -- lua set leader key to space
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "

@@ -17,21 +17,33 @@ let mapleader = " "
 imap jj <esc>
 inoremap <C-c> <esc>
 
-" Swap lines down and up
-vnoremap J :m '>+1<CR>gv=gv
-vnoremap K :m '<-2<CR>gv=gv
-" inoremap <C-j> <esc>:m .+1<CR>==
-" inoremap <C-k> <esc>:m .-2<CR>==
-nnoremap <leader>k :m .-2<CR>==
-nnoremap <leader>j :m .+1<CR>==
+" Insert into next line
+inoremap jk <Esc>o
 
-" make Y behave, really yank till end
-nnoremap Y y$
+" Go to end of line staying in insert mode
+inoremap jl <Esc>A
+
+" Swap lines down and up
+vnoremap <M-j> :m '>+1<CR>gv=gv
+vnoremap <M-k> :m '<-2<CR>gv=gv
+
+inoremap <M-j> <esc>:m .+1<CR>==
+inoremap <M-k> <esc>:m .-2<CR>==
+
+noremap <M-j> :m .+1<CR>==
+nnoremap <M-k> :m .-2<CR>==
+
+" Sticky tabbing while in visual mode
+vnoremap < <gv
+vnoremap > >gv
 
 " centered search next
 nnoremap n nzzzv
 nnoremap N Nzzzv
-"
+
+" make Y behave, really yank till end
+nnoremap Y y$
+
 " greatest remap ever
 xnoremap <leader>p "_dP
 
@@ -64,9 +76,6 @@ inoremap OK <Esc>O
 nnoremap <leader>dk m`YPVr <C-o>0y$kP
 nnoremap <leader>dj m`YpVr <C-o>0y$jP
 
-" reload vim config without restarting vim
-nnoremap <Leader><CR> :so ~/.config/nvim/init.vim<CR>
-
 " Fast saves and force writes
 nmap <leader>w :w!<cr>
 cmap w!! w !sudo tee % >/dev/null
@@ -83,12 +92,13 @@ nnoremap <Leader>b :b#<CR>
 
 " v and h spli
 nmap vs :vsplit<cr>
-nmap hp :split<cr>
+nmap hs :split<cr>
 
 " increase, decrease and reset pane sizes
-nnoremap <Leader>= :vertical resize +15<CR>
-nnoremap <Leader>- :vertical resize -15<CR>
-nnoremap <Leader>rp :resize 100<CR>
+nnoremap <C-Up> :resize +5<CR>
+nnoremap <C-Down> :resize -5<CR>
+nnoremap <C-Right> :vertical resize +5<CR>
+nnoremap <C-Left> :vertical resize -5<CR>
 
 " window navigation
 nmap <C-h> <C-w>h

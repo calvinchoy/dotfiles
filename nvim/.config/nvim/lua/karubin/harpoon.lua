@@ -1,6 +1,6 @@
 vim.cmd([[
     nnoremap <silent><leader>a :lua require("harpoon.mark").add_file()<CR>
-    nnoremap <silent><M-h> :lua require("harpoon.ui").toggle_quick_menu()<CR>
+    nnoremap <silent><leader>h :lua require("harpoon.ui").toggle_quick_menu()<CR>
     
     nnoremap <silent><leader>1 :lua require("harpoon.ui").nav_file(1)<CR>
     nnoremap <silent><leader>2 :lua require("harpoon.ui").nav_file(2)<CR>
