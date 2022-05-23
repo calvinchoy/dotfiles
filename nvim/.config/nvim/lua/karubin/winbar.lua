@@ -55,7 +55,7 @@ M.filename = function()
       file_icon_color = default_file_icon_color
     end
 
-    return " " .. "%#" .. hl_group .. "#" .. file_icon .. "%*" .. " " .. "%#Normal#" .. filename .. "%*"
+    return "%=" .. "%#" .. hl_group .. "#" .. file_icon .. "%*" .. " " .. "%#Normal#" .. "%f" .. "%*" .. " " .. "%#String#" .. "%m" .. "%*" .. "%="
   end
 end
 

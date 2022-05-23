@@ -23,6 +23,9 @@ inoremap jk <Esc>o
 " Go to end of line staying in insert mode
 inoremap jl <Esc>A
 
+" Go to start of line staying in insert mode
+inoremap jh <Esc>I
+
 " Swap lines down and up
 vnoremap <M-j> :m '>+1<CR>gv=gv
 vnoremap <M-k> :m '<-2<CR>gv=gv
@@ -88,7 +91,9 @@ nnoremap <Leader>qf :Bdelete!<CR>
 " Buffer back and forth
 nnoremap <silent>]b :bn<CR>
 nnoremap <silent>[b :bp<CR>
-nnoremap <Leader>b :b#<CR>
+nnoremap <M-b> :b#<CR>
+inoremap <M-b> <Esc>:b#<CR>
+vnoremap <M-b> <Esc>:b#<CR>
 
 " v and h spli
 nmap vs :vsplit<cr>
