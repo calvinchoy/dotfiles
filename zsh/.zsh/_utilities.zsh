@@ -37,6 +37,23 @@ function venvinit(){
 }
 
 # ---------------------------------------------------------------
+# some npm aliases
+# ---------------------------------------------------------------
+alias nbuild="npm run build"
+alias ntest="npm run test:unit"
+alias nserve="npm run serve"
+alias ninst="npm install"
+
+function nreset(){
+  echo "Delete node_modules ..."
+  rmd node_modules
+  echo "Delete package-lock.json"
+  rm package-lock.json
+  echo "Run npm install and generate new lock file"
+  npm install
+}
+
+# ---------------------------------------------------------------
 # tmux & tmuxinator
 # ---------------------------------------------------------------
 alias stm="tmux source-file ~/.tmux.conf"

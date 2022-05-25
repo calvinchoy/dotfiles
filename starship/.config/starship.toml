@@ -6,7 +6,7 @@ command_timeout = 2000
 # truncation_symbol = "…/" 
 
 [azure]
-disabled = false
+disabled = true
 format = "on [$symbol($subscription)]($style) "
 symbol = "ﴃ "
 style = "blue bold"
