@@ -100,7 +100,6 @@ return packer.startup({
     use("folke/zen-mode.nvim")
     use({"WhoIsSethDaniel/toggle-lsp-diagnostics.nvim", config = function() require('toggle_lsp_diagnostics').init() end})
     use {'declancm/windex.nvim', config = function() require('windex').setup() end }
-
 		-- Automatically set up your configuration after cloning packer.nvim
 		-- Put this at the end after all plugins
 		if PACKER_BOOTSTRAP then
