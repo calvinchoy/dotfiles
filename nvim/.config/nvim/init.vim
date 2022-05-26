@@ -1,11 +1,11 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Lua autoloading and init plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-lua require('plugins')
+lua require('impatient')
 lua require("karubin")
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vim remaps
-" => Plugin specific remaps can be gound in the ./plugin
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " use tpop vim-surround mappings, ys, cs yss, css etc.
 runtime macros/sandwich/keymap/surround.vim 

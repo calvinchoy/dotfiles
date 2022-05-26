@@ -33,6 +33,11 @@ end
 
 -- Have packer use a popup window
 packer.init({
+  profile = {
+	  enable = true,
+	},
+	-- Move to lua dir so impatient.nvim can cache it
+	compile_path = vim.fn.stdpath("config") .. "/lua/packer_compiled.lua",
 	display = {
 		open_fn = function()
 			return require("packer.util").float({ border = "rounded" })
@@ -45,6 +50,7 @@ return packer.startup({
 	function(use)
 		use("wbthomason/packer.nvim")
 		use("lewis6991/impatient.nvim")
+		use("dstein64/vim-startuptime")
 		-- Theme/UI
 		use("nvim-lualine/lualine.nvim")
 		use("akinsho/bufferline.nvim")
@@ -101,8 +107,4 @@ return packer.startup({
 			require("packer").sync()
 		end
 	end,
-	config = {
-		-- Move to lua dir so impatient.nvim can cache it
-		compile_path = vim.fn.stdpath("config") .. "/lua/packer_compiled.lua",
-	},
 })
