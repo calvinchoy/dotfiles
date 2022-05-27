@@ -84,10 +84,6 @@ nmap <leader>w :w!<cr>
 cmap w!! w !sudo tee % >/dev/null
 cnoremap sudow w !sudo tee % >/dev/null
 
-" Fast and forced quits
-nnoremap <Leader>q :Bdelete<CR>
-nnoremap <Leader>qf :Bdelete!<CR>
-
 " Buffer back and forth
 nnoremap <silent>]b :bn<CR>
 nnoremap <silent>[b :bp<CR>
