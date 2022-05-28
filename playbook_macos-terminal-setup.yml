@@ -28,6 +28,8 @@
             "jq",
             "htop",
             "vim",
+            "ninja",
+            "go"
           ]
         state: present
 
@@ -35,6 +37,17 @@
       homebrew:
         name: neovim
         state: head
+
+    - name: Install lsp language servers for nvim
+      shell: npm install -g {{item}}
+      with_items:
+          - vscode-langservers-extracted
+          - "@volar/vue-language-server"
+          - typescript-language-server
+          - yaml-language-server
+          - bash-language-server
+          - dot-language-server
+          - emmet-ls
 
     - name: Clone dotfiles from github to .dotfiles in home directory
       git:
