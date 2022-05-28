@@ -23,6 +23,9 @@ file_sorter = require("telescope.sorters").get_fzy_sorter,
 		  ".git/.*",
 			"node_modules",
 			"**/*.svg",
+			"dist",
+			"coverage",
+			"report"
 		},
 		mappings = {
 			n = {
