@@ -123,6 +123,7 @@ Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory
 - [ ] lua, telescope plugin creation
 - [ ] Improve faster fuzzy search with telescope, fg sometimes hangs, use regular grep and QL
 - [ ] Using QL and cdo patterns, vimgrep and grep
+- [ ] Update playbook to auto install fonts
 
 ## Notes
 - zsh setup uses zinit for package management.
