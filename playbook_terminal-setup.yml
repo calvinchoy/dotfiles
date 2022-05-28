@@ -7,10 +7,6 @@
   hosts: 127.0.0.1
   connection: local
   tasks:
-    - name: Set homebrew tap for cask-fonts
-      homebrew_tap:
-        name: [homebrew/cask-fonts, espanso/espanso]
-        state: present
     - name: install some utilities using macos homebrew
       homebrew:
         name:
@@ -18,6 +14,7 @@
             "zsh",
             "starship",
             "tmux",
+            "direnv",
             "exa",
             "bat",
             "fzf",
@@ -31,8 +28,6 @@
             "jq",
             "htop",
             "vim",
-            "font-hack-nerd-font",
-            "espanso",
           ]
         state: present
 
@@ -42,7 +37,9 @@
         state: head
 
     - name: Clone dotfiles from github to .dotfiles in home directory
-      command: git clone https://github.com/calvinchoy/dotfiles.git {{lookup('env','HOME')}}/.dotfiles
+      git:
+        repo: 'https://github.com/calvinchoy/dotfiles.git'
+        dest: "{{lookup('env','HOME')}}/.dotfiles"
 
     - name: Change to home/.dotfiles directory
       command: cd {{lookup('env','HOME')}}/.dotfiles
