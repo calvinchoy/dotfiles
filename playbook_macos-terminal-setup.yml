@@ -48,6 +48,7 @@
           - bash-language-server
           - dot-language-server
           - emmet-ls
+          - commitizen
 
     - name: Clone dotfiles from github to .dotfiles in home directory
       git:
