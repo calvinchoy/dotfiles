@@ -2,3 +2,4 @@ zsh/**/_local.zsh
 nvim/**/local.lua
 espanso/**/local.yml
 packer_compiled.lua
+.DS_Store
