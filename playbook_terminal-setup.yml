@@ -48,7 +48,7 @@
       shell: stow {{ item }}
       with_items:
         - alacritty
-        - commitzen
+        - commitizen
         - espanso
         - hammerspoon
         - lazygit
