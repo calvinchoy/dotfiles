@@ -1,3 +1,6 @@
+gui:
+  showIcons: true
+
 customCommands:
   - key: "C"
     command: "git cz"
