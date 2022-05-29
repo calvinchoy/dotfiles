@@ -29,7 +29,9 @@
             "htop",
             "vim",
             "ninja",
-            "go"
+            "go",
+            "azure-cli",
+            "awscli"
           ]
         state: present
 
