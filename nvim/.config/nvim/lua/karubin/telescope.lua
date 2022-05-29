@@ -23,6 +23,8 @@ file_sorter = require("telescope.sorters").get_fzy_sorter,
 		  ".git/.*",
 			"node_modules",
 			"**/*.svg",
+			"**/*.ttf",
+			"**/*.otf",
 			"dist",
 			"coverage",
 			"report"
