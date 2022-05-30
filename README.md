@@ -30,7 +30,7 @@ Note: dependencies can be installed using a package manager of your os:
 - [Ag](https://github.com/ggreer/the_silver_searcher) - ag the silver searcher
 - [Lazygit](https://github.com/jesseduffield/lazygit) - lazygit terminal interface for git
 
-## Installation MacOS (linux)
+## Installation MacOS (linux) - Manual
 With the above dependencies installed
 1. Clone this repository to your home directory into `.dotfiles`
 2. Symlink the configurations into your home directory using `stow` inside the `.dotfiles` directory:
@@ -47,6 +47,14 @@ Note: Stow is used to manage aliasing/symlinking dotfiles, stow what you want to
 3. Make sure zinit is installing zsh plugins (using alias `zinit-update`)
 5. Make sure to install tmux plugins using tpm (`Prefix + I`) if not done automatically
 6. Reload your terminal
+
+## Installation MacOS Ansible playbook - Automated provisioning
+You have to have the ansible binary installed. You can install this using pip install ansible.
+The playbook currenly assume that you don't have any existing setup of any of these tools installed already.
+
+    ```sh
+    ansible-playbook playbook_macos-terminal-setup.yml
+    ```
 
 ## Installation windows powershell
 Note: You can use WSL2 with for example ubuntu, but performance is slow. 
@@ -109,21 +117,24 @@ Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory
 - [x] Add auto pair functionality for brackets
 - [x] Add snippets support to work with nvim-cmp
 - [x] Working with search, quickfix lists 
-- [ ] Create ansible playbook for installation
+- [x] Create ansible playbook for installation
 - [x] Configure nvim-cmp, results and context what snippets to load
 - [x] replace airline with lualine for better performance
 - [x] create workable powershell neovim setup with fzf and z navigation
 - [x] Create telescope picker for dotfiles
-- [ ] Add git blame plugin
+- [x] Add git blame plugin
 - [x] Replace vim-plug with packer
 - [x] Add Neogen for docs scaffolds
 - [ ] Improve performance by reducing amount of plugins, lazyloading in packer etc.
 - [ ] Add which key plugin to see overview of keymappings
 - [ ] Migrate init.vim to full lua
 - [ ] lua, telescope plugin creation
-- [ ] Improve faster fuzzy search with telescope, fg sometimes hangs, use regular grep and QL
+- [x] Improve faster fuzzy search with telescope, fg sometimes hangs, use regular grep and QL
 - [ ] Using QL and cdo patterns, vimgrep and grep
 - [ ] Update playbook to auto install fonts
+- [ ] Proper formatting using null-ls or Neoformat
+- [ ] Python Setup
+- [ ] Golang Setup
 
 ## Notes
 - zsh setup uses zinit for package management.
