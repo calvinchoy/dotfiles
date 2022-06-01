@@ -1,7 +1,11 @@
 require("nvim-tree").setup({
 	disable_netrw = false,
 	hijack_netrw = false,
-	update_to_buf_dir = {
+	update_focused_file = {
+    enable = true,
+    update_cwd = false,
+    ignore_list = {},
+  },update_to_buf_dir = {
 		enable = true,
 		auto_open = false,
 	},
