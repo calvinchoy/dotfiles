@@ -48,8 +48,8 @@ packer.init({
 -- Start plugin installation here
 return packer.startup({
 	function(use)
-		use("wbthomason/packer.nvim")
 		use("lewis6991/impatient.nvim")
+		use("wbthomason/packer.nvim")
 		use("dstein64/vim-startuptime")
 		-- Theme/UI
 		use("nvim-lualine/lualine.nvim")
@@ -73,16 +73,7 @@ return packer.startup({
 		use("neovim/nvim-lspconfig")
 		use("onsails/lspkind-nvim")
 		use("folke/trouble.nvim")
-    use {
-      "folke/which-key.nvim",
-      config = function()
-        require("which-key").setup {
-          -- your configuration comes here
-          -- or leave it empty to use the default settings
-          -- refer to the configuration section below
-        }
-      end
-    }
+    use("folke/which-key.nvim")
 		-- Autocomplete
 		use("hrsh7th/nvim-cmp")
 		use("hrsh7th/cmp-nvim-lsp")
@@ -108,7 +99,7 @@ return packer.startup({
 		use({"mattn/emmet-vim", ft = { "html, vue" } })
 		use("akinsho/toggleterm.nvim")
 		use("vim-test/vim-test")
-    use("folke/zen-mode.nvim")
+    use({"folke/zen-mode.nvim"})
     use({"WhoIsSethDaniel/toggle-lsp-diagnostics.nvim", config = function() require('toggle_lsp_diagnostics').init() end})
     use {'declancm/windex.nvim', config = function() require('windex').setup() end }
 		-- Automatically set up your configuration after cloning packer.nvim

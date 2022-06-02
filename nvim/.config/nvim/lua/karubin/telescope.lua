@@ -24,7 +24,6 @@ file_sorter = require("telescope.sorters").get_fzy_sorter,
 			"node_modules",
 			"**/*.svg",
 			"**/*.ttf",
-			"**/*.otf",
 			"dist",
 			"coverage",
 			"report"
@@ -47,14 +46,8 @@ file_sorter = require("telescope.sorters").get_fzy_sorter,
       override_file_sorter = true,     -- override the file sorter
       case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
     },
-    termfinder = {
-        mappings = {
-            rename_term = '<C-r>',
-            delete_term = '<C-x>',
-            vertical_term = '<C-v>',
-            horizontal_term = '<C-h>',
-            float_term = '<C-f>'
-        }
+    file_browser = {
+      path = "%:p:h"
     }
 	}
 })
