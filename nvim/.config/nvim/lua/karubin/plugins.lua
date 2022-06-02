@@ -88,6 +88,7 @@ return packer.startup({
 		use("hrsh7th/cmp-nvim-lsp")
 		use("hrsh7th/cmp-buffer")
 		use("hrsh7th/cmp-path")
+		use("hrsh7th/cmp-nvim-lsp-signature-help")
 		use("saadparwaiz1/cmp_luasnip")
 		-- Snippets to make nvim-cmp actually do something
 		use("l3mon4d3/luasnip")
