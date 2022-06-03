@@ -21,8 +21,6 @@ end
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- impatient to speed things up
--- require('packer_compiled')
 -- plugins with custom lua config
 require("karubin.plugins")
 require("karubin.sets")

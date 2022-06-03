@@ -47,7 +47,7 @@ file_sorter = require("telescope.sorters").get_fzy_sorter,
       case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
     },
     file_browser = {
-      path = "%:p:h"
+      path = "%:p:h",
     }
 	}
 })
