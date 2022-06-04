@@ -7,7 +7,8 @@ alias rmd="rm -rf"
 alias v="nvim"
 alias vd="nvim ."
 alias b="bat"
-alias npr="npm run"
+
+alias ezenv="v $HOME/.zshenv"
 
 update-zinit(){
   echo "Updating and cleaning up zinit modules"
@@ -39,6 +40,7 @@ function venvinit(){
 # ---------------------------------------------------------------
 # some npm aliases
 # ---------------------------------------------------------------
+alias nrun="npm run"
 alias nbuild="npm run build"
 alias ntest="npm run test:unit"
 alias nserve="npm run serve"

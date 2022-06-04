@@ -48,7 +48,6 @@ require("karubin.trouble")
 require("karubin.vim-test")
 require("karubin.gitsigns")
 require("karubin.gitworktree")
-require("karubin.zen-mode")
 require("karubin.which-key")
 -- plugins using default config
 require('Comment').setup()

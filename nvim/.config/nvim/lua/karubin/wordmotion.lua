@@ -1,6 +1,5 @@
 vim.cmd([[
   let g:wordmotion_mappings = {
-      \ 'w' : ',w',
       \ 'e' : ',e',
       \ 'b' : ',b',
       \ 'ge' : ',ge',

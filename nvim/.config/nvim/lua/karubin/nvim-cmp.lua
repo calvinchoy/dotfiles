@@ -11,6 +11,16 @@ local has_words_before = function()
 end
 
 cmp.setup({
+    window = {
+        documentation = {
+          border = "rounded",
+          winhighlight = 'FloatBorder:LineNr',
+        },
+        completion = {
+          border = "rounded",
+          winhighlight = 'FloatBorder:LineNr',
+        },
+    },
     snippet = {
       expand = function(args)
         require('luasnip').lsp_expand(args.body)
@@ -56,12 +66,12 @@ cmp.setup({
       { name = 'nvim_lsp', keyword_length = 3, max_item_count = 5, priortiy_weight = 2 },
       { name = 'buffer', keyword_length = 3, max_item_count = 5, priority_weight = 3 },
       { name = 'path', keyword_length = 3, max_item_count = 5, priority_weight = 4},
-      {name = 'nvim_lsp_signature_help'},
+      { name = 'nvim_lsp_signature_help'},
     },
     -- menu formatting
     formatting = {
       format = lspkind.cmp_format {
-        with_text = true,
+        with_text = false,
         menu = {
           luasnip = "[snip]",
           nvim_lsp = "[lsp]",

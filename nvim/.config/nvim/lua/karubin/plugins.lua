@@ -96,9 +96,9 @@ return packer.startup({
 		use("chaoren/vim-wordmotion")
 		use({"mattn/emmet-vim", ft = { "html, vue" } })
 		use("akinsho/toggleterm.nvim")
-		use("vim-test/vim-test")
-    use({"folke/zen-mode.nvim"})
-    use({"WhoIsSethDaniel/toggle-lsp-diagnostics.nvim", config = function() require('toggle_lsp_diagnostics').init() end})
+		use({"vim-test/vim-test", cmd = { "TestFile", "TestNearest", "TestSuite", "TestLast", ",TestVisit" }})
+    use({"folke/zen-mode.nvim", cmd = { "ZenMode" }, config = function() require('karubin.zen-mode') end})
+    use({"WhoIsSethDaniel/toggle-lsp-diagnostics.nvim", config = function() require('toggle_lsp_diagnostics').init({virtual_text = false}) end})
     use {'declancm/windex.nvim', config = function() require('windex').setup() end }
 		-- Automatically set up your configuration after cloning packer.nvim
 		-- Put this at the end after all plugins
