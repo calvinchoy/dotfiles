@@ -4,5 +4,9 @@ require("which-key").setup {
   },
   layout = {
     height = { min = 10, max = 35}
-  }
+  },
+  triggers_blacklist = {
+    i = { "j", "k", "s" },
+    v = { "j", "k", "s" },
+  },
 }

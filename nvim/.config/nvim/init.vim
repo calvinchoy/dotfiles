@@ -81,8 +81,6 @@ nnoremap <leader>dj m`YpVr <C-o>0y$jP
 
 " Fast saves and force writes
 nmap <leader>w :w!<cr>
-cmap w!! w !sudo tee % >/dev/null
-cnoremap sudow w !sudo tee % >/dev/null
 
 " Buffer back and forth
 nnoremap <silent>]b :bn<CR>
