@@ -63,7 +63,6 @@ Keymap("n", "<leader>ff", "<cmd>lua require('telescope.builtin').find_files({no_
 Keymap("n", "<leader>bf", "<cmd>lua require('karubin.telescope').browse_files()<cr>", opts)
 Keymap("n", "<leader>fg", "<cmd>lua require('karubin.telescope').generic_live_grep()<cr>", opts)
 Keymap("n", "<leader>fb", "<cmd>lua require('karubin.telescope').browse_buffers()<cr>", opts)
-Keymap("n", "<S-t>", "<cmd>lua require('karubin.telescope').term_finder()<cr>", opts)
 Keymap("n", "<S-e>", "<cmd>lua require('karubin.telescope').browse_buffers()<cr>", opts)
 Keymap("n", "<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<cr>", opts)
 Keymap("n", "<leader>fz", "<cmd>lua require('karubin.telescope').fuzzy_buffer_grep()<cr>", opts)
