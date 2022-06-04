@@ -30,6 +30,7 @@
             "vim",
             "ninja",
             "go",
+            "lua-language-server",
             "azure-cli",
             "awscli"
           ]
