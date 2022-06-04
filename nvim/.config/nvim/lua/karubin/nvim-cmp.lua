@@ -62,8 +62,8 @@ cmp.setup({
     },
     -- load cmp wih some additonal extensions for autocompletion
     sources = {
-      { name = 'luasnip', keyword_length = 2, max_item_count = 5, priority_weight = 1 },
-      { name = 'nvim_lsp', keyword_length = 3, max_item_count = 5, priortiy_weight = 2 },
+      { name = 'nvim_lsp', keyword_length = 3, max_item_count = 5, priortiy_weight = 1 },
+      { name = 'luasnip', keyword_length = 2, max_item_count = 5, priority_weight = 2 },
       { name = 'buffer', keyword_length = 3, max_item_count = 5, priority_weight = 3 },
       { name = 'path', keyword_length = 3, max_item_count = 5, priority_weight = 4},
       { name = 'nvim_lsp_signature_help'},

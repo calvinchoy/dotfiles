@@ -1,5 +1,5 @@
 require('trouble').setup {
-  height = 23,
+  height = 20,
   mode = "document_diagnostics"
 }
 

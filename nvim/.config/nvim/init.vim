@@ -92,9 +92,9 @@ inoremap <M-b> <Esc>:b#<CR>
 vnoremap <M-b> <Esc>:b#<CR>
 
 " v and h spli
-nmap vs :vsplit<cr>
-nmap hs :split<cr>
-
+nmap vs :vsplit<cr><C-l>
+" nmap hs :split<cr>
+"
 " increase, decrease and reset pane sizes
 nnoremap <C-Up> :resize +5<CR>
 nnoremap <C-Down> :resize -5<CR>
