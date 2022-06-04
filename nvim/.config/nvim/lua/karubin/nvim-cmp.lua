@@ -13,11 +13,11 @@ end
 cmp.setup({
     window = {
         documentation = {
-          border = "rounded",
+          border = "single",
           winhighlight = 'FloatBorder:LineNr',
         },
         completion = {
-          border = "rounded",
+          border = "single",
           winhighlight = 'FloatBorder:LineNr',
         },
     },
