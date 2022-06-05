@@ -2,4 +2,5 @@ undo_backspace: false
 search_trigger: off
 toggle_key: off
 search_shortcut: off
+show_icon: false
 backend: "Clipboard"
