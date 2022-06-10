@@ -1,0 +1,21 @@
+matches:
+  - trigger: ";vuecreate"
+    replace: |
+              import { createApp } from 'vue'
+              import App from './App.vue'
+
+              const app = createApp(App)
+              // app.use(...)
+              app.mount('#app')
+  - trigger: ";vuesetup"
+    replace: |
+              <template>
+              </template>
+
+              <script setup>
+              </script>
+
+              <style scoped>
+              </style>
+
+

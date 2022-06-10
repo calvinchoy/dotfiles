@@ -111,7 +111,6 @@ fzf-git-branch() {
 
 alias gb="fzf-git-checkout-branch"
 alias gc="fzf-git-checkout-branch"
-alias gcb="fzf-git-checkout-branch"
 fzf-git-checkout-branch() {
   git rev-parse HEAD >/dev/null 2>&1 || return
 
