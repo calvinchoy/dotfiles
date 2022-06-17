@@ -1,3 +1,15 @@
+# TODO: Refactor out to it can be used anywhere
+# pretty line fullwidth
+alias hr='$HOME/.dotfiles/zsh/.zsh/external/hr'
+
+function headerBar() {
+  echo -e -n "$(tput setaf 3)"
+  hr '-'
+  echo "$1"
+  echo -e -n "$(tput setaf 3)"
+  hr '-'
+  echo -e -n "$(tput setaf 7)"
+}
 #----------------------------------------------------------------------------------------------------------------
 # Basic git wrappers
 #----------------------------------------------------------------------------------------------------------------
@@ -12,6 +24,7 @@ alias grls="git remote -v"
 alias gcb="git checkout -b"
 alias gz="cz"
 
+# go back to git root diretory
 function gr(){
   cd $(git rev-parse --show-toplevel)
 }
@@ -160,6 +173,31 @@ fzf-git-diff() {
   # preview="git diff $@ --color=always -- {-1}"
   git diff $@ --name-only | fzf -m --ansi --preview 'bat --style numbers,changes,header,grid --color=always --diff {}'
 }
+
+#----------------------------------------------------------------------------------------------------------------
+# Deleting branches
+#----------------------------------------------------------------------------------------------------------------
+# delete merged branches
+function git-delete-branches() {
+  echo "Are you sure? (y/n)"
+  read REPLY
+  if [ $REPLY = "y" ]; then
+    git branch --merged | egrep -v "(^\*|master|main|dev|temp)" | xargs git branch -d
+    git remote prune origin
+  fi
+}
+
+# Fuzzy Branch Delete
+alias gbd="fzf-git-delete-branches"
+fzf-git-delete-branches() {
+ local branches branch
+  branches=$(git for-each-ref --count=30 --sort=-committerdate refs/heads/ --format="%(refname:short)") &&
+  branch=$(echo "$branches" | fzf --multi --reverse  --preview-window right:50% \
+      --preview 'git log -n 50 --color=always --date=short --pretty="%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit $(sed "s/.* //" <<< {})' |
+    sed "s/.* //") &&
+  git branch -D $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
+}
+
 #----------------------------------------------------------------------------------------------------------------
 # Git revert and reset
 #----------------------------------------------------------------------------------------------------------------
@@ -223,11 +261,38 @@ function git-init-remote() {
 # Check if there are changes
 function git-has-changes() {
   if git diff-index --quiet HEAD --; then
-    echo "$(tput setaf 7)No local changes $(tput setaf 7)"
+    echo "$(tput setaf 7) $(tput setaf 7)"
   else
-    echo "$(tput setaf 4)Changes$(tput setaf 7)"
+    echo "$(tput setaf 1)*$(tput setaf 7)"
   fi
 }
+
+# Get current branch
+function getCurrentBranch() {
+  git branch | grep \* | cut -d ' ' -f2
+}
+
+function getLastCommits(){
+  git log --oneline -n $1
+}
+
+# Return repo branch and dirty state
+function getGitStatus() {
+  if [ -d "$1" ]; then
+    curdir=$(pwd)
+    cd $1
+    dirname=${PWD##*/}
+    line="                                     "
+    printf "%s %s $(tput setaf 3)$(getCurrentBranch)$(tput setaf 7)($(git branch | wc -l | tr -d '[:space:]'))$(git-has-changes)$(tput setaf 7) $(getLastCommits 1) \n" $dirname "${line:${#dirname}}"
+    if [ "$2" = "branches" ]; then
+      gbls
+    fi
+
+    hr "-"
+    cd $curdir
+  fi
+}
+
 # Clear git locks
 function git-clear-lock() {
   rm -f ./.git/index.lock
@@ -251,24 +316,4 @@ function git-unignore-folder() {
 # list ignored files
 alias git-list-ignored="git ls-files -v | grep '^[[:lower:]]'"
 
-# delete merged branches
-function git-delete-branches() {
-  echo "Are you sure? (y/n)"
-  read REPLY
-  if [ $REPLY = "y" ]; then
-    git branch --merged | egrep -v "(^\*|master|main|dev|temp)" | xargs git branch -d
-    git remote prune origin
-  fi
-}
-
-# Fuzzy Branch Delete
-alias gbd="fzf-git-delete-branches"
-fzf-git-delete-branches() {
- local branches branch
-  branches=$(git for-each-ref --count=30 --sort=-committerdate refs/heads/ --format="%(refname:short)") &&
-  branch=$(echo "$branches" | fzf --multi --reverse  --preview-window right:50% \
-      --preview 'git log -n 50 --color=always --date=short --pretty="%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit $(sed "s/.* //" <<< {})' |
-    sed "s/.* //") &&
-  git branch -D $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
-}
 

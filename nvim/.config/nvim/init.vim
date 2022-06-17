@@ -44,13 +44,11 @@ vnoremap > >gv
 nnoremap n nzzzv
 nnoremap N Nzzzv
 
-" make Y behave, really yank till end
-nnoremap Y y$
-
-" greatest remap ever
+" Alternatve pasting while clearing blackhole
 xnoremap <leader>p "_dP
 
-" next greatest remap ever : asbjornHaland
+" Yank
+nnoremap Y y$
 nnoremap <leader>y "+y
 vnoremap <leader>y "+y
 nnoremap <leader>Y gg"+yG
