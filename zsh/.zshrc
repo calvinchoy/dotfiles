@@ -14,6 +14,18 @@ if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
 fi
 
 source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
+
+# ---------------------------------------------------------------
+# zsh-autocomplete settings
+# ---------------------------------------------------------------
+zstyle ':autocomplete:*' recent-dirs no
+zstyle ':autocomplete:*' min-delay 1.0
+zstyle ':autocomplete:*' min-input 5 
+zstyle ':autocomplete:*' widget-style menu-complete 
+zstyle ':autocomplete:*' fzf-completion yes
+zstyle ':completion:*:all-matches' hidden all
+zstyle ':completion:*:unambiguous' hidden all
+
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 # ---------------------------------------------------------------
@@ -24,7 +36,7 @@ zinit wait lucid for \
   zdharma-continuum/fast-syntax-highlighting \
   zsh-users/zsh-history-substring-search \
   zsh-users/zsh-autosuggestions \
-  zsh-users/zsh-completions \
+  marlonrichert/zsh-autocomplete \
   urbainvaes/fzf-marks \
   lukechilds/zsh-nvm \
   #.zsh local extensions and aliases
@@ -69,6 +81,9 @@ unsetopt CHECK_JOBS       # Don't report on jobs when shell exit.
 unsetopt correct_all
 unsetopt correct
 DISABLE_CORRECTION="true"
+
+# Cases insensitivity settings
+setopt MENU_COMPLETE
 
 # directory
 setopt AUTO_CD              # Auto changes to a directory without typing cd.

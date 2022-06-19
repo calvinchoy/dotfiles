@@ -2,7 +2,8 @@
 # General
 # ---------------------------------------------------------------
 alias cl="clear"
-alias szsh='exec zsh'
+alias szsh='echo "Reloading zsh config..." && exec zsh'
+alias sz='szsh'
 alias rmd="rm -rf"
 alias v="nvim"
 alias vd="nvim ."

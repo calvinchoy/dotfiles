@@ -1,5 +1,5 @@
 matches:
-  - trigger: ";vuecreate"
+  - trigger: ";vcreate"
     replace: |
               import { createApp } from 'vue'
               import App from './App.vue'
@@ -7,7 +7,7 @@ matches:
               const app = createApp(App)
               // app.use(...)
               app.mount('#app')
-  - trigger: ";vuesetup"
+  - trigger: ";vsetup"
     replace: |
               <template>
               </template>
@@ -17,5 +17,33 @@ matches:
 
               <style scoped>
               </style>
+  - trigger: ";vrouteconfig"
+    replace: |
+              import { RouteRecordRaw } from "vue-router";
 
+              const routes: Array<RouteRecordRaw> = [
+                {
+                  path: "baseRooute",
+                  component: <ParenteComponent>,
+                  props: {},
+                  children: [
+                    {
+                      path: "",
+                      component: async () => import("../views/NestedComponent.vue)"
+                      name: "routeName"
+                    },
+                    {
+                      path: "<subroute>",
+                      component: () => import("../views/NestedComponent.vue"),
+                      name: "routeName",
+                    },
+              ];
+  - trigger: ";vroutesetup"
+    replace: |
+              import { createRouter } from "vue-router";
+
+              const router = createRouter({
+                history: createWebHistory("/portalserver/"),
+                routes
+              });
 
