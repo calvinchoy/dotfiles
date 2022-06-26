@@ -358,7 +358,7 @@ set-hook -g 'after-resize-pane'  "if-shell -F '#{||:#{==:#{window_panes},1},#{wi
 # toggle status bar
 bind-key -n C-S-Down set-option -g status #Ctrl+shift+down  to toggle status bar
 # set status bar top
-# set-option -g status-position top
+set-option -g status-position top
 
 # Swap tmux windows left and right
 bind-key -n C-S-Left swap-window -t -1

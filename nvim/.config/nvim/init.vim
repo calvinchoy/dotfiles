@@ -71,8 +71,8 @@ inoremap OJ <Esc>o
 inoremap OK <Esc>O
 
 "Duplicate up/down
-nnoremap <leader>dk m`YPVr <C-o>0y$kP
-nnoremap <leader>dj m`YpVr <C-o>0y$jP
+nnoremap <leader>dk m`YPVr <C-o>0y$kP<Right>D0
+nnoremap <leader>dj m`YpVr <C-o>0y$jP<Right>D0
 
 " Fast saves and force writes
 nmap <leader>w :w!<cr>
@@ -99,6 +99,10 @@ nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
+
+" remapping undo and redo
+nnoremap <C-Z> :undo<CR>
+nnoremap <C-Y> :redo<CR>
 
 " map recording to leader q
 noremap <expr> q reg_recording() is# '' ? '\<Nop>' : 'q'

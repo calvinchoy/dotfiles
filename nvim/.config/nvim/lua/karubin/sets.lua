@@ -44,6 +44,7 @@ vim.cmd([[
     set autowrite                               " Save on buffer switch
     set mouse=a
     set laststatus=2                            " Always show the statusline
+    " set cmdheight=0                             " hide commandline
     set noshowmode                              " Hide the default mode text (e.g. -- INSERT -- below the statusline)
     set clipboard=unnamed                       " Copy pasting, fix for macos
     set noswapfile
