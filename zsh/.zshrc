@@ -15,17 +15,6 @@ fi
 
 source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
 
-# ---------------------------------------------------------------
-# zsh-autocomplete settings
-# ---------------------------------------------------------------
-zstyle ':autocomplete:*' recent-dirs no
-zstyle ':autocomplete:*' min-delay 1.0
-zstyle ':autocomplete:*' min-input 5 
-zstyle ':autocomplete:*' widget-style menu-complete 
-zstyle ':autocomplete:*' fzf-completion yes
-zstyle ':completion:*:all-matches' hidden all
-zstyle ':completion:*:unambiguous' hidden all
-
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 # ---------------------------------------------------------------
@@ -36,7 +25,7 @@ zinit wait lucid for \
   zdharma-continuum/fast-syntax-highlighting \
   zsh-users/zsh-history-substring-search \
   zsh-users/zsh-autosuggestions \
-  marlonrichert/zsh-autocomplete \
+  zsh-users/zsh-completions \
   urbainvaes/fzf-marks \
   lukechilds/zsh-nvm \
   #.zsh local extensions and aliases

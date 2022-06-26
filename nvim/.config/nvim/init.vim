@@ -7,9 +7,6 @@ lua require("karubin")
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vim remaps
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" use tpop vim-surround mappings, ys, cs yss, css etc.
-runtime macros/sandwich/keymap/surround.vim 
-
 " remap leader to spacebar
 let mapleader = " "
 

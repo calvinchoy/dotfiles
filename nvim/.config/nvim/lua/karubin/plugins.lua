@@ -48,10 +48,9 @@ return packer.startup({
 	function(use)
 		use("lewis6991/impatient.nvim")
 		use("wbthomason/packer.nvim")
-		use("dstein64/vim-startuptime")
+		use({"dstein64/vim-startuptime", cmd = { "StartupTime" }})
 		-- Theme/UI
 		use("nvim-lualine/lualine.nvim")
-		use("akinsho/bufferline.nvim")
 		use("lewis6991/gitsigns.nvim")
 		use("lukas-reineke/indent-blankline.nvim")
 		use("folke/tokyonight.nvim")
@@ -84,7 +83,6 @@ return packer.startup({
 		-- Code formatting and linting
 		use({ "sbdchd/neoformat", cmd = { "Neoformat" } })
 		-- Tools and motion
-		use("famiu/bufdelete.nvim")
 		use("numToStr/Comment.nvim")
 		use({"tpope/vim-fugitive", cmd = { "G", "Gstatus", "G diff", "Gdiffsplit" } })
 		use("machakann/vim-sandwich")
@@ -92,13 +90,11 @@ return packer.startup({
 		use("windwp/nvim-autopairs")
 		use("windwp/nvim-ts-autotag")
 		use("ggandor/lightspeed.nvim")
-		use("chaoren/vim-wordmotion")
 		use({"mattn/emmet-vim", ft = { "html, vue" } })
 		use("akinsho/toggleterm.nvim")
 		use({"vim-test/vim-test", cmd = { "TestFile", "TestNearest", "TestSuite", "TestLast", ",TestVisit" }})
     use({"folke/zen-mode.nvim", cmd = { "ZenMode" }, config = function() require('karubin.zen-mode') end})
     use({"WhoIsSethDaniel/toggle-lsp-diagnostics.nvim", config = function() require('toggle_lsp_diagnostics').init({virtual_text = false}) end})
-    use {'declancm/windex.nvim', config = function() require('windex').setup() end }
 		-- Automatically set up your configuration after cloning packer.nvim
 		-- Put this at the end after all plugins
 		if PACKER_BOOTSTRAP then

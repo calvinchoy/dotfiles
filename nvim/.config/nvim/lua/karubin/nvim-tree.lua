@@ -5,11 +5,8 @@ require("nvim-tree").setup({
     enable = true,
     update_cwd = false,
     ignore_list = {},
-  },update_to_buf_dir = {
-		enable = true,
-		auto_open = false,
-	},
-	git = {
+  },
+  git = {
 		enable = false,
 	},
 	view = {
