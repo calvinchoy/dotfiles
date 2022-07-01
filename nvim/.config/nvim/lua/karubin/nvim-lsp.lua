@@ -1,5 +1,5 @@
--- nvim-cmp
 local function config(_config)
+    -- nvim-cmp
     return vim.tbl_deep_extend("force", {
         capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
     }, _config or {})
@@ -28,6 +28,9 @@ vim.lsp.handlers["textDocument/signatureHelp"] =
   }
 )
 
+-- -------------------------------------------------------------------
+-- Language servers
+-- -------------------------------------------------------------------
 require'lspconfig'.sumneko_lua.setup {
   settings = {
     Lua = {

@@ -70,6 +70,7 @@ return packer.startup({
 		use("onsails/lspkind-nvim")
 		use("folke/trouble.nvim")
     use("folke/which-key.nvim")
+    use({"glepnir/lspsaga.nvim", branch = "main"})
 		-- Autocomplete
 		use("hrsh7th/nvim-cmp")
 		use("hrsh7th/cmp-nvim-lsp")
@@ -95,12 +96,8 @@ return packer.startup({
 		use({"vim-test/vim-test", cmd = { "TestFile", "TestNearest", "TestSuite", "TestLast", ",TestVisit" }})
     use({"folke/zen-mode.nvim", cmd = { "ZenMode" }, config = function() require('karubin.zen-mode') end})
     use({"WhoIsSethDaniel/toggle-lsp-diagnostics.nvim", config = function() require('toggle_lsp_diagnostics').init({virtual_text = false}) end})
-    use {
-      'VonHeikemen/searchbox.nvim',
-      requires = {
-        {'MunifTanjim/nui.nvim'}
-      }
-    }
+    use {'VonHeikemen/searchbox.nvim', requires = {{'MunifTanjim/nui.nvim'}}}
+    use({"metakirby5/codi.vim", cmd = {"Codi", "Codi!", "Codi!!", "CodiNew", "CodiSelect", "CodiExpand"}})
 		-- Automatically set up your configuration after cloning packer.nvim
 		-- Put this at the end after all plugins
 		if PACKER_BOOTSTRAP then

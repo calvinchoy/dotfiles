@@ -198,16 +198,5 @@ M.fuzzy_buffer_grep = function()
   require("telescope.builtin").current_buffer_fuzzy_find(require("telescope.themes").get_ivy(opts))
 end
 
--- custom picker creation
---  https://github.com/nvim-telescope/telescope.nvim/blob/master/developers.md
---  https://www.reddit.com/r/neovim/comments/n9vt6d/chaining_2_telescope_pickers/
--- WIP: picker to execute command
--- M.command_execute = function()
---   local previewers = require("telescope.previewers")
---   local pickers = require("telescope.pickers")
---   local sorters = require("telescope.sorters")
---   local finders = require("telescope.finders")
--- end
-
 return M
 
