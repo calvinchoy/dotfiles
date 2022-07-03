@@ -21,6 +21,9 @@ cmp.setup({
           winhighlight = 'FloatBorder:LineNr',
         },
     },
+    matching = {
+      disallow_fuzzy_matching = true 
+    },
     snippet = {
       expand = function(args)
         require('luasnip').lsp_expand(args.body)
@@ -37,35 +40,36 @@ cmp.setup({
         c = cmp.mapping.close(),
       },
       ['<CR>'] = cmp.mapping.confirm({ select = true }),
+ 
       -- Use Tab to navigatie autocomplete list
-      ["<Tab>"] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.select_next_item()
-      elseif luasnip.expand_or_jumpable() then
-        luasnip.expand_or_jump()
-      elseif has_words_before() then
-        cmp.complete()
-     else
-        fallback()
-      end
-    end, { "i", "s" }),
-
-    ["<S-Tab>"] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.select_prev_item()
-      elseif luasnip.jumpable(-1) then
-        luasnip.jump(-1)
-      else
-        fallback()
-      end
-    end, { "i", "s" }),
+    --   ["<Tab>"] = cmp.mapping(function(fallback)
+    --   if cmp.visible() then
+    --     cmp.select_next_item()
+    --   elseif luasnip.expand_or_jumpable() then
+    --     luasnip.expand_or_jump()
+    --   elseif has_words_before() then
+    --     cmp.complete()
+    --  else
+    --     fallback()
+    --   end
+    -- end, { "i", "s" }),
+    --
+    -- ["<S-Tab>"] = cmp.mapping(function(fallback)
+    --   if cmp.visible() then
+    --     cmp.select_prev_item()
+    --   elseif luasnip.jumpable(-1) then
+    --     luasnip.jump(-1)
+    --   else
+    --     fallback()
+    --   end
+    -- end, { "i", "s" }),
     },
     -- load cmp wih some additonal extensions for autocompletion
     sources = {
-      { name = 'nvim_lsp', keyword_length = 3, max_item_count = 5, priortiy_weight = 1 },
-      { name = 'luasnip', keyword_length = 2, max_item_count = 5, priority_weight = 2 },
-      { name = 'buffer', keyword_length = 3, max_item_count = 5, priority_weight = 3 },
-      { name = 'path', keyword_length = 3, max_item_count = 5, priority_weight = 4},
+      { name = 'luasnip', keyword_length = 2, max_item_count = 3, priority_weight = 1 },
+      { name = 'nvim_lsp', keyword_length = 3, max_item_count = 2, priortiy_weight = 2 },
+      { name = 'buffer', keyword_length = 3, max_item_count = 3, priority_weight = 3 },
+      { name = 'path', keyword_length = 3, max_item_count = 3, priority_weight = 4},
       { name = 'nvim_lsp_signature_help'},
     },
     -- menu formatting

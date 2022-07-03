@@ -18,12 +18,12 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 -- Autocommand that reloads neovim whenever you save the plugins.lua file
-vim.cmd([[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerSync
-  augroup end
-]])
+-- vim.cmd([[
+--   augroup packer_user_config
+--     autocmd!
+--     autocmd BufWritePost plugins.lua source <afile> | PackerSync
+--   augroup end
+-- ]])
 
 -- Use a protected call so we don't error out on first use
 local status_ok, packer = pcall(require, "packer")
@@ -69,7 +69,8 @@ return packer.startup({
 		use("nvim-treesitter/nvim-treesitter")
 		use("neovim/nvim-lspconfig")
 		use("onsails/lspkind-nvim")
-		use("folke/trouble.nvim")
+		-- use("folke/trouble.nvim")
+		use("bellini666/trouble.nvim")
     use("folke/which-key.nvim")
     use({"glepnir/lspsaga.nvim", branch = "main"})
 		-- Autocomplete
@@ -96,8 +97,9 @@ return packer.startup({
 		use("akinsho/toggleterm.nvim")
 		use({"vim-test/vim-test", cmd = { "TestFile", "TestNearest", "TestSuite", "TestLast", ",TestVisit" }})
     use({"folke/zen-mode.nvim", cmd = { "ZenMode" }, config = function() require('karubin.zen-mode') end})
-    use({"WhoIsSethDaniel/toggle-lsp-diagnostics.nvim", config = function() require('toggle_lsp_diagnostics').init({virtual_text = false}) end})
-    use {'VonHeikemen/searchbox.nvim', requires = {{'MunifTanjim/nui.nvim'}}}
+    use({"WhoIsSethDaniel/toggle-lsp-diagnostics.nvim", config = function() require('toggle_lsp_diagnostics').init({virtual_text = false, underline = false}) end})
+    use({'VonHeikemen/searchbox.nvim', requires = {{'MunifTanjim/nui.nvim'}}})
+    use({'abecodes/tabout.nvim', config = function() require('tabout').setup({}) end })
     use({"metakirby5/codi.vim", cmd = {"Codi", "Codi!", "Codi!!", "CodiNew", "CodiSelect", "CodiExpand"}})
 		-- Automatically set up your configuration after cloning packer.nvim
 		-- Put this at the end after all plugins
