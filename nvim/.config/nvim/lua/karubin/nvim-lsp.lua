@@ -54,13 +54,12 @@ require'lspconfig'.sumneko_lua.setup {
   },
 }
 
--- check: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 -- require'lspconfig'.phpactor.setup(config())
+-- require'lspconfig'.intelephense.setup(config())
+-- require'lspconfig'.rust_analyzer.setup(config())
 require'lspconfig'.tsserver.setup(config())
--- require'lspconfig'.vuels.setup(config())
 require'lspconfig'.volar.setup(config({filetypes = {'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json'}}))
 require'lspconfig'.pyright.setup(config())
--- require'lspconfig'.rust_analyzer.setup(config())
 require'lspconfig'.cssls.setup(config())
 require'lspconfig'.html.setup(config())
 require'lspconfig'.jsonls.setup(config())

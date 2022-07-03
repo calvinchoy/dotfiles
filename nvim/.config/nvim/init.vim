@@ -80,9 +80,8 @@ nmap <leader>w :w!<cr>
 " Buffer back and forth
 nnoremap <silent>]b :bn<CR>
 nnoremap <silent>[b :bp<CR>
-nnoremap <M-b> :b#<CR>
-inoremap <M-b> <Esc>:b#<CR>
-vnoremap <M-b> <Esc>:b#<CR>
+nnoremap <S-e> :b#<CR>
+vnoremap <S-e> <Esc>:b#<CR>
 
 " v and h spli
 nmap vs :vsplit<cr><C-l>

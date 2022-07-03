@@ -47,6 +47,7 @@ packer.init({
 return packer.startup({
 	function(use)
 		use("lewis6991/impatient.nvim")
+		use("nathom/filetype.nvim")
 		use("wbthomason/packer.nvim")
 		use({"dstein64/vim-startuptime", cmd = { "StartupTime" }})
 		-- Theme/UI

@@ -63,12 +63,13 @@ Keymap("n", "<leader>ff", "<cmd>lua require('telescope.builtin').find_files({no_
 Keymap("n", "<leader>bf", "<cmd>lua require('karubin.telescope').browse_files()<cr>", opts)
 Keymap("n", "<leader>fg", "<cmd>lua require('karubin.telescope').generic_live_grep()<cr>", opts)
 Keymap("n", "<leader>fb", "<cmd>lua require('karubin.telescope').browse_buffers()<cr>", opts)
-Keymap("n", "<S-e>", "<cmd>lua require('karubin.telescope').browse_buffers()<cr>", opts)
+Keymap("n", "<M-b>", "<cmd>lua require('karubin.telescope').browse_buffers()<cr>", opts)
 Keymap("n", "<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<cr>", opts)
 Keymap("n", "<leader>fz", "<cmd>lua require('karubin.telescope').fuzzy_buffer_grep()<cr>", opts)
 Keymap("n", "<C-p>", "<cmd>lua require('karubin.telescope').project_files()<cr>", opts)
 Keymap("n", "<S-p>", "<cmd>lua require('karubin.telescope').document_symbols()<cr>", opts)
 Keymap("n", "<leader>dcf", "<cmd>lua require('karubin.telescope').browse_dotfiles()<cr>", opts)
+Keymap("n", "gd", "<cmd>lua require('karubin.telescope').go_to_definitions()<cr>", opts)
 
 -- Basic git helper
 Keymap("n", "<leader>gb", "<cmd>lua require('telescope.builtin').git_branches()<cr>", opts)
@@ -186,6 +187,17 @@ M.generic_live_grep = function()
     }
   }
   require("telescope.builtin").live_grep(require("telescope.themes").get_ivy(opts))
+end
+
+
+M.go_to_definitions = function()
+  local opts = {
+    prompt_title = " Find all",
+    layout_config = {
+      height = 0.5,
+    },
+  }
+  require('telescope.builtin').lsp_definitions(require("telescope.themes").get_ivy(opts))
 end
 
 M.fuzzy_buffer_grep = function()
