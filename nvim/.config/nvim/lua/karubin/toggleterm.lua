@@ -72,7 +72,7 @@ local floatterminal = Terminal:new({
 	end,
 	-- function to run on closing the terminal
 	on_close = function(term)
-		  -- vim.cmd("exit")
+		-- vim.cmd("exit")
 	end,
 })
 
@@ -83,9 +83,9 @@ end
 vim.api.nvim_set_keymap("n", "<leader>/", "<cmd>lua _floatterminal_toggle()<CR>", { noremap = true, silent = true })
 
 -- -----------------------------------------------------------
--- Mappings 
+-- Mappings
 -- -----------------------------------------------------------
 local opts = { noremap = true, silent = true }
 Keymap("n", "<C-t>", '<Cmd>exe v:count1 . "ToggleTerm"<CR>', opts)
 Keymap("i", "<C-t>", '<Esc><Cmd>exe v:count1 . "ToggleTerm"<CR>', opts)
-Map({"n", "i", "t"}, "<M-\\>", '<Cmd> ToggleTermToggleAll <CR>')
+Map({ "n", "i", "t" }, "<M-\\>", "<Cmd> ToggleTermToggleAll <CR>")

@@ -17,7 +17,4 @@ vim.cmd([[
     highlight VertSplit       guibg=bg guifg=#3b4261
 ]])
 
-require'colorizer'.setup()
-
-
-
+require("colorizer").setup()

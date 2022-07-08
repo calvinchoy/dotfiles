@@ -1,7 +1,7 @@
-require('trouble').setup {
-  height = 20,
-  mode = "document_diagnostics"
-}
+require("trouble").setup({
+	height = 20,
+	mode = "document_diagnostics",
+})
 
 local opts = { noremap = true, silent = true }
 Keymap("n", "<Leader>x", "<cmd>TroubleToggle<cr>", opts)

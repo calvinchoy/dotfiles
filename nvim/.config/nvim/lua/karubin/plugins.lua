@@ -33,8 +33,8 @@ end
 
 -- Have packer use a popup window
 packer.init({
-  profile = {
-	  enable = false,
+	profile = {
+		enable = false,
 	},
 	display = {
 		open_fn = function()
@@ -49,7 +49,7 @@ return packer.startup({
 		use("lewis6991/impatient.nvim")
 		use("nathom/filetype.nvim")
 		use("wbthomason/packer.nvim")
-		use({"dstein64/vim-startuptime", cmd = { "StartupTime" }})
+		use({ "dstein64/vim-startuptime", cmd = { "StartupTime" } })
 		-- Theme/UI
 		use("nvim-lualine/lualine.nvim")
 		use("lewis6991/gitsigns.nvim")
@@ -63,7 +63,7 @@ return packer.startup({
 		use("nvim-lua/plenary.nvim")
 		use("ThePrimeagen/git-worktree.nvim")
 		use("nvim-telescope/telescope.nvim")
-		use({"nvim-telescope/telescope-fzf-native.nvim", run = "make" })
+		use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
 		use("nvim-telescope/telescope-file-browser.nvim")
 		-- Tree shitter and LSP
 		use("nvim-treesitter/nvim-treesitter")
@@ -71,8 +71,8 @@ return packer.startup({
 		use("onsails/lspkind-nvim")
 		-- use("folke/trouble.nvim")
 		use("bellini666/trouble.nvim")
-    use("folke/which-key.nvim")
-    use({"glepnir/lspsaga.nvim", branch = "main"})
+		use("folke/which-key.nvim")
+		use({ "glepnir/lspsaga.nvim", branch = "main" })
 		-- Autocomplete
 		use("hrsh7th/nvim-cmp")
 		use("hrsh7th/cmp-nvim-lsp")
@@ -87,20 +87,36 @@ return packer.startup({
 		use({ "sbdchd/neoformat", cmd = { "Neoformat" } })
 		-- Tools and motion
 		use("numToStr/Comment.nvim")
-		use({"tpope/vim-fugitive", cmd = { "G", "Gstatus", "G diff", "Gdiffsplit" } })
+		use({ "tpope/vim-fugitive", cmd = { "G", "Gstatus", "G diff", "Gdiffsplit" } })
 		use("machakann/vim-sandwich")
 		use("wellle/targets.vim")
 		use("windwp/nvim-autopairs")
 		use("windwp/nvim-ts-autotag")
 		use("ggandor/lightspeed.nvim")
-		use({"mattn/emmet-vim", ft = { "html, vue" } })
+		use({ "mattn/emmet-vim", ft = { "html, vue" } })
 		use("akinsho/toggleterm.nvim")
-		use({"vim-test/vim-test", cmd = { "TestFile", "TestNearest", "TestSuite", "TestLast", ",TestVisit" }})
-    use({"folke/zen-mode.nvim", cmd = { "ZenMode" }, config = function() require('karubin.zen-mode') end})
-    use({"WhoIsSethDaniel/toggle-lsp-diagnostics.nvim", config = function() require('toggle_lsp_diagnostics').init({virtual_text = false, underline = false}) end})
-    use({'VonHeikemen/searchbox.nvim', requires = {{'MunifTanjim/nui.nvim'}}})
-    use({'abecodes/tabout.nvim', config = function() require('tabout').setup({}) end })
-    use({"metakirby5/codi.vim", cmd = {"Codi", "Codi!", "Codi!!", "CodiNew", "CodiSelect", "CodiExpand"}})
+		use({ "vim-test/vim-test", cmd = { "TestFile", "TestNearest", "TestSuite", "TestLast", ",TestVisit" } })
+		use({
+			"folke/zen-mode.nvim",
+			cmd = { "ZenMode" },
+			config = function()
+				require("karubin.zen-mode")
+			end,
+		})
+		use({
+			"WhoIsSethDaniel/toggle-lsp-diagnostics.nvim",
+			config = function()
+				require("toggle_lsp_diagnostics").init({ virtual_text = false, underline = false })
+			end,
+		})
+		use({ "VonHeikemen/searchbox.nvim", requires = { { "MunifTanjim/nui.nvim" } } })
+		use({
+			"abecodes/tabout.nvim",
+			config = function()
+				require("tabout").setup({})
+			end,
+		})
+		use({ "metakirby5/codi.vim", cmd = { "Codi", "Codi!", "Codi!!", "CodiNew", "CodiSelect", "CodiExpand" } })
 		-- Automatically set up your configuration after cloning packer.nvim
 		-- Put this at the end after all plugins
 		if PACKER_BOOTSTRAP then

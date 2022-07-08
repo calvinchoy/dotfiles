@@ -107,5 +107,8 @@ nnoremap <C-Y> :redo<CR>
 noremap <expr> q reg_recording() is# '' ? '\<Nop>' : 'q'
 nnoremap <leader>q q
 
+" mapping to open sublime merge
+nnoremap <silent><leader>sm :!smerge .<CR><CR>
+
 " toggle search highlights
 nmap thl :set hls!<CR>

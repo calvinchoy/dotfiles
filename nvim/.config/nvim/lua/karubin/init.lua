@@ -1,21 +1,20 @@
 -- Global stuff
 function IsWindows()
-  return vim.loop.os_uname().sysname == "Windows_NT"
+	return vim.loop.os_uname().sysname == "Windows_NT"
 end
 
 -- set global variable for home path based on os (win/macos)
 HOME_PATH = os.getenv("HOME")
 if IsWindows() then
-  HOME_PATH = os.getenv("USERPROFILE")
+	HOME_PATH = os.getenv("USERPROFILE")
 end
-
 
 -- shortcut to set keymaps
 Keymap = vim.api.nvim_set_keymap
 
 function Map(mode, l, r, opts)
-  opts = opts or {}
-  vim.keymap.set(mode, l, r, opts)
+	opts = opts or {}
+	vim.keymap.set(mode, l, r, opts)
 end
 -- lua set leader key to space
 vim.g.mapleader = " "
@@ -51,4 +50,4 @@ require("karubin.gitworktree")
 require("karubin.which-key")
 require("karubin.searchbox")
 -- plugins using default config
-require('Comment').setup()
+require("Comment").setup()

@@ -2,16 +2,16 @@ require("nvim-tree").setup({
 	disable_netrw = false,
 	hijack_netrw = false,
 	update_focused_file = {
-    enable = true,
-    update_cwd = false,
-    ignore_list = {},
-  },
-  git = {
+		enable = true,
+		update_cwd = false,
+		ignore_list = {},
+	},
+	git = {
 		enable = false,
 	},
 	view = {
-	  side = 'left'
-	}
+		side = "left",
+	},
 })
 
 -- keymaps
