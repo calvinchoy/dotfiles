@@ -77,12 +77,7 @@ return packer.startup({
 		-- Code formatting and linting
 		use({ "sbdchd/neoformat", cmd = { "Neoformat" } })
 		-- Tools and motion
-		use({
-			"numToStr/Comment.nvim",
-			config = function()
-				require("Comment").setup()
-			end,
-		})
+		use({ "numToStr/Comment.nvim" })
 		use("machakann/vim-sandwich")
 		use("wellle/targets.vim")
 		use("windwp/nvim-autopairs")
@@ -91,34 +86,12 @@ return packer.startup({
 		use({ "mattn/emmet-vim", ft = { "html, vue" } })
 		use("akinsho/toggleterm.nvim")
 		use({ "tpope/vim-fugitive", cmd = { "G", "Gstatus", "G diff", "Gdiffsplit" } })
-		use({
-			"sindrets/diffview.nvim",
-			requires = "nvim-lua/plenary.nvim",
-			config = function()
-				require("diffview.actions")
-			end,
-		})
+		use({ "sindrets/diffview.nvim" })
 		use({ "vim-test/vim-test", cmd = { "TestFile", "TestNearest", "TestSuite", "TestLast", ",TestVisit" } })
-		use({
-			"folke/zen-mode.nvim",
-			cmd = { "ZenMode" },
-			config = function()
-				require("karubin.zen-mode")
-			end,
-		})
-		use({
-			"WhoIsSethDaniel/toggle-lsp-diagnostics.nvim",
-			config = function()
-				require("toggle_lsp_diagnostics").init({ virtual_text = false, underline = false })
-			end,
-		})
+		use({ "folke/zen-mode.nvim" })
+		use({ "WhoIsSethDaniel/toggle-lsp-diagnostics.nvim" })
 		use({ "VonHeikemen/searchbox.nvim", requires = { { "MunifTanjim/nui.nvim" } } })
-		use({
-			"abecodes/tabout.nvim",
-			config = function()
-				require("tabout").setup({})
-			end,
-		})
+		use({ "abecodes/tabout.nvim" })
 		-- Automatically set up your configuration after cloning packer.nvim
 		-- Put this at the end after all plugins
 		if PACKER_BOOTSTRAP then

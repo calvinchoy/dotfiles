@@ -1,3 +1,5 @@
+require("toggle_lsp_diagnostics").init({ virtual_text = false, underline = false })
+
 vim.cmd([[
   nmap <leader>tlu <Plug>(toggle-lsp-diag-underline)
   nmap <leader>tls <Plug>(toggle-lsp-diag-signs)
