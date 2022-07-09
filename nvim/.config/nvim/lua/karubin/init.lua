@@ -49,5 +49,3 @@ require("karubin.gitsigns")
 require("karubin.gitworktree")
 require("karubin.which-key")
 require("karubin.searchbox")
--- plugins using default config
-require("Comment").setup()

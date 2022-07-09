@@ -56,5 +56,6 @@ vim.cmd([[
     set signcolumn=yes
     set completeopt=menu,menuone,noselect       " auto complete options for nvim-cmp
     set updatetime=100                          " async update for signify
+    set fillchars+=diff:╱                       " fill character
     
 ]])

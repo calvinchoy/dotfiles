@@ -17,14 +17,6 @@ if fn.empty(fn.glob(install_path)) > 0 then
 	vim.cmd([[packadd packer.nvim]])
 end
 
--- Autocommand that reloads neovim whenever you save the plugins.lua file
--- vim.cmd([[
---   augroup packer_user_config
---     autocmd!
---     autocmd BufWritePost plugins.lua source <afile> | PackerSync
---   augroup end
--- ]])
-
 -- Use a protected call so we don't error out on first use
 local status_ok, packer = pcall(require, "packer")
 if not status_ok then
@@ -78,16 +70,19 @@ return packer.startup({
 		use("hrsh7th/cmp-nvim-lsp")
 		use("hrsh7th/cmp-buffer")
 		use("hrsh7th/cmp-path")
-		use("hrsh7th/cmp-nvim-lsp-signature-help")
 		use("saadparwaiz1/cmp_luasnip")
-		-- Snippets to make nvim-cmp actually do something
+		use("hrsh7th/cmp-nvim-lsp-signature-help")
 		use("l3mon4d3/luasnip")
 		use("rafamadriz/friendly-snippets")
 		-- Code formatting and linting
 		use({ "sbdchd/neoformat", cmd = { "Neoformat" } })
 		-- Tools and motion
-		use("numToStr/Comment.nvim")
-		use({ "tpope/vim-fugitive", cmd = { "G", "Gstatus", "G diff", "Gdiffsplit" } })
+		use({
+			"numToStr/Comment.nvim",
+			config = function()
+				require("Comment").setup()
+			end,
+		})
 		use("machakann/vim-sandwich")
 		use("wellle/targets.vim")
 		use("windwp/nvim-autopairs")
@@ -95,6 +90,14 @@ return packer.startup({
 		use("ggandor/lightspeed.nvim")
 		use({ "mattn/emmet-vim", ft = { "html, vue" } })
 		use("akinsho/toggleterm.nvim")
+		use({ "tpope/vim-fugitive", cmd = { "G", "Gstatus", "G diff", "Gdiffsplit" } })
+		use({
+			"sindrets/diffview.nvim",
+			requires = "nvim-lua/plenary.nvim",
+			config = function()
+				require("diffview.actions")
+			end,
+		})
 		use({ "vim-test/vim-test", cmd = { "TestFile", "TestNearest", "TestSuite", "TestLast", ",TestVisit" } })
 		use({
 			"folke/zen-mode.nvim",
@@ -116,7 +119,6 @@ return packer.startup({
 				require("tabout").setup({})
 			end,
 		})
-		use({ "metakirby5/codi.vim", cmd = { "Codi", "Codi!", "Codi!!", "CodiNew", "CodiSelect", "CodiExpand" } })
 		-- Automatically set up your configuration after cloning packer.nvim
 		-- Put this at the end after all plugins
 		if PACKER_BOOTSTRAP then
