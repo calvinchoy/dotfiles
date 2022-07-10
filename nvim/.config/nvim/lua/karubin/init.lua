@@ -9,8 +9,10 @@ if IsWindows() then
 	HOME_PATH = os.getenv("USERPROFILE")
 end
 
--- shortcut to set keymaps
-Keymap = vim.api.nvim_set_keymap
+function Keymap(mode, l, r, opts)
+  opts = opts or {}
+  vim.keymap.set(mode, l, r, opts)
+end
 
 function Map(mode, l, r, opts)
 	opts = opts or {}
