@@ -44,6 +44,9 @@ nnoremap N Nzzzv
 " Alternatve pasting while clearing blackhole
 xnoremap <leader>p "_dP
 
+" select last pasted content
+nnoremap gp `[v`]
+
 " Yank
 nnoremap Y y$
 nnoremap <leader>y "+y
