@@ -77,7 +77,6 @@ Keymap("n", "gd", "<cmd>lua require('karubin.telescope').go_to_definitions()<cr>
 
 -- Basic git helper
 Keymap("n", "<leader>gb", "<cmd>lua require('telescope.builtin').git_branches()<cr>", opts)
-Keymap("n", "<leader>gl", "<cmd>lua require('telescope.builtin').git_bcommits()<cr>", opts)
 
 --------------------------------------------------
 -- Custom telescope pickers

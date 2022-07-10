@@ -10,6 +10,7 @@ require("lualine").setup({
 		lualine_a = { "mode" },
 		lualine_b = { "branch", "diff", "diagnostics" },
 		lualine_c = {
+			{ "tabs" },
 			{ "filetype", colored = true, icon_only = true },
 			{ "filename", path = 1, symbols = { modified = "%#String#" .. " [+]" .. "%*" } },
 		},
