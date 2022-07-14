@@ -1,0 +1,40 @@
+matches:
+  - trigger: ";jmock-function"
+    replace: | 
+              import { namedFunction } from '@/moduleName';
+              
+              jest.mock('@/moduleName');
+              beforeEach(() => {
+                namedFunction.mockImplementation(() => { });
+              });
+  - trigger: ";jmock-module"
+    replace: |
+              import { namedFunction } from '@/moduleName';
+
+              jest.mock("@module/api", () => {
+                  return {
+                      ...jest.requireActual('@/moduleName');
+                      namedFunction: jest.fn()
+                  };
+              });
+  - trigger: ";jmock-spy"
+    replace: |
+              import * as moduleAlias from '@/moduleName';
+
+              jest.spyOn(moduleAlias, 'functionToMock'
+  - trigger: ";describe"
+    replace: |
+              describe('description', () => {
+
+              })
+
+  - trigger: ";it"
+    replace: |
+              it('description', () => {
+
+              })
+
+  - trigger: ";jmock-imp"
+    replace: |
+              (function as jest.Mock).mockImplementation(() => {});
+

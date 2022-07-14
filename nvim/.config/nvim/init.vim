@@ -88,7 +88,7 @@ vnoremap <S-e> <Esc>:b#<CR>
 
 " v and h spli
 nmap vs :vsplit<cr><C-l>
-nmap hs :split<cr><C-j>
+nmap - :split<cr><C-j>
 
 " increase, decrease and reset pane sizes
 nnoremap <C-Up> :resize +5<CR>
@@ -108,7 +108,8 @@ nnoremap <C-Y> :redo<CR>
 
 " map recording to leader q
 noremap <expr> q reg_recording() is# '' ? '\<Nop>' : 'q'
-nnoremap <leader>q q
+nnoremap <leader>qr q
+nnoremap <leader>q <cmd>q!<cr>
 
 " mapping to open sublime merge
 nnoremap <silent><leader>sm :!smerge .<CR><CR>

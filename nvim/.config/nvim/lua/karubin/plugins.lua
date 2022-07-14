@@ -78,6 +78,7 @@ return packer.startup({
 		use({ "sbdchd/neoformat", cmd = { "Neoformat" } })
 		-- Tools and motion
 		use({ "numToStr/Comment.nvim" })
+		use("ThePrimeagen/harpoon")
 		use("machakann/vim-sandwich")
 		use("wellle/targets.vim")
 		use("windwp/nvim-autopairs")
