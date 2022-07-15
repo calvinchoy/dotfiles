@@ -1,4 +1,3 @@
-Keymap('n','<leader>h', '<cmd>lua require("harpoon.ui").toggle_quick_menu()<cr>')
 Keymap('n','<M-h>', '<cmd>lua require("harpoon.ui").toggle_quick_menu()<cr>')
 Keymap('n', ']h', '<cmd>lua require("harpoon.ui").nav_next()<cr>')
 Keymap('n', '[h', '<cmd>lua require("harpoon.ui").nav_prev()<cr>')
