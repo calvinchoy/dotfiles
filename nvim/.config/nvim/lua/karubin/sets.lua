@@ -29,6 +29,7 @@ vim.cmd([[
     set linespace=15
     set conceallevel=0
     set showcmd                                 " Show (partial) command in the status line
+    set cmdheight=0
     set nowrap                                  " don't wrap lines
     set tags=tags
     set shiftround                              " use multiple of shiftwidth when indenting with '<' and '>'

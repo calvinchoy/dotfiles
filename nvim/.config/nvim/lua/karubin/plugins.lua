@@ -63,7 +63,6 @@ return packer.startup({
 		use("onsails/lspkind-nvim")
 		-- use("folke/trouble.nvim")
 		use("bellini666/trouble.nvim")
-		use("folke/which-key.nvim")
 		use({ "glepnir/lspsaga.nvim", branch = "main" })
 		-- Autocomplete
 		use("hrsh7th/nvim-cmp")
