@@ -3,23 +3,36 @@
 -- ---------------------------------------------
 vim.cmd([[
     set termguicolors
-    let g:tokyonight_transparent = "true"
-    let g:tokyonight_transparent_sidebar = "true"
-    let g:tokyonight_style = "storm"
-    colorscheme tokyonight
 
-    " -----------------------------------------------------------------
-    " Override colorscheme highlights
-    " -----------------------------------------------------------------
+    " -----------------------------------------
+    " TokyoNight
+    " -----------------------------------------
+    " let g:tokyonight_transparent = "true"
+    " let g:tokyonight_transparent_sidebar = "true"
+    " let g:tokyonight_style = "storm"
+    " colorscheme tokyonight
+    "
+    " " Custom linenumber highlights
+    " highlight LineNr          ctermbg=NONE guifg=#50587d guibg=NONE
+    " highlight CursorLineNr    ctermbg=NONE guifg=#CCCCCC guibg=NONE
+    " highlight CursorLine      ctermbg=darkred guifg=NONE guibg=#22273D
+    " highlight VertSplit       guibg=bg guifg=#3b4261
 
-    " Custom linenumber highlights
-    highlight LineNr          ctermbg=NONE guifg=#50587d guibg=NONE
-    highlight CursorLineNr    ctermbg=NONE guifg=#CCCCCC guibg=NONE
-    highlight CursorLine      ctermbg=darkred guifg=NONE guibg=#22273D
+    
+    " -----------------------------------------
+    " Catpuccin
+    " -----------------------------------------
+    " let g:catppuccin_flavour = "macchiato" " latte, frappe, macchiato, mocha
+    " colorscheme catppuccin
 
-    " Custom split border color
-    highlight VertSplit       guibg=bg guifg=#3b4261
+    " -----------------------------------------
+    " Nightfox
+    " -----------------------------------------
+    colorscheme nightfox
 
+    " -----------------------------------------
+    " Custom overrides
+    " -----------------------------------------
     " Custom diff colors
     highlight DiffDelete      guifg=#3b4261
 

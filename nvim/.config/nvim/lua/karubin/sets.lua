@@ -1,7 +1,8 @@
 vim.cmd([[
     filetype off
     filetype plugin indent on
-    
+    autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
     set path+=**
     
     set wildignore+=**/vendor/*
@@ -15,6 +16,7 @@ vim.cmd([[
     set guicursor=i:ver1                        " Enable vert cursor in insert mode
     set guicursor+=a:blinkon1                   " turnon cursor blink
     set relativenumber
+    set formatoptions-=cro                      " disable continuation of comments lines
     set rnu
     set hidden
     set nocompatible                            " Disable vi-compatibility
@@ -45,7 +47,6 @@ vim.cmd([[
     set autowrite                               " Save on buffer switch
     set mouse=a
     set laststatus=2                            " Always show the statusline
-    " set cmdheight=0                             " hide commandline
     set noshowmode                              " Hide the default mode text (e.g. -- INSERT -- below the statusline)
     set clipboard=unnamed                       " Copy pasting, fix for macos
     set noswapfile

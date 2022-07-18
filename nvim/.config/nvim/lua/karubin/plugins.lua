@@ -46,8 +46,18 @@ return packer.startup({
 		use("nvim-lualine/lualine.nvim")
 		use("lewis6991/gitsigns.nvim")
 		use("lukas-reineke/indent-blankline.nvim")
-		use("folke/tokyonight.nvim")
-		use("norcalli/nvim-colorizer.lua")
+		use({"folke/tokyonight.nvim"})
+		-- use({
+		-- 	"catppuccin/nvim",
+		-- 	as = "catppuccin",
+		-- })
+		use({'EdenEast/nightfox.nvim'})
+		use({
+			"norcalli/nvim-colorizer.lua",
+			config = function()
+				require("colorizer").setup({ "*" }, { names = false })
+			end,
+		})
 		use("kyazdani42/nvim-web-devicons")
 		use("kyazdani42/nvim-tree.lua")
 		-- Telescope
@@ -92,6 +102,7 @@ return packer.startup({
 		use({ "WhoIsSethDaniel/toggle-lsp-diagnostics.nvim" })
 		use({ "VonHeikemen/searchbox.nvim", requires = { { "MunifTanjim/nui.nvim" } } })
 		use({ "abecodes/tabout.nvim" })
+		use({ "dhruvmanila/telescope-bookmarks.nvim" })
 		-- Automatically set up your configuration after cloning packer.nvim
 		-- Put this at the end after all plugins
 		if PACKER_BOOTSTRAP then

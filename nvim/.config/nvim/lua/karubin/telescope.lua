@@ -1,5 +1,6 @@
 --------------------------------------------------
 -- Default telescope setup
+--------------------------------------------------
 local action_layout = require("telescope.actions.layout")
 require("telescope").setup({
 	defaults = {
@@ -48,12 +49,16 @@ require("telescope").setup({
 		file_browser = {
 			path = "%:p:h",
 		},
+		bookmarks = {
+			selected_browser = "edge",
+			full_path = false,
+		},
 	},
 })
 
 require("telescope").load_extension("fzf")
 require("telescope").load_extension("file_browser")
-
+require("telescope").load_extension("bookmarks")
 --------------------------------------------------
 -- Mappings
 --------------------------------------------------
@@ -76,6 +81,7 @@ Keymap("n", "<leader>dcf", "<cmd>lua require('karubin.telescope').browse_dotfile
 Keymap("n", "gd", "<cmd>lua require('karubin.telescope').go_to_definitions()<cr>", opts)
 
 -- Basic git helper
+Keymap("n", "<leader>bm", "<cmd>Telescope bookmarks<cr>", opts)
 Keymap("n", "<leader>gb", "<cmd>lua require('telescope.builtin').git_branches()<cr>", opts)
 
 --------------------------------------------------
