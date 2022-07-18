@@ -39,21 +39,21 @@ tmux_conf_new_session_prompt=false
 tmux_conf_24b_colour=true
 
 # default theme
-tmux_conf_theme_colour_1="#131a24"    # dark gray
+tmux_conf_theme_colour_1="#121c29"    # dark gray
 tmux_conf_theme_colour_2="#303030"    # gray
-tmux_conf_theme_colour_3="#8a8a8a"    # light gray
-tmux_conf_theme_colour_4="#00afff"    # light blue
-tmux_conf_theme_colour_5="#ffff00"    # yellow
-tmux_conf_theme_colour_6="#080808"    # dark gray
+tmux_conf_theme_colour_3="#b7b8b9"    # light gray
+tmux_conf_theme_colour_4="#364b65"    # light blue
+tmux_conf_theme_colour_5="#7da7dd"    # yellow
+tmux_conf_theme_colour_6="#121c29"    # dark gray
 tmux_conf_theme_colour_7="#e4e4e4"    # white
-tmux_conf_theme_colour_8="#080808"    # dark gray
-tmux_conf_theme_colour_9="#ffff00"    # yellow
+tmux_conf_theme_colour_8="#121c29"    # dark gray
+tmux_conf_theme_colour_9="#7da7dd"    # yellow
 tmux_conf_theme_colour_10="#ff00af"   # pink
 tmux_conf_theme_colour_11="#5fff00"   # green
 tmux_conf_theme_colour_12="#8a8a8a"   # light gray
 tmux_conf_theme_colour_13="#e4e4e4"   # white
-tmux_conf_theme_colour_14="#080808"   # dark gray
-tmux_conf_theme_colour_15="#080808"   # dark gray
+tmux_conf_theme_colour_14="#121c29"   # dark gray
+tmux_conf_theme_colour_15="#121c29"   # dark gray
 tmux_conf_theme_colour_16="#d70000"   # red
 tmux_conf_theme_colour_17="#e4e4e4"   # white
 
@@ -141,7 +141,7 @@ tmux_conf_theme_window_status_format="#I #W"
 #     - #{hostname_full_ssh}
 #     - #{username}
 #     - #{username_ssh}
-tmux_conf_theme_window_status_current_fg="$tmux_conf_theme_colour_1"
+tmux_conf_theme_window_status_current_fg="$tmux_conf_theme_colour_3"
 tmux_conf_theme_window_status_current_bg="$tmux_conf_theme_colour_4"
 tmux_conf_theme_window_status_current_attr="bold"
 tmux_conf_theme_window_status_current_format="#I #W"
@@ -158,9 +158,9 @@ tmux_conf_theme_window_status_bell_fg="$tmux_conf_theme_colour_5"
 tmux_conf_theme_window_status_bell_bg="default"
 tmux_conf_theme_window_status_bell_attr="blink,bold"
 
-# window last status style -- CUSTOM
-tmux_conf_theme_window_status_last_fg="#b7b8b9"
-tmux_conf_theme_window_status_last_bg="#131a24"
+# window last status style -- CUSTOM:
+tmux_conf_theme_window_status_last_fg="$tmux_conf_theme_colour_3"
+tmux_conf_theme_window_status_last_bg="$tmux_conf_theme_colour_1"
 tmux_conf_theme_window_status_last_attr="none"
 
 # status left/right sections separators
@@ -202,8 +202,8 @@ tmux_conf_theme_right_separator_sub="|"
 #     - #{username_ssh}
 
 # status bar left and right
-tmux_conf_theme_status_left=" ❐ #S | ↑#{?uptime_y, #{uptime_y}y,}#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} "
-tmux_conf_theme_status_right=" #{prefix}#{mouse}#{pairing}#{synchronized}#{?battery_status,#{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} , %R , %d %b | #{username}#{root} | #{hostname} "
+tmux_conf_theme_status_left=" ❐ #S "
+tmux_conf_theme_status_right=" #(curl -m 1 wttr.in?format=3 2>/dev/null; sleep 900) , %a %d %b , %R "
 
 # status left style
 tmux_conf_theme_status_left_fg="$tmux_conf_theme_colour_6,$tmux_conf_theme_colour_7,$tmux_conf_theme_colour_8"
@@ -211,9 +211,9 @@ tmux_conf_theme_status_left_bg="$tmux_conf_theme_colour_9,$tmux_conf_theme_colou
 tmux_conf_theme_status_left_attr="bold,none,none"
 
 # status right style
-tmux_conf_theme_status_right_fg="$tmux_conf_theme_colour_12,$tmux_conf_theme_colour_13,$tmux_conf_theme_colour_14"
-tmux_conf_theme_status_right_bg="$tmux_conf_theme_colour_15,$tmux_conf_theme_colour_16,$tmux_conf_theme_colour_17"
-tmux_conf_theme_status_right_attr="none,none,bold"
+# tmux_conf_theme_status_right_fg="$tmux_conf_theme_colour_12,$tmux_conf_theme_colour_13,$tmux_conf_theme_colour_14"
+# tmux_conf_theme_status_right_bg="$tmux_conf_theme_colour_15,$tmux_conf_theme_colour_16,$tmux_conf_theme_colour_17"
+# tmux_conf_theme_status_right_attr="none,none,bold"
 
 # pairing indicator
 tmux_conf_theme_pairing="⚇"                 # U+2687
@@ -299,7 +299,7 @@ tmux_conf_theme_clock_style="24"
 tmux_conf_copy_to_os_clipboard=false
 
 # --------------------------------------------------------------------------------------
-# -- CUSTOM: user customizations 
+# -- START CUSTOM: user customizations 
 # --------------------------------------------------------------------------------------
 # General
 # set-option -g status-position top
@@ -315,9 +315,9 @@ set -g mode-keys emacs
 set -g status-keys emacs
 bind a send-prefix
 
-# window current status style
-tmux_conf_theme_window_status_current_fg="$tmux_conf_theme_colour_1"
-tmux_conf_theme_window_status_current_bg="#00beff"
+# # window current status style
+# tmux_conf_theme_window_status_current_fg="$tmux_conf_theme_colour_1"
+# tmux_conf_theme_window_status_current_bg="#00beff"
 
 # pane titles
 set -g pane-border-format " [ ###P #{pane_title} | #{pane_current_command} ] "
@@ -349,6 +349,11 @@ bind-key -n C-S-Right swap-window -t +1
 bind-key -n C-s run-shell -b "~/.tmux/plugins/tmux-fzf/scripts/session.sh attach"
 # Hide preview window
 TMUX_FZF_PREVIEW=0
+
+# --------------------------------------------------------------------------------------
+# -- END CUSTOM: user customizations 
+# --------------------------------------------------------------------------------------
+
 
 # status bar left and right
 # tmux_conf_theme_status_left=' ❐ #S '
