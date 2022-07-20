@@ -46,6 +46,7 @@ return packer.startup({
 		use("nvim-lualine/lualine.nvim")
 		use("lewis6991/gitsigns.nvim")
 		use("lukas-reineke/indent-blankline.nvim")
+		use({"folke/tokyonight.nvim"})
 		use({'EdenEast/nightfox.nvim'})
 		use({
 			"norcalli/nvim-colorizer.lua",

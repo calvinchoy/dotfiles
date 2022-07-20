@@ -1,3 +1,7 @@
+-- auto insert mode when entering a terminal
+vim.cmd([[  
+  autocmd BufWinEnter,WinEnter term://* startinsert
+]])
 require("toggleterm").setup({
 	-- size can be a number or function which is passed the current terminal
 	size = function(term)
@@ -80,7 +84,7 @@ function _floatterminal_toggle()
 	floatterminal:toggle()
 end
 
-vim.api.nvim_set_keymap("n", "<leader>/", "<cmd>lua _floatterminal_toggle()<CR>", { noremap = true, silent = true })
+Map({"n", "i", "t"}, "<C-\\>", "<cmd>lua _floatterminal_toggle()<CR>", { noremap = true, silent = true })
 
 -- -----------------------------------------------------------
 -- Mappings

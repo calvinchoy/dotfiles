@@ -55,9 +55,7 @@ require("lspconfig").sumneko_lua.setup({
 -- require'lspconfig'.intelephense.setup(config())
 -- require'lspconfig'.rust_analyzer.setup(config())
 require("lspconfig").tsserver.setup(config())
-require("lspconfig").volar.setup(
-	config({ filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue", "json" } })
-)
+require("lspconfig").volar.setup(config())
 require("lspconfig").pyright.setup(config())
 require("lspconfig").cssls.setup(config())
 require("lspconfig").html.setup(config())

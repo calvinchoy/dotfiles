@@ -11,6 +11,16 @@ local lspkind = require("lspkind")
 -- end
 
 cmp.setup({
+	enabled = function()
+		if
+			require("cmp.config.context").in_treesitter_capture("comment") == true
+			or require("cmp.config.context").in_syntax_group("Comment")
+		then
+			return false
+		else
+			return true
+		end
+	end,
 	window = {
 		documentation = {
 			border = "single",
