@@ -94,6 +94,7 @@ return packer.startup({
 		use({ "tpope/vim-fugitive", cmd = { "G", "Gstatus", "G diff", "Gdiffsplit" } })
 		use({ "sindrets/diffview.nvim" })
 		use({ "vim-test/vim-test", cmd = { "TestFile", "TestNearest", "TestSuite", "TestLast", ",TestVisit" } })
+		use("kkoomen/vim-doge")
 		use({ "folke/zen-mode.nvim" })
 		use({ "WhoIsSethDaniel/toggle-lsp-diagnostics.nvim" })
 		use({ "VonHeikemen/searchbox.nvim", requires = { { "MunifTanjim/nui.nvim" } } })

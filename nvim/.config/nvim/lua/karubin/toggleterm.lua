@@ -1,6 +1,7 @@
 -- auto insert mode when entering a terminal
 vim.cmd([[  
   autocmd BufWinEnter,WinEnter term://* startinsert
+  autocmd WinLeave term://* :norm G
 ]])
 require("toggleterm").setup({
 	-- size can be a number or function which is passed the current terminal

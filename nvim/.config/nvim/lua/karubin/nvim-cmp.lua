@@ -12,13 +12,15 @@ local lspkind = require("lspkind")
 
 cmp.setup({
 	enabled = function()
-		if
-			require("cmp.config.context").in_treesitter_capture("comment") == true
-			or require("cmp.config.context").in_syntax_group("Comment")
-		then
-			return false
-		else
+		-- disable completion in comments
+		local context = require("cmp.config.context")
+		-- keep command mode completion enabled when cursor is in a comment
+		if vim.api.nvim_get_mode().mode == "c" then
 			return true
+    elseif vim.bo.buftype == 'prompt' then
+      return false
+		else
+			return not context.in_treesitter_capture("comment") and not context.in_syntax_group("Comment")
 		end
 	end,
 	window = {
@@ -76,8 +78,8 @@ cmp.setup({
 	},
 	-- load cmp wih some additonal extensions for autocompletion
 	sources = {
-		{ name = "luasnip", keyword_length = 2, max_item_count = 3, priority_weight = 1 },
-		{ name = "nvim_lsp", keyword_length = 3, max_item_count = 2, priortiy_weight = 2 },
+		{ name = "luasnip", keyword_length = 2, max_item_count = 4, priority_weight = 1 },
+		{ name = "nvim_lsp", keyword_length = 3, max_item_count = 4, priortiy_weight = 2 },
 		{ name = "buffer", keyword_length = 3, max_item_count = 3, priority_weight = 3 },
 		{ name = "path", keyword_length = 3, max_item_count = 3, priority_weight = 4 },
 		{ name = "nvim_lsp_signature_help" },

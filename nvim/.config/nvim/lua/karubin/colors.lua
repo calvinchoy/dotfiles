@@ -7,17 +7,18 @@ vim.cmd([[
     " -----------------------------------------
     " TokyoNight
     " -----------------------------------------
-    " let g:tokyonight_transparent = "true"
-    " let g:tokyonight_transparent_sidebar = "true"
-    " let g:tokyonight_style = "storm"
-    " colorscheme tokyonight
-    "
-    " " Custom linenumber highlights
-    " highlight LineNr          ctermbg=NONE guifg=#50587d guibg=NONE
-    " highlight CursorLineNr    ctermbg=NONE guifg=#CCCCCC guibg=NONE
-    " highlight CursorLine      ctermbg=darkred guifg=NONE guibg=#22273D
-    " highlight VertSplit       guibg=bg guifg=#3b4261
+    let g:tokyonight_transparent = "true"
+    let g:tokyonight_transparent_sidebar = "true"
+    let g:tokyonight_style = "storm"
+    colorscheme tokyonight
 
+    " Custom linenumber highlights
+    highlight LineNr          ctermbg=NONE guifg=#50587d guibg=NONE
+    highlight CursorLineNr    ctermbg=NONE guifg=#CCCCCC guibg=NONE
+    highlight CursorLine      ctermbg=darkred guifg=NONE guibg=#272c45
+    highlight VertSplit       guibg=bg guifg=#3b4261
+    
+    highlight TelescopeBorder guibg=NONE
     
     " -----------------------------------------
     " Catpuccin
@@ -28,7 +29,7 @@ vim.cmd([[
     " -----------------------------------------
     " Nightfox
     " -----------------------------------------
-    colorscheme nightfox
+    " colorscheme nightfox
 
     " -----------------------------------------
     " Custom overrides
