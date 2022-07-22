@@ -202,7 +202,7 @@ tmux_conf_theme_right_separator_sub="|"
 #     - #{username_ssh}
 
 # status bar left and right
-tmux_conf_theme_status_left="  #S "
+tmux_conf_theme_status_left="  #S "
 tmux_conf_theme_status_right=" #(curl -m 1 wttr.in?format=3 2>/dev/null; sleep 900) , %a %d %b , %R "
 
 # status left style
